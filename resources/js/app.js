@@ -1,21 +1,14 @@
-import { createApp } from 'vue'
+import { h, createApp } from 'vue'
+import { createInertiaApp } from '@inertiajs/vue3'
 
-// ── Composants Vue.js ──
-import RootApp         from './components/RootApp.vue'
-import ProductGrid     from './components/ProductGrid.vue'
-import MenuProductGrid from './components/MenuProductGrid.vue'
-import ReviewsCarousel from './components/ReviewsCarousel.vue'
-import FaqAccordion    from './components/FaqAccordion.vue'
-
-// ── Initialisation de l'application Vue ──
-// Montage sur l'élément #app défini dans le layout Blade
-const app = createApp(RootApp)
-
-// Enregistrement global des composants
-app.component('product-grid',      ProductGrid)
-app.component('menu-product-grid', MenuProductGrid)
-app.component('reviews-carousel',  ReviewsCarousel)
-app.component('faq-accordion',     FaqAccordion)
-
-// Montage
-app.mount('#app')
+createInertiaApp({
+  resolve: (name) => {
+    const pages = import.meta.glob('./pages/**/*.vue', { eager: true })
+    return pages[`./pages/${name}.vue`]
+  },
+  setup({ el, App, props, plugin }) {
+    createApp({ render: () => h(App, props) })
+      .use(plugin)
+      .mount(el)
+  },
+})

@@ -106,7 +106,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     {{-- ── Vite Assets (CSS + JS) ── --}}
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/modal-app.js'])
 
     {{-- ── Page-specific head ── --}}
     @stack('head')
@@ -130,6 +130,8 @@
     @include('layouts.partials.footer')
 
 </div>{{-- /#app --}}
+
+<div id="modal-app"></div>
 
 </body>
 </html>
