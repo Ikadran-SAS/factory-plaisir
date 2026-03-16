@@ -27,7 +27,9 @@ class HomeController extends Controller
 
         $openingHours = OpeningHour::orderBy('sort_order')->get();
 
-        $faqs = FaqItem::grouped();
+        $faqsGrouped = FaqItem::grouped();
+        // Flatten grouped FAQs into a single array for the accordion component
+        $faqs = collect($faqsGrouped)->flatten(1)->values()->all();
 
         $seo = [
             'title'       => 'Factory & Co Val d\'Europe – Restaurant Burger Serris',

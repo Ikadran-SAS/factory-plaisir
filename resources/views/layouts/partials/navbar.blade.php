@@ -1,53 +1,57 @@
 {{-- ── NAVBAR PRINCIPALE ── --}}
-<header class="navbar" x-data="{ mobileOpen: false }">
-    <div class="navbar-inner">
-        <a href="{{ route('home') }}" class="logo">Factory <span>&amp;</span> Co</a>
+<header class="navbar-modern" x-data="{ mobileOpen: false, dropdownOpen: false }">
+    <div class="navbar-container">
+        {{-- Logo --}}
+        <a href="{{ route('home') }}" class="navbar-logo">
+            <img src="{{ asset('images/logo-fact.svg') }}" alt="Factory & Co" height="32" width="auto">
+        </a>
 
         {{-- Navigation desktop --}}
-        <ul class="nav-links">
-            <li>
-                <a href="{{ route('home') }}" @class(['active' => request()->routeIs('home')])>
-                    Accueil
-                </a>
-            </li>
-            <li class="nav-dropdown">
-                <a href="{{ route('menu.burgers') }}" @class(['active' => request()->routeIs('menu.*')])>
-                    Notre Carte ▾
-                </a>
-                <div class="nav-dropdown-menu">
-                    <a href="{{ route('menu.burgers') }}"    @class(['active' => request()->routeIs('menu.burgers')])>🍔 L'Atelier Burger</a>
-                    <a href="{{ route('menu.bagels') }}"     @class(['active' => request()->routeIs('menu.bagels')])>🥯 Bagels New-Yorkais</a>
-                    <a href="{{ route('menu.cheesecake') }}" @class(['active' => request()->routeIs('menu.cheesecake')])>🍰 Cheesecake Factory</a>
-                    <a href="{{ route('menu.bowls') }}"      @class(['active' => request()->routeIs('menu.bowls')])>🥗 Healthy &amp; Bowls</a>
-                </div>
-            </li>
-            <li><a href="{{ route('click-collect') }}" @class(['active' => request()->routeIs('click-collect')])>Click &amp; Collect</a></li>
-            <li><a href="{{ route('blog.index') }}"     @class(['active' => request()->routeIs('blog.*')])>Blog</a></li>
-            <li><a href="{{ route('faq') }}"            @class(['active' => request()->routeIs('faq')])>FAQ</a></li>
-            <li><a href="{{ route('contact') }}"        @class(['active' => request()->routeIs('contact')])>Contact</a></li>
-        </ul>
+        <nav class="navbar-menu">
+            <a href="{{ route('home') }}" @class(['navbar-link', 'navbar-link-active' => request()->routeIs('home')])>
+                Accueil
+            </a>
+            <a href="{{ route('menu.burgers') }}" @class(['navbar-link', 'navbar-link-active' => request()->routeIs('menu.*')])>
+                La carte
+            </a>
+            <a href="{{ route('home') }}#concept" class="navbar-link">
+                Notre concept
+            </a>
+            <a href="{{ route('home') }}#specialites" class="navbar-link">
+                Nos spécialités
+            </a>
+            <a href="{{ route('home') }}#avis" class="navbar-link">
+                Avis
+            </a>
+            <a href="{{ route('blog.index') }}" @class(['navbar-link', 'navbar-link-active' => request()->routeIs('blog.*')])>
+                Le blog
+            </a>
+        </nav>
 
-        <a href="{{ route('click-collect') }}" class="nav-cta">Commander</a>
-
-        {{-- Burger menu mobile --}}
-        <button class="nav-mobile-toggle" @click="mobileOpen = !mobileOpen" aria-label="Menu">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
-                <path x-show="!mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                <path x-show="mobileOpen"  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-        </button>
+        {{-- Right side CTA --}}
+        <div class="navbar-actions">
+            <a href="{{ route('home') }}#horaires" class="navbar-cta">
+                Venir chez nous
+            </a>
+            <button class="navbar-toggle" @click="mobileOpen = !mobileOpen" type="button" aria-label="Menu">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path x-show="!mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    <path x-show="mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
     </div>
+
+    {{-- Divider --}}
+    <div class="navbar-divider"></div>
 
     {{-- Menu mobile --}}
-    <div class="nav-mobile" x-show="mobileOpen" x-transition>
-        <a href="{{ route('home') }}">Accueil</a>
-        <a href="{{ route('menu.burgers') }}">🍔 Burgers</a>
-        <a href="{{ route('menu.bagels') }}">🥯 Bagels</a>
-        <a href="{{ route('menu.cheesecake') }}">🍰 Cheesecake</a>
-        <a href="{{ route('menu.bowls') }}">🥗 Bowls</a>
-        <a href="{{ route('click-collect') }}">Click &amp; Collect</a>
-        <a href="{{ route('blog.index') }}">Blog</a>
-        <a href="{{ route('faq') }}">FAQ</a>
-        <a href="{{ route('contact') }}">Contact</a>
-    </div>
+    <nav class="navbar-mobile" x-show="mobileOpen" x-transition>
+        <a href="{{ route('home') }}" @class(['navbar-mobile-link', 'active' => request()->routeIs('home')])>Accueil</a>
+        <a href="{{ route('menu.burgers') }}" @class(['navbar-mobile-link', 'active' => request()->routeIs('menu.*')])>La carte</a>
+        <a href="{{ route('home') }}#concept" class="navbar-mobile-link">Notre concept</a>
+        <a href="{{ route('home') }}#specialites" class="navbar-mobile-link">Nos spécialités</a>
+        <a href="{{ route('home') }}#avis" class="navbar-mobile-link">Avis</a>
+        <a href="{{ route('blog.index') }}" @class(['navbar-mobile-link', 'active' => request()->routeIs('blog.*')])>Le blog</a>
+    </nav>
 </header>

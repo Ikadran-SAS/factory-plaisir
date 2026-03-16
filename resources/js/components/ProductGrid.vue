@@ -1,101 +1,159 @@
 <template>
-  <div class="product-grid-vue">
-    <!-- Grille des 4 silos catégories -->
-    <div class="silos-grid">
-      <a
-        v-for="silo in silos"
-        :key="silo.key"
-        :href="routes[silo.key]"
-        class="silo-card"
-        :class="{ 'silo-card--featured': silo.featured }"
-      >
-        <div class="silo-image-wrap">
-          <img
-            v-if="silo.product && silo.product.image_url"
-            :src="silo.product.image_url"
-            :alt="silo.label"
-            loading="lazy"
-          />
-          <div class="silo-overlay">
-            <span class="silo-cta">Voir la carte →</span>
+  <div class="product-grid-wrapper">
+    <div v-if="!products || products.length === 0" class="empty-state">
+      <p>Aucun produit disponible</p>
+    </div>
+    <div v-else class="products-container">
+      <div v-for="(productList, category) in groupedProducts" :key="category" class="category-section">
+        <h3 class="category-title">{{ categoryLabel(category) }}</h3>
+        <div class="grid">
+          <div v-for="product in productList" :key="product.id" class="product-card">
+            <div class="product-image">
+              <img v-if="product.image" :src="product.image" :alt="product.name" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h4>{{ product.name }}</h4>
+              <p v-if="product.description" class="description">{{ product.description }}</p>
+              <div v-if="product.price" class="price">{{ product.price }}€</div>
+            </div>
           </div>
         </div>
-        <div class="silo-body">
-          <span class="silo-badge">{{ silo.badge }}</span>
-          <h3 class="silo-title">{{ silo.emoji }} {{ silo.label }}</h3>
-          <p class="silo-desc">{{ silo.description }}</p>
-          <span class="silo-link">{{ silo.cta }}</span>
-        </div>
-      </a>
+      </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ProductGrid',
-  props: {
-    products: {
-      type: Object,
-      default: () => ({})
-    },
-    routes: {
-      type: Object,
-      default: () => ({})
-    }
+<script setup>
+import { computed } from 'vue'
+
+const props = defineProps({
+  products: {
+    type: [Array, Object],
+    default: () => ([])
   },
-  computed: {
-    silos() {
-      return [
-        {
-          key: 'burgers',
-          emoji: '🍔',
-          badge: 'BEST-SELLER',
-          label: "L'ATELIER BURGER",
-          description: 'Smash Burgers, options Halal, menus enfants. Le meilleur burger de Blagnac.',
-          cta: 'VOIR LES BURGERS',
-          featured: true,
-          product: this.getFeaturedProduct('burgers')
-        },
-        {
-          key: 'bagels',
-          emoji: '🥯',
-          badge: 'BREAKFAST',
-          label: 'BAGELS AUTHENTIQUES',
-          description: 'Chauds, froids, à composer. Petit-déjeuner américain dès 07h00.',
-          cta: 'VOIR LES BAGELS',
-          featured: false,
-          product: this.getFeaturedProduct('bagels')
-        },
-        {
-          key: 'cheesecake',
-          emoji: '🍰',
-          badge: 'SIGNATURE',
-          label: 'CHEESECAKE FACTORY',
-          description: 'Recettes du chef Jonathan Jablonski. Le meilleur cheesecake de Toulouse.',
-          cta: 'VOIR LES DESSERTS',
-          featured: false,
-          product: this.getFeaturedProduct('cheesecake')
-        },
-        {
-          key: 'bowls',
-          emoji: '🥗',
-          badge: 'HEALTHY',
-          label: 'HEALTHY & BOWLS',
-          description: 'Super Bowls, salades sur mesure, options Veggie & sans gluten.',
-          cta: 'VOIR LES BOWLS',
-          featured: false,
-          product: this.getFeaturedProduct('bowls')
-        }
-      ]
-    }
-  },
-  methods: {
-    getFeaturedProduct(category) {
-      const items = this.products[category]
-      if (!items || items.length === 0) return null
-      return items[0]
-    }
+  routes: {
+    type: Object,
+    default: () => ({})
   }
+})
+
+const groupedProducts = computed(() => {
+  if (Array.isArray(props.products)) {
+    return { default: props.products }
+  }
+  return props.products
+})
+
+const categoryLabel = (category) => {
+  const labels = {
+    burgers: 'Smash Burgers',
+    bagels: 'Bagels New-Yorkais',
+    cheesecake: 'Cheesecake Factory',
+    bowls: 'Healthy Bowls'
+  }
+  return labels[category] || category
 }
 </script>
+
+<style scoped>
+.product-grid-wrapper {
+  width: 100%;
+}
+
+.products-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.category-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.category-title {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #F5C3DB;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(245, 195, 219, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  border-color: #F5C3DB;
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info h4 {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.5rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 0 0 1rem;
+  flex: 1;
+}
+
+.price {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #F5C3DB;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+}
+</style>

@@ -53,8 +53,8 @@
 <div class="page-hero">
     <div class="page-hero-inner">
         <span class="section-tag">Recherche vocale optimisée</span>
-        <h1>Questions Fréquentes –<br><em>Factory &amp; Co Toulouse-Blagnac</em></h1>
-        <p>Toutes les réponses sur nos horaires, notre accès Hall C, nos options Halal, nos allergènes et notre service Click &amp; Collect.</p>
+        <h1>Questions fréquentes –<br><em>Factory &amp; Co Toulouse-Blagnac</em></h1>
+        <p>Toutes les réponses sur nos horaires, notre accès Hall C, nos options Halal, nos allergènes et notre service Click &amp; collect.</p>
     </div>
 </div>
 

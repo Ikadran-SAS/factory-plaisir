@@ -1,66 +1,201 @@
 <template>
-  <div class="reviews-vue">
-    <!-- Note agrégée -->
-    <div class="reviews-aggregate">
-      <div class="aggregate-score">
-        <span class="aggregate-number">{{ aggregateRating }}</span>
-        <div class="aggregate-stars">
-          <span v-for="i in 5" :key="i" class="star" :class="{ 'star--half': i === Math.ceil(aggregateRating) && aggregateRating % 1 !== 0 }">★</span>
-        </div>
-        <span class="aggregate-count">Basé sur +{{ reviewCount }} avis Google · TripAdvisor</span>
-      </div>
+  <div class="reviews-carousel-wrapper">
+    <div v-if="!reviews || reviews.length === 0" class="empty-state">
+      <p>Aucun avis disponible</p>
     </div>
-
-    <!-- Grille des avis -->
-    <div class="reviews-grid">
-      <div
-        v-for="review in reviews"
-        :key="review.id"
-        class="review-card"
-      >
-        <div class="review-header">
-          <div class="review-avatar" :style="{ background: review.avatar_color }">
-            {{ review.author_initial }}
+    <div v-else class="carousel-container">
+      <div class="reviews-grid">
+        <div v-for="review in reviews" :key="review.id" class="review-card">
+          <div class="review-rating">
+            <span class="stars">{{ renderStars(review.rating) }}</span>
+            <span class="rating-value">{{ review.rating }}/5</span>
           </div>
-          <div class="review-author-info">
-            <span class="review-author">{{ review.author_name }}</span>
-            <span class="review-date">{{ review.date_label }}</span>
-          </div>
-          <div class="review-source">
-            <svg v-if="review.source === 'google'" viewBox="0 0 24 24" width="20" height="20">
-              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-            </svg>
-            <span v-else class="tripadvisor-badge">TA</span>
+          <p class="review-text">{{ review.text }}</p>
+          <div class="review-author">
+            <img v-if="review.avatar" :src="review.avatar" :alt="review.author" class="avatar">
+            <div class="author-info">
+              <h4>{{ review.author }}</h4>
+              <p class="source">{{ review.source || 'Google' }}</p>
+            </div>
           </div>
         </div>
-        <div class="review-stars">
-          <span v-for="i in 5" :key="i" class="star" :class="{ 'star--empty': i > review.rating }">★</span>
+      </div>
+      <div v-if="aggregateRating" class="reviews-summary">
+        <div class="summary-stat">
+          <span class="summary-rating">{{ aggregateRating }}</span>
+          <span class="summary-stars">★★★★★</span>
         </div>
-        <p class="review-content">« {{ review.content }} »</p>
+        <p class="summary-count">{{ reviewCount }} avis clients</p>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ReviewsCarousel',
-  props: {
-    reviews: {
-      type: Array,
-      default: () => []
-    },
-    aggregateRating: {
-      type: [String, Number],
-      default: '4.5'
-    },
-    reviewCount: {
-      type: [String, Number],
-      default: '320'
-    }
+<script setup>
+const props = defineProps({
+  reviews: {
+    type: Array,
+    default: () => ([])
+  },
+  aggregateRating: {
+    type: [String, Number],
+    default: null
+  },
+  reviewCount: {
+    type: [String, Number],
+    default: 0
   }
+})
+
+const renderStars = (rating) => {
+  const fullStars = Math.floor(rating)
+  const hasHalf = rating % 1 !== 0
+  let stars = '★'.repeat(fullStars)
+  if (hasHalf) stars += '½'
+  return stars
 }
 </script>
+
+<style scoped>
+.reviews-carousel-wrapper {
+  width: 100%;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.reviews-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(245, 195, 219, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.review-card:hover {
+  border-color: #F5C3DB;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars {
+  color: #F5C3DB;
+  font-size: 1.1rem;
+}
+
+.rating-value {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.review-text {
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-info h4 {
+  font-family: 'Lexend', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.source {
+  font-size: 0.8rem;
+  color: #999;
+  margin: 0;
+}
+
+.reviews-summary {
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(245, 195, 219, 0.15);
+  text-align: center;
+  min-width: 200px;
+}
+
+.summary-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.summary-rating {
+  font-family: 'Lexend', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.summary-stars {
+  color: #F5C3DB;
+  font-size: 1.2rem;
+}
+
+.summary-count {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 0;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+}
+
+@media (max-width: 1024px) {
+  .carousel-container {
+    flex-direction: column;
+  }
+  
+  .reviews-summary {
+    min-width: 100%;
+  }
+}
+</style>

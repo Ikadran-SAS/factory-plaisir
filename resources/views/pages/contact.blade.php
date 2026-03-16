@@ -70,7 +70,7 @@
                         <select id="sujet" name="sujet" class="form-select @error('sujet') is-invalid @enderror" required>
                             <option value="">Choisissez un sujet</option>
                             <option value="allergenes"    @selected(old('sujet')=='allergenes')>Question sur les allergènes</option>
-                            <option value="click-collect" @selected(old('sujet')=='click-collect')>Click &amp; Collect</option>
+                            <option value="click-collect" @selected(old('sujet')=='click-collect')>Click &amp; collect</option>
                             <option value="recrutement"   @selected(old('sujet')=='recrutement')>Recrutement</option>
                             <option value="franchise"     @selected(old('sujet')=='franchise')>Devenir franchisé</option>
                             <option value="avis"          @selected(old('sujet')=='avis')>Retour d'expérience</option>
@@ -91,7 +91,7 @@
             </div>
             <div>
                 <div class="info-card">
-                    <h3>📍 Adresse &amp; Accès</h3>
+                    <h3>📍 Adresse &amp; accès</h3>
                     <p><strong>Aéroport Toulouse-Blagnac</strong><br>Zone réservée Hall C, Portes 30–36<br>31700 Blagnac, France</p>
                     <p>Tramway T2 – Arrêt Aéroport</p>
                     <p><a href="tel:+33561000000">+33 (0)5 61 00 00 00</a></p>

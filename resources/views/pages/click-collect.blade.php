@@ -4,11 +4,11 @@
 @section('keywords', $seo['keywords'])
 @section('canonical', $seo['canonical'])
 @section('content')
-<nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Click &amp; Collect</span></div></nav>
+<nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Click &amp; collect</span></div></nav>
 <div class="page-hero">
     <div class="page-hero-inner">
         <span class="section-tag">Service · Zéro attente</span>
-        <h1>Click &amp; Collect –<br><em>Commandez avant d'arriver</em></h1>
+        <h1>Click &amp; collect –<br><em>Commandez avant d'arriver</em></h1>
         <p>Commandez en ligne, récupérez votre repas directement au comptoir Hall C sans attendre. Idéal pour les voyageurs pressés.</p>
     </div>
 </div>

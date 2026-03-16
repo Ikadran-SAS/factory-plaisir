@@ -1,113 +1,137 @@
 <template>
-  <div class="faq-vue">
-    <!-- Barre de recherche -->
-    <div class="faq-search">
-      <input
-        v-model="searchQuery"
-        type="search"
-        placeholder="Rechercher une question…"
-        class="faq-search-input"
-        aria-label="Rechercher dans la FAQ"
-      />
+  <div class="faq-accordion-wrapper">
+    <div v-if="!faqs || faqs.length === 0" class="empty-state">
+      <p>Aucune question disponible</p>
     </div>
-
-    <!-- Catégories -->
-    <div v-if="!searchQuery">
-      <div
-        v-for="(items, category) in faqs"
-        :key="category"
-        class="faq-category"
-      >
-        <h2 class="faq-category-title">
-          {{ items[0].category_icon }} {{ items[0].category_label }}
-        </h2>
-        <div class="faq-items">
-          <div
-            v-for="item in items"
-            :key="item.id"
-            class="faq-item"
-            :class="{ 'faq-item--open': openItem === item.id }"
-          >
-            <button
-              class="faq-question"
-              @click="toggle(item.id)"
-              :aria-expanded="openItem === item.id"
-            >
-              <span>{{ item.question }}</span>
-              <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-            <transition name="faq-expand">
-              <div
-                v-show="openItem === item.id"
-                class="faq-answer"
-                v-html="item.answer"
-              ></div>
-            </transition>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Résultats de recherche -->
-    <div v-else>
-      <div v-if="searchResults.length" class="faq-items">
-        <div
-          v-for="item in searchResults"
-          :key="item.id"
-          class="faq-item"
-          :class="{ 'faq-item--open': openItem === item.id }"
+    <div v-else class="accordion">
+      <div v-for="(faq, index) in faqs" :key="index" class="accordion-item">
+        <button 
+          class="accordion-trigger"
+          @click="toggleItem(index)"
+          :aria-expanded="expandedIndex === index"
         >
-          <button class="faq-question" @click="toggle(item.id)" :aria-expanded="openItem === item.id">
-            <span>{{ item.question }}</span>
-            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-          <transition name="faq-expand">
-            <div v-show="openItem === item.id" class="faq-answer" v-html="item.answer"></div>
-          </transition>
+          <span class="accordion-title">{{ faq.question }}</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div v-if="expandedIndex === index" class="accordion-content">
+          <p>{{ faq.answer }}</p>
         </div>
-      </div>
-      <div v-else class="faq-no-results">
-        <p>Aucune question ne correspond à votre recherche. <a href="/contact">Contactez-nous directement</a>.</p>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'FaqAccordion',
-  props: {
-    faqs: {
-      type: Object,
-      default: () => ({})
-    }
-  },
-  data() {
-    return {
-      openItem: null,
-      searchQuery: ''
-    }
-  },
-  computed: {
-    allItems() {
-      return Object.values(this.faqs).flat()
-    },
-    searchResults() {
-      const q = this.searchQuery.toLowerCase()
-      return this.allItems.filter(item =>
-        item.question.toLowerCase().includes(q) ||
-        item.answer.toLowerCase().includes(q)
-      )
-    }
-  },
-  methods: {
-    toggle(id) {
-      this.openItem = this.openItem === id ? null : id
-    }
+<script setup>
+import { ref } from 'vue'
+
+const props = defineProps({
+  faqs: {
+    type: Array,
+    default: () => ([])
   }
+})
+
+const expandedIndex = ref(null)
+
+const toggleItem = (index) => {
+  expandedIndex.value = expandedIndex.value === index ? null : index
 }
 </script>
+
+<style scoped>
+.faq-accordion-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.accordion-item:hover {
+  border-color: #F5C3DB;
+  background: rgba(245, 195, 219, 0.05);
+}
+
+.accordion-trigger {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Lexend', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.accordion-trigger:hover {
+  color: #F5C3DB;
+}
+
+.accordion-trigger[aria-expanded="true"] {
+  color: #F5C3DB;
+}
+
+.accordion-title {
+  flex: 1;
+}
+
+.accordion-icon {
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+  color: #F5C3DB;
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.accordion-content p {
+  margin: 0;
+}
+
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .accordion-trigger {
+    padding: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .accordion-content {
+    padding: 0 1.25rem 1.25rem;
+  }
+}
+</style>

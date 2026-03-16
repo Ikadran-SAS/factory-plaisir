@@ -48,12 +48,12 @@
 
             {{-- Colonne carte --}}
             <div class="footer-col">
-                <h4>Notre Carte</h4>
+                <h4>Notre carte</h4>
                 <ul>
                     <li><a href="{{ route('menu.burgers') }}">Burgers Gourmets</a></li>
                     <li><a href="{{ route('menu.bagels') }}">Bagels Authentiques</a></li>
                     <li><a href="{{ route('menu.cheesecake') }}">Cheesecakes</a></li>
-                    <li><a href="{{ route('menu.bowls') }}">Bowls &amp; Salades</a></li>
+                    <li><a href="{{ route('menu.bowls') }}">Bowls &amp; salades</a></li>
                 </ul>
             </div>
 
@@ -61,7 +61,7 @@
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="{{ route('click-collect') }}">Click &amp; Collect</a></li>
+                    <li><a href="{{ route('click-collect') }}">Click &amp; collect</a></li>
                     <li><a href="{{ route('faq') }}">FAQ Allergènes</a></li>
                     <li><a href="{{ route('contact') }}">Contactez-nous</a></li>
                 </ul>
@@ -71,10 +71,10 @@
             <div class="footer-col">
                 <h4>Informations</h4>
                 <ul>
-                    <li><a href="{{ route('blog.index') }}">Guide du Voyageur</a></li>
+                    <li><a href="{{ route('blog.index') }}">Guide du voyageur</a></li>
                     <li><a href="#">Recrutement</a></li>
-                    <li><a href="#">Mentions Légales</a></li>
-                    <li><a href="#">Devenez Franchise</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Devenez franchise</a></li>
                 </ul>
             </div>
         </div>

@@ -1,14 +1,17 @@
-import { h, createApp } from 'vue'
-import { createInertiaApp } from '@inertiajs/vue3'
+import { createApp } from 'vue'
+import FaqAccordion from './components/FaqAccordion.vue'
 
-createInertiaApp({
-  resolve: (name) => {
-    const pages = import.meta.glob('./pages/**/*.vue', { eager: true })
-    return pages[`./pages/${name}.vue`]
-  },
-  setup({ el, App, props, plugin }) {
-    createApp({ render: () => h(App, props) })
-      .use(plugin)
-      .mount(el)
-  },
-})
+// Mount FAQ Accordion component if element exists
+const faqContainer = document.getElementById('faq-accordion-app')
+if (faqContainer) {
+  const encodedFaqs = faqContainer.dataset.faqs
+  const faqs = encodedFaqs ? JSON.parse(atob(encodedFaqs)) : []
+
+  createApp({
+    components: { FaqAccordion },
+    template: '<FaqAccordion :faqs="faqs" />',
+    data() {
+      return { faqs }
+    }
+  }).mount(faqContainer)
+}
