@@ -1,27 +1,3 @@
-{{-- ── BLOC DE MAILLAGE INTERNE ── --}}
-<div class="internal-links">
-    <div class="container">
-        <div class="internal-links-grid">
-            <a href="{{ route('menu.burgers') }}" class="internal-link-card">
-                <h4>🍔 L'Atelier Burger</h4>
-                <p>Smash Burgers, options Halal, menus enfants</p>
-            </a>
-            <a href="{{ route('menu.bagels') }}" class="internal-link-card">
-                <h4>🥯 Bagels New-Yorkais</h4>
-                <p>Chauds, froids, à composer — dès 07h00</p>
-            </a>
-            <a href="{{ route('menu.cheesecake') }}" class="internal-link-card">
-                <h4>🍰 Cheesecake Factory</h4>
-                <p>Recettes du chef Jonathan Jablonski</p>
-            </a>
-            <a href="{{ route('menu.bowls') }}" class="internal-link-card">
-                <h4>🥗 Healthy &amp; Bowls</h4>
-                <p>Super Bowls, salades, options Veggie</p>
-            </a>
-        </div>
-    </div>
-</div>
-
 {{-- ── FOOTER PRINCIPAL ── --}}
 <footer class="footer">
     <div class="container">
@@ -41,7 +17,7 @@
                         <span itemprop="addressCountry">France</span>
                     </span><br>
                     <em style="color:var(--pink-dark)">Parking gratuit – Gare RER Val d'Europe</em><br><br>
-                    <a href="tel:+33561000000" itemprop="telephone" style="color:var(--navy);font-weight:600">+33 (0)5 61 00 00 00</a><br>
+                    <a href="tel:0164632889" itemprop="telephone" style="color:var(--navy);font-weight:600">01 64 63 28 89</a><br>
                     <a href="mailto:contact@factoryandco.com" itemprop="email" style="color:var(--navy);font-weight:600">contact@factoryandco.com</a>
                 </address>
             </div>

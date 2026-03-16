@@ -41,13 +41,13 @@ const toggleItem = (index) => {
 <style scoped>
 .faq-accordion-wrapper {
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .accordion {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
@@ -125,6 +125,10 @@ const toggleItem = (index) => {
 }
 
 @media (max-width: 768px) {
+  .accordion {
+    grid-template-columns: 1fr;
+  }
+
   .accordion-trigger {
     padding: 1.25rem;
     font-size: 0.95rem;

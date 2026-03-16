@@ -39,7 +39,7 @@
             'name' => 'Factory & Co Val d\'Europe',
             'description' => 'Restaurant burger, bagel et cheesecake à Val d\'Europe à Serris. Fast-casual américain, ouvert 7j/7.',
             'url' => url('/'),
-            'telephone' => '+33561000000',
+            'telephone' => '0164632889',
             'email' => 'contact@factoryandco.com',
             'image' => asset('images/og-factory-co.jpg'),
             'logo' => asset('images/logo.png'),

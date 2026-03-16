@@ -92,9 +92,9 @@
             <div>
                 <div class="info-card">
                     <h3>📍 Adresse &amp; accès</h3>
-                    <p><strong>Aéroport Toulouse-Blagnac</strong><br>Zone réservée Hall C, Portes 30–36<br>31700 Blagnac, France</p>
-                    <p>Tramway T2 – Arrêt Aéroport</p>
-                    <p><a href="tel:+33561000000">+33 (0)5 61 00 00 00</a></p>
+                    <p><strong>Centre Commercial Val d'Europe</strong><br>14 Rue du Danube<br>77700 Serris, France</p>
+                    <p>🅿️ Parking gratuit – 🚆 RER E Gare du Val d'Europe</p>
+                    <p><a href="tel:0164632889">01 64 63 28 89</a></p>
                     <p><a href="mailto:contact@factoryandco.com">contact@factoryandco.com</a></p>
                 </div>
                 <div class="info-card">
@@ -113,8 +113,8 @@
                     </table>
                 </div>
                 <div class="map-wrap" style="height:280px">
-                    <iframe title="Localisation Factory & Co Toulouse-Blagnac"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.0!2d1.3678!3d43.6290!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb6e6e6e6e6e%3A0x1!2sFactory+%26+Co+A%C3%A9roport+Toulouse-Blagnac!5e0!3m2!1sfr!2sfr!4v1"
+                    <iframe title="Localisation Factory & Co Val d'Europe"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.0!2d2.7758!3d48.8753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e614d4c8c8c8c8%3A0x1!2sFactory+%26+Co+Val+d%27Europe!5e0!3m2!1sfr!2sfr!4v1"
                         allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>

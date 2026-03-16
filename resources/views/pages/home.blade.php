@@ -85,7 +85,7 @@
 {{-- ════════════════════════════════════════════
      SECTION : LA PHILOSOPHIE
 ════════════════════════════════════════════ --}}
-<section class="section section-light">
+<section class="section section-light section-philosophy">
     <div class="container">
         <div class="concept-grid">
             <div class="concept-text">
@@ -126,22 +126,41 @@
             <h2 class="section-title light">Le meilleur de Factory &amp; Co Val d'Europe</h2>
         </div>
 
-        {{-- Affichage des produits en slider --}}
+        {{-- Slider d'images produits --}}
         <div class="products-slider-wrapper">
-            @php
-                $allProducts = collect($featuredProducts)->flatten(1);
-            @endphp
             <div class="products-slider">
-                @foreach($allProducts as $product)
-                    <div class="product-slide">
-                        @if($product->image_url)
-                            <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="product-img">
-                        @endif
-                        <h4>{{ $product->name }}</h4>
-                        <p class="product-desc">{{ $product->description }}</p>
-                        <div class="product-price">{{ $product->price }}€</div>
-                    </div>
-                @endforeach
+                <div class="product-item-slide">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp" alt="Smash Burgers" loading="lazy">
+                    <figcaption>Smash Burgers</figcaption>
+                </div>
+                <div class="product-item-slide">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/smoothiee.jpeg" alt="Breakfast" loading="lazy">
+                    <figcaption>Breakfast</figcaption>
+                </div>
+                <div class="product-item-slide">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/BLT-SEUL-2.jpg" alt="Bagels" loading="lazy">
+                    <figcaption>Bagels</figcaption>
+                </div>
+                <div class="product-item-slide">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/milkshake.png" alt="Milkshakes" loading="lazy">
+                    <figcaption>Milkshakes</figcaption>
+                </div>
+                <div class="product-item-slide">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/Factory_And_Co_Claye_Souilly_Jon_Filin_Burger_Cheesecake_Sports_Bar-6.png" alt="Cheesecake" loading="lazy">
+                    <figcaption>Cheesecake</figcaption>
+                </div>
+                <div class="product-item-slide">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/Bowl-768x1086.png" alt="Bowl" loading="lazy">
+                    <figcaption>Bowl</figcaption>
+                </div>
+                <div class="product-item-slide">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/Cheesecake-1.png" alt="Cheesecake" loading="lazy">
+                    <figcaption>Cheesecake</figcaption>
+                </div>
+                <div class="product-item-slide">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/Coffee.png" alt="Coffeeshop" loading="lazy">
+                    <figcaption>Coffeeshop</figcaption>
+                </div>
             </div>
         </div>
     </div>
@@ -196,61 +215,37 @@
             <h2 class="section-title dark">Au cœur de Val d'Europe</h2>
         </div>
 
-        <div class="location-grid">
-            <div class="location-info">
-                <div class="info-card info-address">
-                    <div class="info-icon">📍</div>
-                    <div class="info-content">
-                        <h3>Nous trouver</h3>
-                        <p class="info-main">14 Rue du Danube</p>
-                        <p class="info-sub">CC Val d'Europe • 77700 Serris</p>
-                    </div>
-                </div>
-
-                <div class="info-card info-hours">
-                    <div class="info-icon">🕐</div>
-                    <div class="info-content">
-                        <h3>Horaires d'ouverture</h3>
-                        <div class="hours-grid">
-                            @foreach($openingHours as $hours)
-                                <div class="hour-item">
-                                    <span class="day-label">{{ $hours->days_label }}</span>
-                                    <span class="day-hours">{{ $hours->opens_at_formatted }} – {{ $hours->closes_at_formatted }}</span>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-card info-access">
-                    <div class="info-icon">🚗</div>
-                    <div class="info-content">
-                        <h3>Accès & Transport</h3>
-                        <ul class="access-list">
-                            <li><strong>🅿️ Parking gratuit</strong> du centre commercial</li>
-                            <li><strong>🚆 RER E</strong> Gare du Val d'Europe</li>
-                            <li><strong>✨ À 15 min</strong> de Disneyland Paris</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="services-showcase">
-                    <p class="services-title">Nos Services</p>
-                    <div class="services-grid">
-                        @foreach(['Sur place', 'À emporter', 'Click & Collect', 'Halal', 'Végétarien', 'Family Friendly', 'Accessible PMR'] as $badge)
-                            <span class="service-tag">{{ $badge }}</span>
-                        @endforeach
-                    </div>
-                </div>
+        <div class="location-info">
+            <div>
+                <h3>📍 Nous trouver</h3>
+                <p>14 Rue du Danube<br>CC Val d'Europe • 77700 Serris</p>
             </div>
 
-            <div class="map-wrap">
-                <iframe
-                    title="Localisation Factory & Co Val d'Europe"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.0!2d2.7758!3d48.8753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e614d4c8c8c8c8%3A0x1!2sFactory+%26+Co+Val+d%27Europe!5e0!3m2!1sfr!2sfr!4v1"
-                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <div>
+                <h3>🕐 Horaires d'ouverture</h3>
+                <ul>
+                    @foreach($openingHours as $hours)
+                        <li>{{ $hours->days_label }}: {{ $hours->opens_at_formatted }} – {{ $hours->closes_at_formatted }}</li>
+                    @endforeach
+                </ul>
             </div>
+
+            <div>
+                <h3>🚗 Accès & transport</h3>
+                <ul>
+                    <li>🅿️ Parking gratuit du centre commercial</li>
+                    <li>🚆 RER E Gare du Val d'Europe</li>
+                    <li>✨ À 15 min de Disneyland Paris</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="map-wrap">
+            <iframe
+                title="Localisation Factory & Co Val d'Europe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.0!2d2.7758!3d48.8753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e614d4c8c8c8c8%3A0x1!2sFactory+%26+Co+Val+d%27Europe!5e0!3m2!1sfr!2sfr!4v1"
+                allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </div>
 </section>
@@ -263,11 +258,11 @@
         <div class="cta-large-content">
             <img src="{{ asset('images/ashley.webp') }}" alt="Commander chez Factory & Co" class="cta-image">
             <div class="cta-text">
-                <h2>Commander pour plus tard</h2>
-                <p>Anticipez votre visite ! Commandez en ligne et récupérez votre repas au moment choisi. Parfait pour les visiteurs pressés ou ceux qui veulent optimiser leur temps au centre commercial.</p>
-                <a href="{{ route('click-collect') }}" class="btn btn-pink">
+                <h2>À emporter sur place</h2>
+                <p>Venez nous rendre visite ! Composez votre menu sur place, à la minute, et savourez votre repas à emporter. Parfait pour les visiteurs pressés qui veulent un vrai burger fait maison, sans attente excessive.</p>
+                <a href="{{ route('menu.burgers') }}" class="btn btn-pink">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                    Commander maintenant
+                    Voir la carte
                 </a>
             </div>
         </div>
@@ -287,7 +282,7 @@
         <div id="faq-accordion-app" data-faqs="{{ base64_encode(json_encode($faqs)) }}"></div>
         <div class="faq-cta text-center">
             <p>Vous avez d'autres questions ?</p>
-            <a href="{{ route('contact') }}" class="btn btn-outline-navy">Nous contacter</a>
+            <a href="{{ route('contact') }}" class="btn btn-outline-pink">Nous contacter</a>
         </div>
     </div>
 </section>
