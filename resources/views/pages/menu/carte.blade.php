@@ -1,0 +1,402 @@
+@extends('layouts.app')
+
+@section('title', $seo['title'])
+@section('description', $seo['description'])
+@section('keywords', $seo['keywords'])
+@section('canonical', $seo['canonical'])
+
+@section('content')
+
+{{-- BREADCRUMB --}}
+<nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+        <a href="{{ route('home') }}">Accueil</a>
+        <span class="bc-sep">›</span>
+        <span>La Carte</span>
+    </div>
+</nav>
+
+{{-- ════════════════════════════════════════════
+     HERO SECTION - PREMIUM LANDING
+════════════════════════════════════════════ --}}
+<section class="hero hero-carte">
+    {{-- Animated Background Shapes --}}
+    <div class="hero-shapes">
+        <div class="shape shape-burger"></div>
+        <div class="shape shape-fries"></div>
+        <div class="shape shape-circle-1"></div>
+        <div class="shape shape-circle-2"></div>
+        <div class="shape shape-circle-3"></div>
+    </div>
+
+    {{-- Gradient Overlay --}}
+    <div class="hero-overlay"></div>
+
+    {{-- Hero Content --}}
+    <div class="hero-content">
+        <span class="section-tag">🍔 LA CARTE</span>
+        <h1>Un voyage culinaire<br>sans fin</h1>
+        <p>Découvrez nos incontournables New York et nos créations exclusives</p>
+        <button class="btn btn-pink scroll-to-categories" aria-label="Parcourir la carte">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+            Parcourir la carte
+        </button>
+    </div>
+
+    {{-- Scroll Indicator --}}
+    <div class="scroll-indicator">
+        <div class="scroll-dot"></div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     STICKY CATEGORY NAVIGATION
+════════════════════════════════════════════ --}}
+<nav class="category-nav" id="category-nav">
+    <a href="#burgers" class="category-pill" data-category="burgers">
+        <span class="pill-icon">🍔</span>
+        <span class="pill-label">Burgers</span>
+    </a>
+    <a href="#bagels" class="category-pill" data-category="bagels">
+        <span class="pill-icon">🥯</span>
+        <span class="pill-label">Bagels</span>
+    </a>
+    <a href="#cheesecake" class="category-pill" data-category="cheesecake">
+        <span class="pill-icon">🍰</span>
+        <span class="pill-label">Cheesecake</span>
+    </a>
+    <a href="#bowls" class="category-pill" data-category="bowls">
+        <span class="pill-icon">🥗</span>
+        <span class="pill-label">Bowls</span>
+    </a>
+</nav>
+
+{{-- ════════════════════════════════════════════
+     CATEGORY SECTIONS
+════════════════════════════════════════════ --}}
+
+{{-- BURGERS --}}
+<section class="category-section" id="burgers">
+    <div class="container">
+        <div class="category-hero">
+            <div class="category-badge">
+                <span class="badge-icon">🍔</span>
+                NYC SMASH BURGERS
+            </div>
+            <h2 class="category-title">L'Atelier Burger</h2>
+            <p class="category-subtitle">Du bœuf de race, smashé à la commande, jamais surgelé</p>
+            <p class="category-description">Chaque burger est une création culinaire pensée pour séduire vos papilles. Sauce secrète depuis 1989, garnitures fraîches, pain grillé à la perfection.</p>
+        </div>
+
+        <div class="items-grid">
+            <div class="item-card">
+                <div class="item-image" style="background-image: url('{{ asset('images/burger.webp') }}')">
+                    <span class="price-badge">14,90€</span>
+                </div>
+                <div class="item-content">
+                    <h3>Cheeseburguer</h3>
+                    <p>Bœuf, cheddar, tomate, oignon rouge, pickles, salade, sauce 1989</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image" style="background-image: url('{{ asset('images/burger.webp') }}')">
+                    <span class="price-badge">15,90€</span>
+                </div>
+                <div class="item-content">
+                    <h3>Spicy Smash</h3>
+                    <p>Bœuf, bacon, jalapeños, cheddar épicé, sauce sriracha</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image" style="background-image: url('{{ asset('images/burger.webp') }}')">
+                    <span class="price-badge">16,90€</span>
+                </div>
+                <div class="item-content">
+                    <h3>Golden</h3>
+                    <p>Double bœuf, double cheddar, bacon croustillant, sauce barbecue</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image" style="background-image: url('{{ asset('images/burger.webp') }}')">
+                    <span class="price-badge">15,90€</span>
+                </div>
+                <div class="item-content">
+                    <h3>Southwestern</h3>
+                    <p>Bœuf, oignon rouge, tomate, avocat, cheddar, sauce épicée</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="{{ route('menu.burgers') }}" class="btn btn-pink btn-lg">
+            Voir tous les burgers →
+        </a>
+    </div>
+</section>
+
+{{-- BAGELS --}}
+<section class="category-section category-section-alt" id="bagels">
+    <div class="container">
+        <div class="category-hero">
+            <div class="category-badge">
+                <span class="badge-icon">🥯</span>
+                BAGELS NEW-YORKAIS
+            </div>
+            <h2 class="category-title">Breakfast Américain</h2>
+            <p class="category-subtitle">Dès 07h00 - Recette authen tique à farine canadienne</p>
+            <p class="category-description">Nos bagels sont préparés en-house avec la farine canadienne traditionnelle. Chauds, froids, à composer selon vos envies.</p>
+        </div>
+
+        <div class="items-grid">
+            <div class="item-card">
+                <div class="item-image" style="background: linear-gradient(135deg, #F5C3DB 0%, #E8A0C0 100%)">
+                    <span class="price-badge">8,90€</span>
+                </div>
+                <div class="item-content">
+                    <h3>Cream Cheese</h3>
+                    <p>Bagel nature grillé, crème fraîche, ciboulette fraîche</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image" style="background: linear-gradient(135deg, #F5C3DB 0%, #E8A0C0 100%)">
+                    <span class="price-badge">10,90€</span>
+                </div>
+                <div class="item-content">
+                    <h3>B.L.T.</h3>
+                    <p>Bacon croustillant, laitue fraîche, tomate, mayo, cheddar</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image" style="background: linear-gradient(135deg, #F5C3DB 0%, #E8A0C0 100%)">
+                    <span class="price-badge">9,90€</span>
+                </div>
+                <div class="item-content">
+                    <h3>New Yorker</h3>
+                    <p>Smoked salmon, fromage frais, concombre, aneth</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image" style="background: linear-gradient(135deg, #F5C3DB 0%, #E8A0C0 100%)">
+                    <span class="price-badge">10,90€</span>
+                </div>
+                <div class="item-content">
+                    <h3>Bacon Lover</h3>
+                    <p>Double bacon, œuf, cheddar, tomato, sauce spéciale</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="{{ route('menu.bagels') }}" class="btn btn-pink btn-lg">
+            Voir tous les bagels →
+        </a>
+    </div>
+</section>
+
+{{-- CHEESECAKE --}}
+<section class="category-section" id="cheesecake">
+    <div class="container">
+        <div class="category-hero">
+            <div class="category-badge">
+                <span class="badge-icon">🍰</span>
+                CHEESECAKE FACTORY
+            </div>
+            <h2 class="category-title">Pâtisseries Premium</h2>
+            <p class="category-subtitle">Recettes authen tiques du Chef Jonathan</p>
+            <p class="category-description">Le vrai New York cheesecake préparé selon les traditions. Textures parfaites, saveurs authentiques, portions généreuses.</p>
+        </div>
+
+        <div class="items-grid">
+            <div class="item-card">
+                <div class="item-image" style="background-image: url('{{ asset('images/desserts.webp') }}')">
+                    <span class="price-badge">6,50€</span>
+                </div>
+                <div class="item-content">
+                    <h3>New York Cheesecake</h3>
+                    <p>Le classique intemporel, texte re veloutée, fond de biscuit croustillant</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image" style="background-image: url('{{ asset('images/desserts.webp') }}')">
+                    <span class="price-badge">6,50€</span>
+                </div>
+                <div class="item-content">
+                    <h3>Oreo Paradise</h3>
+                    <p>Cheesecake vanille, cookies Oreo, nappage chocolat brillant</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image" style="background-image: url('{{ asset('images/desserts.webp') }}')">
+                    <span class="price-badge">6,50€</span>
+                </div>
+                <div class="item-content">
+                    <h3>Key Lime Pie</h3>
+                    <p>Cheesecake lime, crème acidulée, crème fouettée généreuse</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image" style="background-image: url('{{ asset('images/desserts.webp') }}')">
+                    <span class="price-badge">6,50€</span>
+                </div>
+                <div class="item-content">
+                    <h3>Spéculoos Crunch</h3>
+                    <p>Cheesecake épices, pâte de spéculoos, granola croustillant</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="{{ route('menu.cheesecake') }}" class="btn btn-pink btn-lg">
+            Voir tous les cheesecakes →
+        </a>
+    </div>
+</section>
+
+{{-- BOWLS --}}
+<section class="category-section category-section-alt" id="bowls">
+    <div class="container">
+        <div class="category-hero">
+            <div class="category-badge">
+                <span class="badge-icon">🥗</span>
+                SUPER BOWLS SAINS
+            </div>
+            <h2 class="category-title">Healthy & Bien-être</h2>
+            <p class="category-subtitle">Vegan, Végétarien, et délicieux</p>
+            <p class="category-description">Manger sain sans compromis sur le goût. Nos bowls sont composés avec des ingrédients frais, biologiques quand possible.</p>
+        </div>
+
+        <div class="items-grid">
+            <div class="item-card">
+                <div class="item-image" style="background: linear-gradient(135deg, #90EE90 0%, #7CFC00 100%)">
+                    <span class="price-badge">12,90€</span>
+                </div>
+                <div class="item-content">
+                    <h3>Cæsar Deluxe</h3>
+                    <p>Laitue romaine fraîche, poulet grillé, parmesan, croutons, sauce cæsar</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image" style="background: linear-gradient(135deg, #90EE90 0%, #7CFC00 100%)">
+                    <span class="price-badge">13,90€</span>
+                </div>
+                <div class="item-content">
+                    <h3>Cancoon Tropicale</h3>
+                    <p>Laitue, mangue, avocat, noix de coco, poulet épicé, vinaigrette tropicale</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image" style="background: linear-gradient(135deg, #90EE90 0%, #7CFC00 100%)">
+                    <span class="price-badge">14,90€</span>
+                </div>
+                <div class="item-content">
+                    <h3>US Marshal Protéiné</h3>
+                    <p>Épinards, quinoa, steak de soja, protéines, edamame, sauce tahini</p>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image" style="background: linear-gradient(135deg, #90EE90 0%, #7CFC00 100%)">
+                    <span class="price-badge">12,90€</span>
+                </div>
+                <div class="item-content">
+                    <h3>Buddha Vegan</h3>
+                    <p>Laitue, tofu grillé, riz complet, légumes rôtis, sauce cacahuète vegan</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="{{ route('menu.bowls') }}" class="btn btn-pink btn-lg">
+            Voir tous les bowls →
+        </a>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     CTA FINAL - COMMANDER MAINTENANT
+════════════════════════════════════════════ --}}
+<section class="section cta-final-carte">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Prêt à déguster ?</h2>
+            <p>Commandez maintenant en restaurant, en click & collect, ou en delivery</p>
+            <div class="cta-buttons">
+                <a href="javascript:void(0)" onclick="window.factoryCoNav && window.factoryCoNav.openNavigationModal()" class="btn btn-pink btn-lg">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Venir au restaurant
+                </a>
+                <a href="javascript:void(0)" class="btn btn-outline-dark btn-lg">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2z"></path>
+                    </svg>
+                    Click & Collect
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- JavaScript for Animations & Interactions --}}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Scroll to categories button
+    const scrollBtn = document.querySelector('.scroll-to-categories');
+    if (scrollBtn) {
+        scrollBtn.addEventListener('click', function() {
+            const nav = document.getElementById('category-nav');
+            if (nav) {
+                nav.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+
+    // Category pill active state on scroll
+    const categoryPills = document.querySelectorAll('.category-pill');
+    const categorySections = document.querySelectorAll('.category-section');
+
+    function updateActiveCategory() {
+        let current = '';
+        categorySections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.pageYOffset >= sectionTop - 200) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        categoryPills.forEach(pill => {
+            pill.classList.remove('active');
+            if (pill.getAttribute('data-category') === current) {
+                pill.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveCategory);
+
+    // Smooth scroll for category pills
+    categoryPills.forEach(pill => {
+        pill.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('data-category');
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+});
+</script>
+
+@endsection

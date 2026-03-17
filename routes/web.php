@@ -24,6 +24,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/concept', [ConceptController::class, 'index'])->name('concept');
 
 /* ── NIVEAU 2 : Silos produits ── */
+Route::get('/carte', [MenuController::class, 'index'])->name('menu.index');
 Route::prefix('carte')->name('menu.')->group(function () {
     Route::get('/burgers', [MenuController::class, 'burgers'])->name('burgers');
     Route::get('/bagels', [MenuController::class, 'bagels'])->name('bagels');

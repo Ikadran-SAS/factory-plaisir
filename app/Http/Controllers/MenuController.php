@@ -7,6 +7,22 @@ use App\Models\Product;
 class MenuController extends Controller
 {
     /**
+     * Page Landing — La Carte
+     */
+    public function index()
+    {
+        $seo = [
+            'title' => 'La Carte | Factory & Co – Burgers, Bagels, Cheesecake à Val d\'Europe',
+            'description' => 'Découvrez la carte complète de Factory & Co à Val d\'Europe. Smash Burgers, Bagels New-Yorkais, Cheesecake premium et Bowls sains.',
+            'keywords' => 'carte factory co serris, menu factory co val d\'europe, burger bagel cheesecake serris',
+            'canonical' => route('menu.index'),
+            'h1' => 'La Carte – Factory & Co',
+        ];
+
+        return view('pages.menu.carte', compact('seo'));
+    }
+
+    /**
      * Page Silo 1 — L'Atelier Burger
      */
     public function burgers()
