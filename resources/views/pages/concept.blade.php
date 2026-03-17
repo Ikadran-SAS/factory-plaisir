@@ -292,8 +292,16 @@
             Chaque assiette est une promesse de gourmandise, chaque détail pensé pour créer un moment mémorable.
         </blockquote>
 
-        {{-- Grille 4 Catégories (2x2) avec cartes PREMIUM redesignées --}}
-        <div class="cuisine-categories-grid">
+        {{-- Slider Wrapper avec Navigation --}}
+        <div class="cuisine-slider-wrapper">
+            <button class="slider-nav slider-nav-prev" id="slider-prev" aria-label="Previous">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            {{-- Grille 4 Catégories avec cartes PREMIUM redesignées --}}
+            <div class="cuisine-categories-grid" id="cuisine-slider">
             {{-- Catégorie 1: Burgers --}}
             <div class="cuisine-card-premium">
                 {{-- Background Layer avec Ashley.webp blurred + Image produit + Overlay --}}
@@ -475,6 +483,13 @@
                 {{-- Shimmer Effect --}}
                 <div class="card-shimmer"></div>
             </div>
+        </div>
+
+            <button class="slider-nav slider-nav-next" id="slider-next" aria-label="Next">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
         </div>
 
         {{-- Engagement Box avec checklist --}}
@@ -743,5 +758,37 @@
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.getElementById('cuisine-slider');
+  const prevBtn = document.getElementById('slider-prev');
+  const nextBtn = document.getElementById('slider-next');
+
+  if (!slider || !prevBtn || !nextBtn) return;
+
+  const scrollAmount = 340; // Card width + gap
+
+  prevBtn.addEventListener('click', function() {
+    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', function() {
+    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  // Optional: Disable buttons at start/end
+  function updateButtonStates() {
+    prevBtn.disabled = slider.scrollLeft <= 0;
+    nextBtn.disabled = slider.scrollLeft >= slider.scrollWidth - slider.clientWidth - 10;
+
+    prevBtn.style.opacity = prevBtn.disabled ? '0.4' : '1';
+    nextBtn.style.opacity = nextBtn.disabled ? '0.4' : '1';
+  }
+
+  slider.addEventListener('scroll', updateButtonStates);
+  updateButtonStates();
+});
+</script>
 
 @endsection
