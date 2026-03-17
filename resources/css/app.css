@@ -1854,10 +1854,33 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
 
 /* ── Grille 4 Catégories (2x2) ── */
 .cuisine-categories-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
+  display: flex;
+  gap: 1.5rem;
   margin-bottom: 4rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  /* Smooth scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(204, 51, 102, 0.3) transparent;
+}
+
+.cuisine-categories-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.cuisine-categories-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cuisine-categories-grid::-webkit-scrollbar-thumb {
+  background: rgba(204, 51, 102, 0.3);
+  border-radius: 3px;
+}
+
+.cuisine-categories-grid::-webkit-scrollbar-thumb:hover {
+  background: rgba(204, 51, 102, 0.5);
 }
 
 /* ── Card Catégorie ── */
@@ -4322,7 +4345,9 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
 /* ── Container Principal Card Premium ── */
 .cuisine-card-premium {
   position: relative;
-  height: 480px;
+  width: 280px;
+  min-width: 280px;
+  height: 240px;
   border-radius: 16px;
   overflow: hidden;
   display: flex;
