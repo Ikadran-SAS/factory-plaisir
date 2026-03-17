@@ -40,179 +40,424 @@
     </video>
     <div class="hero-concept-overlay"></div>
     <div class="hero-content">
-        <span class="section-tag">PHILOSOPHIE</span>
-        <h1>L'Âme d'un Diner Authentique</h1>
-        <p>Factory & Co n'est pas qu'un restaurant. C'est une philosophie : celle de ramener l'authenticité des diners new-yorkais au cœur de Val d'Europe.</p>
+        <span class="section-tag">🍔</span>
+        <h1>Bien plus qu'un restaurant. Une expérience.</h1>
+        <p>Un aller simple pour New York… sans quitter votre centre commercial.</p>
     </div>
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION : L'HISTOIRE
+     SECTION : PITCH EMOTIONNEL (REDESIGNÉ)
 ════════════════════════════════════════════ --}}
-<section class="section section-light">
+<section class="section pitch-section-redesigned">
     <div class="container">
-        <div class="concept-grid">
-            <div class="concept-text">
-                <h2 class="concept-title concept-title-small">Une Histoire de Passion</h2>
-                <p>En 2008, <strong>Jonathan Jablonski</strong>, un chef formé aux côtés des plus grands cuisiniers de Brooklyn, a décidé de transporter l'âme authentique des diners new-yorkais au cœur du centre commercial Val d'Europe.</p>
-                <p>Pas de recettes figées, pas de surgelé. Juste une conviction : <strong>chaque plat doit respirer la passion et la qualité</strong>.</p>
-                <p style="margin-top: 2rem; font-style: italic; color: var(--pink-dark);">"Factory & Co, c'est l'histoire d'une liberté : celle de bien manger, sans compromis."</p>
-            </div>
-            <div class="concept-image">
-                <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Intérieur Factory & Co" loading="lazy">
-            </div>
-        </div>
-    </div>
-</section>
+        <div class="pitch-redesigned-grid">
+            {{-- Colonne Contenu --}}
+            <div class="pitch-redesigned-content">
+                {{-- Badge --}}
+                <span class="pitch-badge">
+                    <span class="pitch-badge-icon">💭</span>
+                    Notre Philosophie
+                </span>
 
-{{-- ════════════════════════════════════════════
-     SECTION : LES 3 PILIERS
-════════════════════════════════════════════ --}}
-<section class="section section-dark">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="concept-title light">Les Trois Piliers de notre Concept</h2>
-            <p class="text-light-muted">Ce qui fait de Factory & Co un endroit unique</p>
-        </div>
-        <div class="pillars-grid">
-            <div class="pillar-card">
-                <div class="pillar-icon">🔥</div>
-                <h3>Fait Maison à la Minute</h3>
-                <p>100% de nos plats sont préparés à la commande. Pas de plateau précuit, pas de sauce réfrigérée depuis trois jours. Juste de la fraîcheur, à chaque fois.</p>
-                <ul class="pillar-list">
-                    <li>Viande sélectionnée</li>
-                    <li>Pains frais du jour</li>
-                    <li>Sauces maison</li>
-                </ul>
-            </div>
-            <div class="pillar-card">
-                <div class="pillar-icon">🌟</div>
-                <h3>Qualité Artisanale</h3>
-                <p>Chaque ingrédient est choisi pour son goût, pas pour son coût. Nous travaillons avec des fournisseurs locaux et des producteurs de confiance.</p>
-                <ul class="pillar-list">
-                    <li>Fromages premium</li>
-                    <li>Fruits frais de saison</li>
-                    <li>Ingrédients traçables</li>
-                </ul>
-            </div>
-            <div class="pillar-card">
-                <div class="pillar-icon">❤️</div>
-                <h3>Passion & Savoir-Faire</h3>
-                <p>Notre équipe vit sa cuisine. Chaque burger est smashé sur plaque brûlante avec intention. Chaque cheesecake est une œuvre.</p>
-                <ul class="pillar-list">
-                    <li>Chef Jonathan Jablonski</li>
-                    <li>Équipe formée</li>
-                    <li>Perfectionnisme culinaire</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+                {{-- Titre principal avec highlight --}}
+                <h2 class="pitch-redesigned-title">
+                    Chez nous, on ne vient<br>
+                    <span class="pitch-highlight">simplement manger.</span>
+                </h2>
 
-{{-- ════════════════════════════════════════════
-     SECTION : SAVOIR-FAIRE
-════════════════════════════════════════════ --}}
-<section class="section section-light">
-    <div class="container">
-        <h2 class="concept-title">Comment on Prépare un Burger Factory & Co</h2>
-        <div class="process-timeline">
-            <div class="process-step">
-                <div class="process-number">1</div>
-                <h3>Sélection de la Viande</h3>
-                <p>Nous choisissons notre viande fraîche chaque matin auprès de nos fournisseurs. 80/20 de ratio gras/maigre : le sweet spot pour un smash burger.</p>
-            </div>
-            <div class="process-step">
-                <div class="process-number">2</div>
-                <h3>Smash sur Plaque Brûlante</h3>
-                <p>La viande arrive à température ambiante et est pressée sur une plaque à 200°C pendant 1 minute 30. Croûte parfaite = Maillard optimal.</p>
-            </div>
-            <div class="process-step">
-                <div class="process-number">3</div>
-                <h3>Fromage & Garnitures</h3>
-                <p>Fromage américain fondu, tomate fraîche, salade croustillante, oignon caramélisé. Chaque élément arrive au bon moment.</p>
-            </div>
-            <div class="process-step">
-                <div class="process-number">4</div>
-                <h3>Le Bun & la Sauce</h3>
-                <p>Pain toasté à la main, sauce maison généroyeuse. C'est la finition qui transforme un burger en expérience.</p>
-            </div>
-        </div>
-    </div>
-</section>
+                {{-- Accent line --}}
+                <div class="pitch-accent-line"></div>
 
-{{-- ════════════════════════════════════════════
-     SECTION : AMBIANCE & EXPÉRIENCE
-════════════════════════════════════════════ --}}
-<section class="section section-dark">
-    <div class="container">
-        <div class="concept-grid concept-grid-reverse">
-            <div class="concept-image">
-                <div class="concept-image-placeholder">
-                    <span>📸</span>
+                {{-- Lead --}}
+                <p class="pitch-redesigned-lead">
+                    On vient vivre un moment : <span class="pitch-emphasis">gourmand, généreux, réconfortant.</span>
+                </p>
+
+                {{-- Description --}}
+                <p class="pitch-redesigned-description">
+                    Entre burgers fondants, desserts iconiques et ambiance chaleureuse, chaque visite devient une parenthèse hors du temps. Ici, chaque détail est conçu pour transformer un simple repas en une véritable expérience.
+                </p>
+
+                {{-- CTA Button --}}
+                <div class="pitch-cta-group">
+                    <a href="javascript:void(0)" onclick="window.factoryCoNav && window.factoryCoNav.openNavigationModal()" class="btn btn-pink">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Venir chez nous
+                    </a>
                 </div>
             </div>
-            <div class="concept-text">
-                <h2 class="concept-title light">Une Expérience, Pas Juste un Repas</h2>
-                <p class="text-light-muted">Factory & Co c'est aussi une atmosphère. Des murs couleur navy, des néons rose, une musique qui respire l'âme new-yorkaise.</p>
-                <p class="text-light-muted" style="margin-top: 1.5rem;">C'est l'endroit où les voyageurs avant leur vol peuvent prendre une vraie pause. Pas une chaîne anonyme. Une adresse authentique avec du caractère.</p>
-                <div style="margin-top: 2rem; display: flex; gap: 1.5rem; flex-wrap: wrap;">
-                    <div class="experience-badge">
-                        <strong>Ouvert 7j/7</strong>
-                        <span>365 jours par an</span>
-                    </div>
-                    <div class="experience-badge">
-                        <strong>Service Rapide</strong>
-                        <span>10 min pour commander</span>
-                    </div>
-                    <div class="experience-badge">
-                        <strong>À Emporter</strong>
-                        <span>Parfait pour les voyages</span>
-                    </div>
+
+            {{-- Colonne Image --}}
+            <div class="pitch-redesigned-image">
+                <div class="pitch-image-wrapper">
+                    <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Intérieur Factory & Co - Atmosphère du diner" loading="lazy">
+                    {{-- Accent corner --}}
+                    <div class="pitch-image-accent"></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+
 {{-- ════════════════════════════════════════════
-     SECTION : VALEURS
+     SECTION : NOTRE CONCEPT
+════════════════════════════════════════════ --}}
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="concept-title light">🧠 Notre Concept</h2>
+            <p class="text-light-muted" style="font-size: 1.1rem; margin-top: 0.5rem;">L'énergie new-yorkaise, le savoir-faire français</p>
+        </div>
+
+        <div class="concept-content">
+            <p class="text-light-muted" style="margin-bottom: 2rem; font-size: 1.05rem;">
+                Notre concept repose sur une idée simple : proposer une cuisine gourmande et qualitative, dans un univers inspiré des diners new-yorkais.
+            </p>
+
+            <div class="concept-grid-simple">
+                <div class="concept-item">
+                    <h3 style="color: var(--pink); margin-bottom: 0.5rem;">Nous avons imaginé un lieu où :</h3>
+                    <ul class="concept-list">
+                        <li>la rapidité rencontre la qualité</li>
+                        <li>la street food devient une expérience</li>
+                        <li>chaque détail est pensé pour le plaisir</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="text-light-muted" style="margin-top: 2rem; font-style: italic; font-size: 1rem;">
+                Ici, tout est préparé avec exigence, dans un esprit fast casual premium : rapide, mais jamais bâclé.
+            </p>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : L'EXPÉRIENCE CLIENT
 ════════════════════════════════════════════ --}}
 <section class="section section-light">
     <div class="container">
-        <div class="section-header">
-            <h2 class="concept-title">Ce en Quoi On Croit</h2>
+        <h2 class="concept-title">🍽️ L'Expérience Client</h2>
+        <p class="section-subtitle">Un moment qui s'adapte à vous</p>
+
+        <div class="experience-content">
+            <p style="margin-bottom: 2rem; font-size: 1.05rem;">
+                Que vous soyez en pleine session shopping, en pause déjeuner ou en sortie détente, notre restaurant s'intègre naturellement dans votre journée.
+            </p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4>Prendre le temps</h4>
+                    <p>vous poser et savourer chaque bouchée</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Manger rapidement</h4>
+                    <p>sans compromis sur la qualité</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Partager un moment</h4>
+                    <p>convivial et chaleureux</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>S'offrir une pause</h4>
+                    <p>gourmande et réconfortante</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--pink-dark);">
+                Ici, tout est conçu pour être simple, fluide et agréable.
+            </p>
         </div>
-        <div class="values-grid">
-            <div class="value-item">
-                <h3>🌱 Responsabilité</h3>
-                <p>Nous travaillons avec des fournisseurs qui partagent nos valeurs. Pas d'OGM, pas de conservateurs inutiles.</p>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : NOTRE CUISINE
+════════════════════════════════════════════ --}}
+<section class="section section-dark">
+    <div class="container">
+        <h2 class="concept-title light">🍔 Notre Cuisine</h2>
+        <p class="text-light-muted" style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">Généreuse, gourmande, assumée</p>
+
+        <div class="cuisine-section">
+            <p class="text-light-muted" style="margin-bottom: 2rem; font-size: 1.05rem; text-align: center;">
+                Notre cuisine célèbre le plaisir.
+            </p>
+
+            <div class="cuisine-grid">
+                <div class="cuisine-item">
+                    <h4 style="color: var(--pink); margin-bottom: 0.5rem;">🍔 Burgers</h4>
+                    <p>Généreux au pain moelleux</p>
+                </div>
+                <div class="cuisine-item">
+                    <h4 style="color: var(--pink); margin-bottom: 0.5rem;">🍽️ Recettes</h4>
+                    <p>Travaillées et savoureuses</p>
+                </div>
+                <div class="cuisine-item">
+                    <h4 style="color: var(--pink); margin-bottom: 0.5rem;">🍰 Desserts</h4>
+                    <p>Iconiques et régressifs</p>
+                </div>
+                <div class="cuisine-item">
+                    <h4 style="color: var(--pink); margin-bottom: 0.5rem;">🥤 Boissons</h4>
+                    <p>Gourmandes et rafraîchissantes</p>
+                </div>
             </div>
-            <div class="value-item">
-                <h3>♻️ Éco-Conscience</h3>
-                <p>Nos emballages sont recyclables. Nos déchets de cuisine sont valorisés. Parce que la qualité c'est aussi de la conscience.</p>
-            </div>
-            <div class="value-item">
-                <h3>🤝 Humain d'Abord</h3>
-                <p>Notre équipe c'est notre fierté. Salaires justes, formation continue, environnement de travail bienveillant.</p>
-            </div>
-            <div class="value-item">
-                <h3>🎯 Excellence</h3>
-                <p>Pas de compromis. Si ça ne monte pas à notre standard, ça ne sort pas. Point.</p>
+
+            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 195, 219, 0.1); border-radius: 2px;">
+                <p class="text-light-muted" style="margin-bottom: 1rem; font-weight: 500;">Chaque produit est pensé pour offrir :</p>
+                <ul class="checklist">
+                    <li>✔️ du goût</li>
+                    <li>✔️ de la texture</li>
+                    <li>✔️ de la satisfaction</li>
+                </ul>
+                <p class="text-light-muted" style="margin-top: 1rem; font-style: italic;">
+                    Parce que bien manger, c'est aussi se faire plaisir sans compromis.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
 {{-- ════════════════════════════════════════════
-     CTA SECTION
+     SECTION : POURQUOI NOUS CHOISIR
 ════════════════════════════════════════════ --}}
-<section class="section section-cta" style="background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); padding: 4rem 0; text-align: center;">
+<section class="section section-light">
     <div class="container">
-        <h2 class="section-title light">Prêt à Vivre l'Expérience ?</h2>
-        <p class="text-light-muted" style="max-width: 600px; margin: 0 auto 2rem;">Venez découvrir Factory & Co. Commandez en ligne avec click & collect, ou venez nous rendre visite directement au Val d'Europe.</p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <a href="{{ route('menu.burgers') }}" class="btn btn-pink">Découvrir la Carte</a>
-            <a href="{{ route('click-collect') }}" class="btn btn-outline-white">Click & Collect</a>
+        <h2 class="concept-title">💥 Pourquoi Nous Choisir</h2>
+        <p class="section-subtitle">Une vraie alternative aux chaînes classiques</p>
+
+        <div class="concept-content">
+            <p style="margin-bottom: 2rem; font-size: 1.05rem; text-align: center;">
+                Nous ne sommes pas un fast-food comme les autres.
+            </p>
+
+            <div class="why-grid">
+                <div class="why-item">
+                    <h4>Identité forte</h4>
+                    <p>Reconnaissable et mémorable</p>
+                </div>
+                <div class="why-item">
+                    <h4>Ambiance immersive</h4>
+                    <p>Qui captive dès l'entrée</p>
+                </div>
+                <div class="why-item">
+                    <h4>Cuisine généreuse</h4>
+                    <p>Qualitative et satisfaisante</p>
+                </div>
+                <div class="why-item">
+                    <h4>Expérience complète</h4>
+                    <p>Repas + dessert + moment</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--pink-dark); font-size: 1.1rem;">
+                Ici, vous ne consommez pas.<br>Vous vivez une expérience.
+            </p>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : L'AMBIANCE
+════════════════════════════════════════════ --}}
+<section class="section section-dark">
+    <div class="container">
+        <h2 class="concept-title light">🏙️ L'Ambiance du Lieu</h2>
+        <p class="text-light-muted" style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">Un lieu vivant, chaleureux et moderne</p>
+
+        <div class="ambiance-content">
+            <p class="text-light-muted" style="margin-bottom: 2rem; font-size: 1.05rem; text-align: center;">
+                Dès l'entrée, l'atmosphère se fait ressentir.
+            </p>
+
+            <div class="ambiance-list">
+                <div class="ambiance-item">
+                    <span class="ambiance-icon">🎨</span>
+                    <h4>Design urbain</h4>
+                    <p>Inspiré des grandes villes</p>
+                </div>
+                <div class="ambiance-item">
+                    <span class="ambiance-icon">👥</span>
+                    <h4>Ambiance conviviale</h4>
+                    <p>Pensée pour se retrouver</p>
+                </div>
+                <div class="ambiance-item">
+                    <span class="ambiance-icon">✨</span>
+                    <h4>Espace détente</h4>
+                    <p>Qui invite à profiter</p>
+                </div>
+            </div>
+
+            <p class="text-light-muted" style="text-align: center; margin-top: 2rem; font-style: italic;">
+                Que ce soit pour une pause rapide ou un moment plus long, l'espace invite à se détendre et à profiter.
+            </p>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : MOMENTS
+════════════════════════════════════════════ --}}
+<section class="section section-light">
+    <div class="container">
+        <h2 class="concept-title">⏰ Pour Tous les Moments</h2>
+        <p class="section-subtitle">Du déjeuner au goûter… jusqu'au dîner</p>
+
+        <div class="moments-grid">
+            <div class="moment-card">
+                <span class="moment-icon">🍽️</span>
+                <h4>Pause déjeuner efficace</h4>
+                <p>Rapide, satisfaisante et délicieuse</p>
+            </div>
+            <div class="moment-card">
+                <span class="moment-icon">☕</span>
+                <h4>Goûter gourmand</h4>
+                <p>Pour une pause sucrée réconfortante</p>
+            </div>
+            <div class="moment-card">
+                <span class="moment-icon">🌆</span>
+                <h4>Dîner décontracté</h4>
+                <p>Entre détente et plaisir gustatif</p>
+            </div>
+            <div class="moment-card">
+                <span class="moment-icon">👫</span>
+                <h4>Moment entre amis</h4>
+                <p>À partager en bonne compagnie</p>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--pink-dark);">
+            Peu importe l'heure, il y a toujours une bonne raison de venir.
+        </p>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : CE QUE NOS CLIENTS AIMENT
+════════════════════════════════════════════ --}}
+<section class="section section-dark">
+    <div class="container">
+        <h2 class="concept-title light">❤️ Ce que Nos Clients Aiment</h2>
+        <p class="text-light-muted" style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">Une expérience qui marque</p>
+
+        <div class="testimonial-section">
+            <p class="text-light-muted" style="margin-bottom: 2rem; text-align: center; font-size: 1.05rem;">
+                Nos clients reviennent pour :
+            </p>
+
+            <div class="love-grid">
+                <div class="love-item">
+                    <h4 style="color: var(--pink);">La générosité</h4>
+                    <p>Des plats copieux et réconfortants</p>
+                </div>
+                <div class="love-item">
+                    <h4 style="color: var(--pink);">La qualité</h4>
+                    <p>Des produits choisis avec soin</p>
+                </div>
+                <div class="love-item">
+                    <h4 style="color: var(--pink);">L'ambiance</h4>
+                    <p>Un lieu agréable et accueillant</p>
+                </div>
+                <div class="love-item">
+                    <h4 style="color: var(--pink);">Le plaisir</h4>
+                    <p>Simple de bien manger</p>
+                </div>
+            </div>
+
+            <p class="text-light-muted" style="text-align: center; margin-top: 2rem; font-style: italic;">
+                Un lieu qui plaît, et qui donne envie de revenir.
+            </p>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     SECTION : LOCALISATION
+════════════════════════════════════════════ --}}
+<section class="section section-light">
+    <div class="container">
+        <h2 class="concept-title">📍 Au Cœur de Votre Centre Commercial</h2>
+        <p class="section-subtitle">Facile, accessible, évident</p>
+
+        <div class="location-content">
+            <p style="margin-bottom: 2rem; font-size: 1.05rem; text-align: center;">
+                Idéalement situé, notre restaurant est le point de pause parfait.
+            </p>
+
+            <div class="location-list">
+                <div class="location-item">
+                    <span>🎯</span>
+                    <p>Au milieu de votre parcours shopping</p>
+                </div>
+                <div class="location-item">
+                    <span>⚡</span>
+                    <p>Accessible rapidement</p>
+                </div>
+                <div class="location-item">
+                    <span>🔄</span>
+                    <p>Adapté à tous les rythmes</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--pink-dark);">
+                Un lieu pratique, sans compromis sur l'expérience.
+            </p>
+        </div>
+    </div>
+</section>
+
+{{-- ════════════════════════════════════════════
+     CTA FINAL - EXPÉRIENCE À VIVRE
+════════════════════════════════════════════ --}}
+<section class="section-cta-final">
+    <div class="section-cta-bg"></div>
+    <div class="container">
+        <div class="cta-inner">
+            {{-- Badge ── --}}
+            <span class="cta-badge">✨ Expérience à vivre</span>
+
+            {{-- Titre principal ── --}}
+            <h2 class="cta-title">
+                Prêt à découvrir<br>
+                <span class="cta-highlight">l'authentique expérience ?</span>
+            </h2>
+
+            {{-- Description ── --}}
+            <p class="cta-description">
+                Bien plus qu'un restaurant, Factory & Co est une parenthèse gourmande<br>
+                et mémorable au cœur de votre centre commercial.
+            </p>
+
+            {{-- CTA Buttons ── --}}
+            <div class="cta-buttons">
+                <a href="{{ route('menu.burgers') }}" class="btn btn-pink cta-btn-primary">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m0 0h6" />
+                    </svg>
+                    Voir la carte
+                </a>
+                <a href="javascript:void(0)" onclick="window.factoryCoNav && window.factoryCoNav.openNavigationModal()" class="btn btn-outline-white cta-btn-secondary">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Venir chez nous
+                </a>
+            </div>
+
+            {{-- Accent line ── --}}
+            <div class="cta-accent"></div>
+
+            {{-- Tagline finale ── --}}
+            <p class="cta-tagline">
+                ✓ Factory & Co Depuis 2008<br>
+                <span class="cta-tagline-small">Une vraie différence. Un vrai plaisir.</span>
+            </p>
         </div>
     </div>
 </section>

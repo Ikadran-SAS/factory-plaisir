@@ -95,8 +95,8 @@
                 <p>Factory &amp; Co, c'est l'histoire d'une passion : celle du chef <strong>Jonathan Jablonski</strong>, formé aux côtés des plus grands cuisiniers de <strong>Brooklyn</strong>. En 2008, il a décidé de transporter l'âme authentique des diners new-yorkais au cœur du centre commercial Val d'Europe.</p>
                 <p>Chez nous, <strong>rien n'est surgelé, tout est préparé à la minute</strong>. Chaque burger est smashé sur plaque brûlante. Chaque bagel est frais du jour. Chaque cheesecake respire les meilleures traditions new-yorkaises.</p>
                 <p><strong>Factory &amp; Co, c'est la liberté de bien manger, sans compromis.</strong></p>
-                <a href="{{ route('menu.burgers') }}" class="btn btn-navy">
-                    Explorer notre concept
+                <a href="{{ route('concept') }}" class="btn btn-pink">
+                    Découvrir notre concept
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </div>
