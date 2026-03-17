@@ -11,6 +11,30 @@ class MenuController extends Controller
      */
     public function index()
     {
+        $burgers = Product::available()
+            ->category('burgers')
+            ->ordered()
+            ->get()
+            ->groupBy('subcategory');
+
+        $bagels = Product::available()
+            ->category('bagels')
+            ->ordered()
+            ->get()
+            ->groupBy('subcategory');
+
+        $cheesecakes = Product::available()
+            ->category('cheesecake')
+            ->ordered()
+            ->get()
+            ->groupBy('subcategory');
+
+        $bowls = Product::available()
+            ->category('bowls')
+            ->ordered()
+            ->get()
+            ->groupBy('subcategory');
+
         $seo = [
             'title' => 'La Carte | Factory & Co – Burgers, Bagels, Cheesecake à Val d\'Europe',
             'description' => 'Découvrez la carte complète de Factory & Co à Val d\'Europe. Smash Burgers, Bagels New-Yorkais, Cheesecake premium et Bowls sains.',
@@ -19,7 +43,7 @@ class MenuController extends Controller
             'h1' => 'La Carte – Factory & Co',
         ];
 
-        return view('pages.menu.carte', compact('seo'));
+        return view('pages.menu.carte', compact('seo', 'burgers', 'bagels', 'cheesecakes', 'bowls'));
     }
 
     /**

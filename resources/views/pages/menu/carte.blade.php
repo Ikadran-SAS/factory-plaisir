@@ -17,9 +17,14 @@
 </nav>
 
 {{-- ════════════════════════════════════════════
-     HERO SECTION - PREMIUM LANDING
+     HERO SECTION - PREMIUM LANDING WITH VIDEO
 ════════════════════════════════════════════ --}}
 <section class="hero hero-carte">
+    {{-- Video Background --}}
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="{{ asset('videos/hero-carte.mp4') }}" type="video/mp4">
+    </video>
+
     {{-- Animated Background Shapes --}}
     <div class="hero-shapes">
         <div class="shape shape-burger"></div>
@@ -37,12 +42,20 @@
         <span class="section-tag">🍔 LA CARTE</span>
         <h1>Un voyage culinaire<br>sans fin</h1>
         <p>Découvrez nos incontournables New York et nos créations exclusives</p>
-        <button class="btn btn-pink scroll-to-categories" aria-label="Parcourir la carte">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-            Parcourir la carte
-        </button>
+        <div class="hero-buttons">
+            <button class="btn btn-pink scroll-to-categories" aria-label="Parcourir la carte">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+                Parcourir la carte
+            </button>
+            <a href="{{ asset('pdf/Carte_Classique_18AVRIL (1).pdf') }}" download class="btn btn-outline-white" aria-label="Télécharger la carte PDF">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19v-7m0 0V5m0 7H5m7 0h7"></path>
+                </svg>
+                Télécharger la carte
+            </a>
+        </div>
     </div>
 
     {{-- Scroll Indicator --}}
@@ -91,45 +104,21 @@
         </div>
 
         <div class="items-grid">
-            <div class="item-card">
-                <div class="item-image" style="background-image: url('{{ asset('images/burger.webp') }}')">
-                    <span class="price-badge">14,90€</span>
-                </div>
-                <div class="item-content">
-                    <h3>Cheeseburguer</h3>
-                    <p>Bœuf, cheddar, tomate, oignon rouge, pickles, salade, sauce 1989</p>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <div class="item-image" style="background-image: url('{{ asset('images/burger.webp') }}')">
-                    <span class="price-badge">15,90€</span>
-                </div>
-                <div class="item-content">
-                    <h3>Spicy Smash</h3>
-                    <p>Bœuf, bacon, jalapeños, cheddar épicé, sauce sriracha</p>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <div class="item-image" style="background-image: url('{{ asset('images/burger.webp') }}')">
-                    <span class="price-badge">16,90€</span>
-                </div>
-                <div class="item-content">
-                    <h3>Golden</h3>
-                    <p>Double bœuf, double cheddar, bacon croustillant, sauce barbecue</p>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <div class="item-image" style="background-image: url('{{ asset('images/burger.webp') }}')">
-                    <span class="price-badge">15,90€</span>
-                </div>
-                <div class="item-content">
-                    <h3>Southwestern</h3>
-                    <p>Bœuf, oignon rouge, tomate, avocat, cheddar, sauce épicée</p>
-                </div>
-            </div>
+            @forelse ($burgers as $subcategory => $items)
+                @foreach ($items as $product)
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('{{ asset('images/burger.webp') }}')">
+                            <span class="price-badge">{{ number_format($product->price, 2, ',', '') }}€</span>
+                        </div>
+                        <div class="item-content">
+                            <h3>{{ $product->name }}</h3>
+                            <p>{{ $product->description }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            @empty
+                <p class="text-center">Aucun burger disponible</p>
+            @endforelse
         </div>
 
         <a href="{{ route('menu.burgers') }}" class="btn btn-pink btn-lg">
@@ -152,45 +141,21 @@
         </div>
 
         <div class="items-grid">
-            <div class="item-card">
-                <div class="item-image" style="background: linear-gradient(135deg, #F5C3DB 0%, #E8A0C0 100%)">
-                    <span class="price-badge">8,90€</span>
-                </div>
-                <div class="item-content">
-                    <h3>Cream Cheese</h3>
-                    <p>Bagel nature grillé, crème fraîche, ciboulette fraîche</p>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <div class="item-image" style="background: linear-gradient(135deg, #F5C3DB 0%, #E8A0C0 100%)">
-                    <span class="price-badge">10,90€</span>
-                </div>
-                <div class="item-content">
-                    <h3>B.L.T.</h3>
-                    <p>Bacon croustillant, laitue fraîche, tomate, mayo, cheddar</p>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <div class="item-image" style="background: linear-gradient(135deg, #F5C3DB 0%, #E8A0C0 100%)">
-                    <span class="price-badge">9,90€</span>
-                </div>
-                <div class="item-content">
-                    <h3>New Yorker</h3>
-                    <p>Smoked salmon, fromage frais, concombre, aneth</p>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <div class="item-image" style="background: linear-gradient(135deg, #F5C3DB 0%, #E8A0C0 100%)">
-                    <span class="price-badge">10,90€</span>
-                </div>
-                <div class="item-content">
-                    <h3>Bacon Lover</h3>
-                    <p>Double bacon, œuf, cheddar, tomato, sauce spéciale</p>
-                </div>
-            </div>
+            @forelse ($bagels as $subcategory => $items)
+                @foreach ($items as $product)
+                    <div class="item-card">
+                        <div class="item-image" style="background: linear-gradient(135deg, #F5C3DB 0%, #E8A0C0 100%)">
+                            <span class="price-badge">{{ number_format($product->price, 2, ',', '') }}€</span>
+                        </div>
+                        <div class="item-content">
+                            <h3>{{ $product->name }}</h3>
+                            <p>{{ $product->description }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            @empty
+                <p class="text-center">Aucun bagel disponible</p>
+            @endforelse
         </div>
 
         <a href="{{ route('menu.bagels') }}" class="btn btn-pink btn-lg">
@@ -213,45 +178,21 @@
         </div>
 
         <div class="items-grid">
-            <div class="item-card">
-                <div class="item-image" style="background-image: url('{{ asset('images/desserts.webp') }}')">
-                    <span class="price-badge">6,50€</span>
-                </div>
-                <div class="item-content">
-                    <h3>New York Cheesecake</h3>
-                    <p>Le classique intemporel, texte re veloutée, fond de biscuit croustillant</p>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <div class="item-image" style="background-image: url('{{ asset('images/desserts.webp') }}')">
-                    <span class="price-badge">6,50€</span>
-                </div>
-                <div class="item-content">
-                    <h3>Oreo Paradise</h3>
-                    <p>Cheesecake vanille, cookies Oreo, nappage chocolat brillant</p>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <div class="item-image" style="background-image: url('{{ asset('images/desserts.webp') }}')">
-                    <span class="price-badge">6,50€</span>
-                </div>
-                <div class="item-content">
-                    <h3>Key Lime Pie</h3>
-                    <p>Cheesecake lime, crème acidulée, crème fouettée généreuse</p>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <div class="item-image" style="background-image: url('{{ asset('images/desserts.webp') }}')">
-                    <span class="price-badge">6,50€</span>
-                </div>
-                <div class="item-content">
-                    <h3>Spéculoos Crunch</h3>
-                    <p>Cheesecake épices, pâte de spéculoos, granola croustillant</p>
-                </div>
-            </div>
+            @forelse ($cheesecakes as $subcategory => $items)
+                @foreach ($items as $product)
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('{{ asset('images/desserts.webp') }}')">
+                            <span class="price-badge">{{ number_format($product->price, 2, ',', '') }}€</span>
+                        </div>
+                        <div class="item-content">
+                            <h3>{{ $product->name }}</h3>
+                            <p>{{ $product->description }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            @empty
+                <p class="text-center">Aucun cheesecake disponible</p>
+            @endforelse
         </div>
 
         <a href="{{ route('menu.cheesecake') }}" class="btn btn-pink btn-lg">
@@ -274,45 +215,21 @@
         </div>
 
         <div class="items-grid">
-            <div class="item-card">
-                <div class="item-image" style="background: linear-gradient(135deg, #90EE90 0%, #7CFC00 100%)">
-                    <span class="price-badge">12,90€</span>
-                </div>
-                <div class="item-content">
-                    <h3>Cæsar Deluxe</h3>
-                    <p>Laitue romaine fraîche, poulet grillé, parmesan, croutons, sauce cæsar</p>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <div class="item-image" style="background: linear-gradient(135deg, #90EE90 0%, #7CFC00 100%)">
-                    <span class="price-badge">13,90€</span>
-                </div>
-                <div class="item-content">
-                    <h3>Cancoon Tropicale</h3>
-                    <p>Laitue, mangue, avocat, noix de coco, poulet épicé, vinaigrette tropicale</p>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <div class="item-image" style="background: linear-gradient(135deg, #90EE90 0%, #7CFC00 100%)">
-                    <span class="price-badge">14,90€</span>
-                </div>
-                <div class="item-content">
-                    <h3>US Marshal Protéiné</h3>
-                    <p>Épinards, quinoa, steak de soja, protéines, edamame, sauce tahini</p>
-                </div>
-            </div>
-
-            <div class="item-card">
-                <div class="item-image" style="background: linear-gradient(135deg, #90EE90 0%, #7CFC00 100%)">
-                    <span class="price-badge">12,90€</span>
-                </div>
-                <div class="item-content">
-                    <h3>Buddha Vegan</h3>
-                    <p>Laitue, tofu grillé, riz complet, légumes rôtis, sauce cacahuète vegan</p>
-                </div>
-            </div>
+            @forelse ($bowls as $subcategory => $items)
+                @foreach ($items as $product)
+                    <div class="item-card">
+                        <div class="item-image" style="background: linear-gradient(135deg, #90EE90 0%, #7CFC00 100%)">
+                            <span class="price-badge">{{ number_format($product->price, 2, ',', '') }}€</span>
+                        </div>
+                        <div class="item-content">
+                            <h3>{{ $product->name }}</h3>
+                            <p>{{ $product->description }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            @empty
+                <p class="text-center">Aucun bowl disponible</p>
+            @endforelse
         </div>
 
         <a href="{{ route('menu.bowls') }}" class="btn btn-pink btn-lg">
