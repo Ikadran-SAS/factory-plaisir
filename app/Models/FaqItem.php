@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 
 class FaqItem extends Model
 {
@@ -23,7 +23,6 @@ class FaqItem extends Model
 
     /**
      * Retourne les FAQs groupées par catégorie
-     * @return \Illuminate\Support\Collection
      */
     public static function grouped(): \Illuminate\Support\Collection
     {

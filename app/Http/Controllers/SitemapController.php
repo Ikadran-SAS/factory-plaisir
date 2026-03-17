@@ -20,7 +20,7 @@ class SitemapController extends Controller
 
     public function robots()
     {
-        $content = "User-agent: *\nAllow: /\nSitemap: " . route('sitemap');
+        $content = "User-agent: *\nAllow: /\nSitemap: ".route('sitemap');
 
         return Response::make($content, 200, [
             'Content-Type' => 'text/plain',

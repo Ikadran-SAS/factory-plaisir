@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
@@ -14,8 +14,8 @@ class Review extends Model
     ];
 
     protected $casts = [
-        'rating'     => 'integer',
-        'is_featured'=> 'boolean',
+        'rating' => 'integer',
+        'is_featured' => 'boolean',
         'is_visible' => 'boolean',
     ];
 
@@ -31,6 +31,7 @@ class Review extends Model
             $class = $i <= $this->rating ? 'star' : 'star empty';
             $html .= "<span class=\"{$class}\">★</span>";
         }
+
         return $html;
     }
 }

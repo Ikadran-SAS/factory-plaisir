@@ -31,10 +31,10 @@ class OpeningHour extends Model
     {
         return static::orderBy('sort_order')->get()->map(function ($h) {
             return [
-                '@type'      => 'OpeningHoursSpecification',
-                'dayOfWeek'  => $h->days_of_week,
-                'opens'      => substr($h->opens_at, 0, 5),
-                'closes'     => substr($h->closes_at, 0, 5),
+                '@type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => $h->days_of_week,
+                'opens' => substr($h->opens_at, 0, 5),
+                'closes' => substr($h->closes_at, 0, 5),
             ];
         })->toArray();
     }

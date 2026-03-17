@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
@@ -15,13 +15,13 @@ class Product extends Model
     ];
 
     protected $casts = [
-        'price'         => 'decimal:2',
-        'is_halal'      => 'boolean',
+        'price' => 'decimal:2',
+        'is_halal' => 'boolean',
         'is_vegetarian' => 'boolean',
-        'is_vegan'      => 'boolean',
-        'is_featured'   => 'boolean',
-        'is_available'  => 'boolean',
-        'allergens'     => 'array',
+        'is_vegan' => 'boolean',
+        'is_featured' => 'boolean',
+        'is_available' => 'boolean',
+        'allergens' => 'array',
     ];
 
     /* ── Scopes ── */
@@ -50,14 +50,14 @@ class Product extends Model
 
     public function getFormattedPriceAttribute(): string
     {
-        return number_format($this->price, 2, ',', '') . ' €';
+        return number_format($this->price, 2, ',', '').' €';
     }
 
     public function getBadgeClassAttribute(): string
     {
         return match ($this->badge_color) {
             'green' => 'product-badge halal',
-            'dark'  => 'product-badge new',
+            'dark' => 'product-badge new',
             default => 'product-badge',
         };
     }

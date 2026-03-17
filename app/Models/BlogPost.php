@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 
 class BlogPost extends Model
 {
@@ -14,7 +14,7 @@ class BlogPost extends Model
     ];
 
     protected $casts = [
-        'is_featured'  => 'boolean',
+        'is_featured' => 'boolean',
         'is_published' => 'boolean',
         'published_at' => 'datetime',
     ];
@@ -31,6 +31,6 @@ class BlogPost extends Model
 
     public function getMetaTitleAttribute($value): string
     {
-        return $value ?: $this->title . ' | Factory & Co Val d\'Europe';
+        return $value ?: $this->title.' | Factory & Co Val d\'Europe';
     }
 }

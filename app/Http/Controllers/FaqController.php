@@ -11,10 +11,10 @@ class FaqController extends Controller
         $faqs = FaqItem::grouped();
 
         $seo = [
-            'title'       => 'FAQ – Questions Fréquentes | Factory & Co Val d\'Europe',
+            'title' => 'FAQ – Questions Fréquentes | Factory & Co Val d\'Europe',
             'description' => 'Toutes les réponses à vos questions sur Factory & Co Val d\'Europe : horaires, accès, options Halal, allergènes, Click & Collect.',
-            'keywords'    => 'faq factory and co serris, halal val d\'europe, allergènes restaurant serris, horaires factory co val d\'europe',
-            'canonical'   => route('faq'),
+            'keywords' => 'faq factory and co serris, halal val d\'europe, allergènes restaurant serris, horaires factory co val d\'europe',
+            'canonical' => route('faq'),
         ];
 
         return view('pages.faq', compact('faqs', 'seo'));
