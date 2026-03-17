@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AvisController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ConceptController;
 use App\Http\Controllers\ContactController;
@@ -22,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 /* ── NIVEAU 1 : Hub de marque ── */
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/concept', [ConceptController::class, 'index'])->name('concept');
+Route::get('/avis', [AvisController::class, 'index'])->name('avis');
 
 /* ── NIVEAU 2 : Silos produits ── */
 Route::get('/carte', [MenuController::class, 'index'])->name('menu.index');
