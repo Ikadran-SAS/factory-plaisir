@@ -37,8 +37,8 @@ Route::prefix('carte')->name('menu.')->group(function () {
 /* ── NIVEAU 3 : Services & Engagement ── */
 Route::get('/click-collect', [HomeController::class, 'clickCollect'])->name('click-collect');
 
-// Blog / Guide du Voyageur
-Route::prefix('guide-voyageur')->name('blog.')->group(function () {
+// Blog
+Route::prefix('blog')->name('blog.')->group(function () {
     Route::get('/', [BlogController::class, 'index'])->name('index');
     Route::get('/{slug}', [BlogController::class, 'show'])->name('show');
 });

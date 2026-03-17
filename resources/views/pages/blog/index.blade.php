@@ -18,7 +18,7 @@
             [
                 '@type' => 'ListItem',
                 'position' => 2,
-                'name' => 'Guide du Voyageur',
+                'name' => 'Blog',
                 'item' => route('blog.index')
             ]
         ]
@@ -27,12 +27,12 @@
 <script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
 @endpush
 @section('content')
-<nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Guide du Voyageur</span></div></nav>
+<nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Blog</span></div></nav>
 <div class="page-hero">
     <div class="page-hero-inner">
         <span class="section-tag">E-E-A-T · Expertise · Autorité · Confiance</span>
-        <h1>Guide du Voyageur –<br><em>Aéroport Toulouse-Blagnac</em></h1>
-        <p>Conseils pratiques, astuces transit, guides gastronomiques et informations pratiques pour votre escale à Toulouse.</p>
+        <h1>Blog –<br><em>Val d'Europe & Conseils</em></h1>
+        <p>Conseils pratiques, astuces shopping, guides gastronomiques et informations pratiques pour votre visite à Val d'Europe.</p>
     </div>
 </div>
 <section class="section section-light">

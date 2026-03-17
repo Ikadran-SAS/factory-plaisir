@@ -25,7 +25,7 @@
                     Avis
                 </a>
                 <a href="{{ route('blog.index') }}" @class(['navbar-link', 'navbar-link-active' => request()->routeIs('blog.*')])>
-                    Le blog
+                    Blog
                 </a>
             </nav>
 
@@ -62,6 +62,6 @@
         <a href="{{ route('concept') }}" @click="mobileOpen = false" @class(['navbar-mobile-link', 'active' => request()->routeIs('concept')])>Notre concept</a>
         <a href="{{ route('home') }}#specialites" @click="mobileOpen = false" class="navbar-mobile-link">Nos spécialités</a>
         <a href="{{ route('avis') }}" @click="mobileOpen = false" @class(['navbar-mobile-link', 'active' => request()->routeIs('avis')])>Avis</a>
-        <a href="{{ route('blog.index') }}" @click="mobileOpen = false" @class(['navbar-mobile-link', 'active' => request()->routeIs('blog.*')])>Le blog</a>
+        <a href="{{ route('blog.index') }}" @click="mobileOpen = false" @class(['navbar-mobile-link', 'active' => request()->routeIs('blog.*')])>Blog</a>
     </nav>
 </div>
