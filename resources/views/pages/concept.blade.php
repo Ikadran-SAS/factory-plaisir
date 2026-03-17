@@ -521,39 +521,158 @@
 </section>
 
 {{-- ════════════════════════════════════════════
-     SECTION : POURQUOI NOUS CHOISIR
+     SECTION : POURQUOI NOUS CHOISIR (REDESIGNÉE)
 ════════════════════════════════════════════ --}}
-<section class="section section-light">
+<section class="section why-choose-section-redesigned">
     <div class="container">
-        <h2 class="concept-title">💥 Pourquoi Nous Choisir</h2>
-        <p class="section-subtitle">Une vraie alternative aux chaînes classiques</p>
+        {{-- Header Premium --}}
+        <div class="why-choose-header">
+            <span class="why-choose-badge">
+                <span class="why-choose-badge-icon">💥</span>
+                Pourquoi Nous Choisir
+            </span>
+            <h2 class="why-choose-title">
+                Bien plus qu'un <span class="why-choose-highlight">fast-food</span>
+            </h2>
+            <p class="why-choose-subtitle">Une vraie alternative aux chaînes classiques</p>
+        </div>
 
-        <div class="concept-content">
-            <p style="margin-bottom: 2rem; font-size: 1.05rem; text-align: center;">
-                Nous ne sommes pas un fast-food comme les autres.
-            </p>
+        {{-- Intro text premium --}}
+        <blockquote class="why-choose-intro-quote">
+            Nous ne sommes pas un fast-food comme les autres.
+        </blockquote>
 
-            <div class="why-grid">
-                <div class="why-item">
-                    <h4>Identité forte</h4>
-                    <p>Reconnaissable et mémorable</p>
+        {{-- Premium Counter Cards Grid --}}
+        <div class="why-choose-cards-grid">
+            {{-- Card 1: Identité forte --}}
+            <div class="why-choose-card">
+                {{-- Counter Badge (01) --}}
+                <div class="card-counter-badge">01</div>
+
+                {{-- Icon --}}
+                <div class="card-icon-wrapper">
+                    <svg class="card-icon-premium" viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-why-identity" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        {{-- Flame/Identity Icon --}}
+                        <path d="M32 8 C32 8, 26 18, 26 26 C26 33.732, 28.686 40, 32 40 C35.314 40, 38 33.732, 38 26 C38 18, 32 8, 32 8 Z" stroke="url(#grad-why-identity)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                        <path d="M32 18 C32 18, 28 24, 28 28 C28 31.314, 29.791 34, 32 34 C34.209 34, 36 31.314, 36 28 C36 24, 32 18, 32 18 Z" stroke="url(#grad-why-identity)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                    </svg>
                 </div>
-                <div class="why-item">
-                    <h4>Ambiance immersive</h4>
-                    <p>Qui captive dès l'entrée</p>
+
+                {{-- Content --}}
+                <div class="card-text-content">
+                    <h3 class="card-title">Identité forte</h3>
+                    <p class="card-description">Reconnaissable et mémorable</p>
                 </div>
-                <div class="why-item">
-                    <h4>Cuisine généreuse</h4>
-                    <p>Qualitative et satisfaisante</p>
-                </div>
-                <div class="why-item">
-                    <h4>Expérience complète</h4>
-                    <p>Repas + dessert + moment</p>
-                </div>
+
+                {{-- Accent line --}}
+                <div class="card-accent-line"></div>
             </div>
 
-            <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--pink-dark); font-size: 1.1rem;">
-                Ici, vous ne consommez pas.<br>Vous vivez une expérience.
+            {{-- Card 2: Ambiance immersive --}}
+            <div class="why-choose-card">
+                {{-- Counter Badge (02) --}}
+                <div class="card-counter-badge">02</div>
+
+                {{-- Icon --}}
+                <div class="card-icon-wrapper">
+                    <svg class="card-icon-premium" viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-why-ambiance" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        {{-- Room/Window Icon --}}
+                        <rect x="12" y="16" width="40" height="32" rx="2" stroke="url(#grad-why-ambiance)" stroke-width="2" fill="none"/>
+                        <path d="M12 24 L52 24" stroke="url(#grad-why-ambiance)" stroke-width="2"/>
+                        <rect x="18" y="18" width="12" height="6" stroke="url(#grad-why-ambiance)" stroke-width="2" fill="none"/>
+                        <rect x="34" y="18" width="12" height="6" stroke="url(#grad-why-ambiance)" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+
+                {{-- Content --}}
+                <div class="card-text-content">
+                    <h3 class="card-title">Ambiance immersive</h3>
+                    <p class="card-description">Qui captive dès l'entrée</p>
+                </div>
+
+                {{-- Accent line --}}
+                <div class="card-accent-line"></div>
+            </div>
+
+            {{-- Card 3: Cuisine généreuse --}}
+            <div class="why-choose-card">
+                {{-- Counter Badge (03) --}}
+                <div class="card-counter-badge">03</div>
+
+                {{-- Icon --}}
+                <div class="card-icon-wrapper">
+                    <svg class="card-icon-premium" viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-why-cuisine" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        {{-- Plate with food --}}
+                        <circle cx="32" cy="32" r="18" stroke="url(#grad-why-cuisine)" stroke-width="2" fill="none"/>
+                        <circle cx="32" cy="32" r="12" stroke="url(#grad-why-cuisine)" stroke-width="1.5" fill="none" opacity="0.5"/>
+                        <path d="M24 28 Q32 22, 40 28" stroke="url(#grad-why-cuisine)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 35 Q32 40, 44 35" stroke="url(#grad-why-cuisine)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                {{-- Content --}}
+                <div class="card-text-content">
+                    <h3 class="card-title">Cuisine généreuse</h3>
+                    <p class="card-description">Qualitative et satisfaisante</p>
+                </div>
+
+                {{-- Accent line --}}
+                <div class="card-accent-line"></div>
+            </div>
+
+            {{-- Card 4: Expérience complète --}}
+            <div class="why-choose-card">
+                {{-- Counter Badge (04) --}}
+                <div class="card-counter-badge">04</div>
+
+                {{-- Icon --}}
+                <div class="card-icon-wrapper">
+                    <svg class="card-icon-premium" viewBox="0 0 64 64" fill="none">
+                        <defs>
+                            <linearGradient id="grad-why-experience" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F5C3DB;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        {{-- Heart/Experience Icon --}}
+                        <path d="M32 48 C32 48, 16 36, 16 26 C16 20, 20 16, 24 16 C26.5 16, 28.8 17.2, 30.4 19 C31.2 19.9, 32 20.8, 32 20.8 C32 20.8, 32.8 19.9, 33.6 19 C35.2 17.2, 37.5 16, 40 16 C44 16, 48 20, 48 26 C48 36, 32 48, 32 48 Z" stroke="url(#grad-why-experience)" stroke-width="2" fill="none" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                {{-- Content --}}
+                <div class="card-text-content">
+                    <h3 class="card-title">Expérience complète</h3>
+                    <p class="card-description">Repas + dessert + moment</p>
+                </div>
+
+                {{-- Accent line --}}
+                <div class="card-accent-line"></div>
+            </div>
+        </div>
+
+        {{-- Conclusion impactante --}}
+        <div class="why-choose-conclusion">
+            <p class="why-choose-conclusion-text">
+                Ici, vous ne consommez pas.<br>
+                <span class="why-choose-conclusion-highlight">Vous vivez une expérience.</span>
             </p>
         </div>
     </div>
