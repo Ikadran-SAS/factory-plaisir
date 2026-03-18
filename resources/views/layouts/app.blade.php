@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    {{-- ── Favicons ── --}}
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+    <meta name="theme-color" content="#000000">
+
     {{-- ── SEO Meta ── --}}
     <title>{{ $__env->yieldContent('title', 'Factory & Co Val d\'Europe – Restaurant Burger Serris') }}</title>
     <meta name="description" content="{{ $__env->yieldContent('description', 'Factory & Co, restaurant burger, bagel et cheesecake à Val d\'Europe à Serris. 14 Rue du Danube. Ouvert 7j/7.') }}">

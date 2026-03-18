@@ -186,66 +186,56 @@
         <div class="quality-header">
             <span class="section-tag dark">Notre promesse</span>
             <h2 class="section-title dark">Qualité<br><em>sans compromis</em></h2>
-            <p class="quality-subtitle">Trois piliers qui font la différence à chaque assiette</p>
         </div>
 
         <div class="quality-cards-grid">
             {{-- PILIER 1: FRAÎCHEUR --}}
             <div class="quality-card quality-card-1">
-                <div class="quality-card-bg"></div>
-                <div class="quality-card-image">
+                <div class="quality-icon-circle">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="quality-icon">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M12 2v20M2 12h20"/>
+                        <circle cx="12" cy="12" r="9"/>
+                        <path d="M12 6v6h4"/>
                     </svg>
                 </div>
                 <div class="quality-card-content">
                     <h3>Fraîcheur</h3>
-                    <p class="quality-description">100% préparé à la commande</p>
-                    <p class="quality-detail">Zéro surgelé. Zéro compromis. Chaque plat respire la fraîcheur du moment.</p>
-                    <div class="quality-badge">À la commande</div>
+                    <p class="quality-detail">100% préparé à la commande. Zéro surgelé. Chaque assiette respire la fraîcheur du moment.</p>
+                    <span class="quality-badge">À la commande</span>
                 </div>
-                <div class="quality-card-accent"></div>
             </div>
 
             {{-- PILIER 2: CRAFT --}}
             <div class="quality-card quality-card-2">
-                <div class="quality-card-bg"></div>
-                <div class="quality-card-image">
+                <div class="quality-icon-circle">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="quality-icon">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        <circle cx="12" cy="12" r="9"/>
+                        <path d="M9 12h6M12 9v6"/>
                     </svg>
                 </div>
                 <div class="quality-card-content">
                     <h3>Craft</h3>
-                    <p class="quality-description">Expertise du chef Jonathan Jablonski</p>
-                    <p class="quality-detail">Recettes exclusives formées aux côtés des plus grands de Brooklyn. 15+ ans d'expérience culinaire.</p>
-                    <div class="quality-badge">Premium Experience</div>
+                    <p class="quality-detail">Recettes exclusives du chef Jonathan Jablonski, formé aux côtés des plus grands de Brooklyn. 15+ ans d'expertise.</p>
+                    <span class="quality-badge">Chef Jonathan</span>
                 </div>
-                <div class="quality-card-accent"></div>
             </div>
 
             {{-- PILIER 3: AUTHENTICITÉ --}}
             <div class="quality-card quality-card-3">
-                <div class="quality-card-bg"></div>
-                <div class="quality-card-image">
+                <div class="quality-icon-circle">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="quality-icon">
-                        <path d="M12 2l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4l2-4z"/>
-                        <circle cx="12" cy="12" r="10" stroke-width="0.5" opacity="0.3"/>
+                        <path d="M12 1L3 5v7c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
                     </svg>
                 </div>
                 <div class="quality-card-content">
                     <h3>Authenticité</h3>
-                    <p class="quality-description">L'ADN New-Yorkais authentique</p>
-                    <p class="quality-detail">Ingrédients sélectionnés avec soin. Goût New-Yorkais authentique. L'essence des diners américains, au cœur de Val d'Europe.</p>
-                    <div class="quality-badge">New-York Heritage</div>
+                    <p class="quality-detail">Ingrédients sélectionnés avec soin. Goût New-Yorkais authentique. L'ADN des diners américains, au cœur de Val d'Europe.</p>
+                    <span class="quality-badge">New-York Heritage</span>
                 </div>
-                <div class="quality-card-accent"></div>
             </div>
         </div>
 
         {{-- Trust Statement --}}
-        <div class="quality-trust-statement">
+        <div class="quality-promise">
             <p>Chaque assiette Factory & Co est une promesse tenue.</p>
         </div>
     </div>
@@ -415,7 +405,7 @@
 ═══════════════════════════════════════════════════════════════ */
 
 .quality-section {
-    padding: 6rem 0;
+    padding: 5rem 0;
     background: var(--bg-light);
     position: relative;
 }
@@ -423,91 +413,78 @@
 /* Header */
 .quality-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
 }
 
 .quality-header h2 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     font-size: 1.75rem;
-}
-
-.quality-subtitle {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    margin-top: 0.5rem;
-    font-weight: 400;
 }
 
 /* Cards Grid */
 .quality-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 /* Card Base */
 .quality-card {
     position: relative;
-    padding: 1rem;
+    padding: 2.5rem 1.75rem;
     border-radius: 2px;
-    overflow: hidden;
     background: var(--white);
     border: 1px solid rgba(27, 38, 58, 0.08);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     height: 100%;
-    min-height: 160px;
+    min-height: 240px;
 }
 
 .quality-card:hover {
-    border-color: rgba(245, 195, 219, 0.4);
-    box-shadow: 0 12px 48px rgba(27, 38, 58, 0.12);
-    transform: translateY(-6px);
+    border-color: rgba(245, 195, 219, 0.5);
+    box-shadow: 0 16px 64px rgba(27, 38, 58, 0.15);
+    transform: translateY(-8px);
 }
 
-/* Background Gradient (per card) */
-.quality-card-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
+/* Icon Circle */
+.quality-icon-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    transition: all 0.4s ease;
 }
 
-.quality-card-1 .quality-card-bg {
-    background: linear-gradient(135deg, rgba(245, 195, 219, 0.08) 0%, rgba(204, 51, 102, 0.04) 100%);
+.quality-card-1 .quality-icon-circle {
+    background: rgba(245, 195, 219, 0.2);
+    border: 2px solid rgba(204, 51, 102, 0.3);
 }
 
-.quality-card-2 .quality-card-bg {
-    background: linear-gradient(135deg, rgba(204, 51, 102, 0.08) 0%, rgba(245, 195, 219, 0.04) 100%);
+.quality-card-2 .quality-icon-circle {
+    background: rgba(204, 51, 102, 0.15);
+    border: 2px solid rgba(204, 51, 102, 0.25);
 }
 
-.quality-card-3 .quality-card-bg {
-    background: linear-gradient(135deg, rgba(27, 38, 58, 0.06) 0%, rgba(204, 51, 102, 0.04) 100%);
+.quality-card-3 .quality-icon-circle {
+    background: rgba(27, 38, 58, 0.1);
+    border: 2px solid rgba(27, 38, 58, 0.2);
 }
 
-.quality-card:hover .quality-card-bg {
-    opacity: 1;
-}
-
-/* Icon Container */
-.quality-card-image {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 0.75rem;
-    position: relative;
-    z-index: 2;
+.quality-card:hover .quality-icon-circle {
+    transform: scale(1.15);
+    border-color: rgba(204, 51, 102, 0.5);
 }
 
 .quality-icon {
-    width: 100%;
-    height: 100%;
-    color: var(--navy);
+    width: 36px;
+    height: 36px;
     stroke-width: 1.5;
     transition: all 0.4s ease;
 }
@@ -516,25 +493,33 @@
     color: var(--pink-dark);
 }
 
+.quality-card-2 .quality-icon {
+    color: var(--pink-dark);
+}
+
+.quality-card-3 .quality-icon {
+    color: var(--navy);
+}
+
 .quality-card:hover .quality-icon {
-    transform: scale(1.1) rotate(-5deg);
-    filter: drop-shadow(0 4px 12px rgba(204, 51, 102, 0.2));
+    transform: scale(1.2) rotate(8deg);
+    filter: drop-shadow(0 4px 12px rgba(204, 51, 102, 0.25));
 }
 
 /* Content */
 .quality-card-content {
     position: relative;
-    z-index: 2;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    gap: 0.75rem;
 }
 
 .quality-card h3 {
     font-family: var(--font-title);
-    font-size: 1rem;
+    font-size: 1.15rem;
     color: var(--navy);
-    margin-bottom: 0.4rem;
+    margin: 0;
     font-weight: 700;
     letter-spacing: -0.01em;
 }
@@ -543,66 +528,46 @@
     color: var(--pink-dark);
 }
 
-.quality-description {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 0.4rem;
-    line-height: 1.3;
-}
-
 .quality-detail {
-    font-size: 0.75rem;
-    line-height: 1.4;
+    font-size: 0.85rem;
+    line-height: 1.6;
     color: var(--text-light);
-    margin-bottom: 0.75rem;
+    margin: 0;
     flex-grow: 1;
 }
 
 /* Badge */
 .quality-badge {
     display: inline-block;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    background: rgba(204, 51, 102, 0.1);
+    background: rgba(204, 51, 102, 0.12);
     color: var(--pink-dark);
-    padding: 3px 8px;
+    padding: 4px 10px;
     border-radius: 2px;
-    border: 1px solid rgba(204, 51, 102, 0.3);
-    margin-top: auto;
+    border: 1px solid rgba(204, 51, 102, 0.35);
     width: fit-content;
     transition: all 0.3s ease;
+    margin-top: auto;
 }
 
 .quality-card:hover .quality-badge {
-    background: rgba(204, 51, 102, 0.15);
-    border-color: rgba(204, 51, 102, 0.5);
-    transform: translateX(2px);
+    background: rgba(204, 51, 102, 0.18);
+    border-color: rgba(204, 51, 102, 0.6);
+    transform: translateX(3px);
 }
 
-/* Accent Corner */
-.quality-card-accent {
-    position: absolute;
-    bottom: -1px;
-    right: -1px;
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(circle at top-left, rgba(245, 195, 219, 0.1) 0%, transparent 70%);
-    border-radius: 2px;
-    pointer-events: none;
-}
-
-/* Trust Statement */
-.quality-trust-statement {
+/* Promise Statement */
+.quality-promise {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--navy);
-    margin-top: 1.5rem;
-    padding: 1rem;
-    border-top: 1px solid rgba(27, 38, 58, 0.1);
+    padding-top: 2rem;
+    border-top: 1px solid rgba(27, 38, 58, 0.12);
+    margin: 0;
 }
 
 /* CTA Section */
@@ -619,37 +584,72 @@
 }
 
 /* Media Queries */
+@media (max-width: 1024px) {
+    .quality-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .quality-card {
+        min-height: 220px;
+        padding: 2rem 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
+    .specialite-card {
+        min-width: 180px;
+    }
+
+    .specialites-grid {
+        gap: 0.8rem;
+        padding: 0.3rem 0;
+    }
+
     .quality-section {
-        padding: 2rem 0;
+        padding: 3rem 0;
     }
 
     .quality-cards-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1.25rem;
     }
 
     .quality-card {
-        min-height: 140px;
+        padding: 2rem 1.5rem;
+        min-height: 200px;
     }
 
-    .quality-card-image {
-        width: 28px;
-        height: 28px;
-        margin-bottom: 0.6rem;
+    .quality-icon-circle {
+        width: 56px;
+        height: 56px;
+    }
+
+    .quality-icon {
+        width: 32px;
+        height: 32px;
     }
 
     .quality-card h3 {
-        font-size: 0.95rem;
+        font-size: 1.05rem;
+    }
+
+    .quality-detail {
+        font-size: 0.8rem;
+        line-height: 1.5;
     }
 
     .quality-header {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2.5rem;
     }
 
-    .quality-trust-statement {
-        font-size: 0.9rem;
-        padding: 0.75rem;
+    .quality-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .quality-promise {
+        font-size: 0.95rem;
+        padding-top: 1.5rem;
     }
 
     .cta-actions {
@@ -662,30 +662,65 @@
 }
 
 @media (max-width: 480px) {
+    .specialite-card {
+        min-width: 140px;
+    }
+
+    .specialites-grid {
+        gap: 0.5rem;
+        padding: 0.2rem 0;
+    }
+
     .quality-section {
-        padding: 1.5rem 0;
+        padding: 2.5rem 0;
+    }
+
+    .quality-cards-grid {
+        gap: 1rem;
     }
 
     .quality-card {
-        padding: 0.75rem;
-        min-height: 130px;
+        padding: 1.5rem 1.25rem;
+        min-height: 180px;
+        gap: 0.75rem;
+    }
+
+    .quality-icon-circle {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 0.25rem;
+    }
+
+    .quality-icon {
+        width: 28px;
+        height: 28px;
     }
 
     .quality-card h3 {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
-    .quality-detail,
-    .quality-description {
-        font-size: 0.7rem;
+    .quality-detail {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .quality-header {
+        margin-bottom: 2rem;
     }
 
     .quality-header h2 {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
     }
 
-    .quality-subtitle {
-        font-size: 0.8rem;
+    .quality-badge {
+        font-size: 9px;
+        padding: 3px 8px;
+    }
+
+    .quality-promise {
+        font-size: 0.85rem;
+        padding-top: 1.25rem;
     }
 }
 </style>
