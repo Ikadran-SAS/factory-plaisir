@@ -8,9 +8,11 @@ class SpecialitesController extends Controller
 {
     public function index()
     {
-        $faqsGrouped = FaqItem::grouped();
-        // Flatten grouped FAQs into a single array for the accordion component
-        $faqs = collect($faqsGrouped)->flatten(1)->values()->all();
+        // Get only specialties-related FAQs
+        $faqs = FaqItem::where('category', 'specialites')
+            ->orderBy('sort_order')
+            ->get()
+            ->toArray();
 
         $seo = [
             'title' => 'Nos Spécialités – Factory & Co Val d\'Europe',

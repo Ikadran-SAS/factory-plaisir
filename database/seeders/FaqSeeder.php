@@ -115,6 +115,39 @@ class FaqSeeder extends Seeder
                 'answer' => 'Nous acceptons toutes les cartes bancaires (Visa, Mastercard, American Express), les paiements sans contact (Apple Pay, Google Pay, Samsung Pay) et les espèces en euros. Nous n\'acceptons pas les chèques.',
                 'sort_order' => 12,
             ],
+            // SPÉCIALITÉS
+            [
+                'category' => 'specialites',
+                'category_label' => 'Nos Spécialités',
+                'category_icon' => '🍔',
+                'question' => 'Quelle est la différence entre un Smash Burger et un burger classique ?',
+                'answer' => 'Le Smash Burger, c\'est une technique de cuisson précise : la viande est posée sur une plaque brûlante et écrasée immédiatement pour créer une croûte caramélisée et savoureux. Le résultat ? Une texture croustillante dehors, succulente dedans, avec un goût bien plus intense qu\'un burger traditionnel. Chaque smash burger est préparé à la minute, jamais précuit.',
+                'sort_order' => 13,
+            ],
+            [
+                'category' => 'specialites',
+                'category_label' => 'Nos Spécialités',
+                'category_icon' => '🍔',
+                'question' => 'Les bagels sont-ils vraiment new-yorkais ?',
+                'answer' => 'Absolument. Notre chef Jonathan a apporté les vraies recettes de Brooklyn. Nos bagels sont bouillis avant la cuisson (contrairement aux pains classiques), ce qui leur donne cette texture unique : croustillants dehors, moelleux dedans. Chaque matin, ils sont préparés frais. C\'est l\'authentique recette new-yorkaise, pas une copie commerciale.',
+                'sort_order' => 14,
+            ],
+            [
+                'category' => 'specialites',
+                'category_label' => 'Nos Spécialités',
+                'category_icon' => '🍔',
+                'question' => 'Puis-je customiser les spécialités ?',
+                'answer' => 'Bien sûr ! Nos spécialités sont préparées à la minute. Vous pouvez adapter votre Smash Burger, Bagel ou Breakfast selon vos préférences : ajouter ou retirer des ingrédients, changer les sauces, etc. Allergies, restrictions alimentaires, goûts personnels : notre équipe s\'adapte à vos besoins spécifiques.',
+                'sort_order' => 15,
+            ],
+            [
+                'category' => 'specialites',
+                'category_label' => 'Nos Spécialités',
+                'category_icon' => '🍔',
+                'question' => 'Quels allergènes contient le Cheesecake Factory & Co ?',
+                'answer' => 'Notre Cheesecake contient : <strong>gluten, produits laitiers, œufs</strong>. Traces possibles de <strong>noix</strong>. Pour une liste complète et détaillée de tous les allergènes présents dans chaque spécialité (burgers, bagels, etc.), consultez notre <a href="' . route('faq') . '">FAQ complète des allergènes</a> ou demandez à notre équipe directement en restaurant.',
+                'sort_order' => 16,
+            ],
         ];
 
         foreach ($faqs as $data) {
