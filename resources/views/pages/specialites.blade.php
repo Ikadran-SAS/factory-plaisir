@@ -423,32 +423,33 @@
 /* Header */
 .quality-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .quality-header h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
 }
 
 .quality-subtitle {
-    font-size: 1.15rem;
+    font-size: 0.9rem;
     color: var(--text-light);
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     font-weight: 400;
 }
 
 /* Cards Grid */
 .quality-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
-    margin-bottom: 3.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 /* Card Base */
 .quality-card {
     position: relative;
-    padding: 2.5rem;
+    padding: 1rem;
     border-radius: 2px;
     overflow: hidden;
     background: var(--white);
@@ -457,7 +458,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    min-height: 420px;
+    min-height: 160px;
 }
 
 .quality-card:hover {
@@ -496,9 +497,9 @@
 
 /* Icon Container */
 .quality-card-image {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 2rem;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.75rem;
     position: relative;
     z-index: 2;
 }
@@ -531,9 +532,9 @@
 
 .quality-card h3 {
     font-family: var(--font-title);
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--navy);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.4rem;
     font-weight: 700;
     letter-spacing: -0.01em;
 }
@@ -543,30 +544,31 @@
 }
 
 .quality-description {
-    font-size: 0.95rem;
+    font-size: 0.75rem;
     font-weight: 600;
     color: var(--navy);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
 }
 
 .quality-detail {
-    font-size: 0.95rem;
-    line-height: 1.7;
+    font-size: 0.75rem;
+    line-height: 1.4;
     color: var(--text-light);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
     flex-grow: 1;
 }
 
 /* Badge */
 .quality-badge {
     display: inline-block;
-    font-size: 11px;
+    font-size: 9px;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     background: rgba(204, 51, 102, 0.1);
     color: var(--pink-dark);
-    padding: 6px 14px;
+    padding: 3px 8px;
     border-radius: 2px;
     border: 1px solid rgba(204, 51, 102, 0.3);
     margin-top: auto;
@@ -595,11 +597,11 @@
 /* Trust Statement */
 .quality-trust-statement {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--navy);
-    margin-top: 2rem;
-    padding: 2rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
     border-top: 1px solid rgba(27, 38, 58, 0.1);
 }
 
@@ -619,35 +621,35 @@
 /* Media Queries */
 @media (max-width: 768px) {
     .quality-section {
-        padding: 4rem 0;
+        padding: 2rem 0;
     }
 
     .quality-cards-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .quality-card {
-        min-height: 380px;
+        min-height: 140px;
     }
 
     .quality-card-image {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 1.5rem;
+        width: 28px;
+        height: 28px;
+        margin-bottom: 0.6rem;
     }
 
     .quality-card h3 {
-        font-size: 1.35rem;
+        font-size: 0.95rem;
     }
 
     .quality-header {
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
     }
 
     .quality-trust-statement {
-        font-size: 1.1rem;
-        padding: 1.5rem;
+        font-size: 0.9rem;
+        padding: 0.75rem;
     }
 
     .cta-actions {
@@ -661,29 +663,29 @@
 
 @media (max-width: 480px) {
     .quality-section {
-        padding: 3rem 0;
+        padding: 1.5rem 0;
     }
 
     .quality-card {
-        padding: 1.75rem;
-        min-height: 350px;
+        padding: 0.75rem;
+        min-height: 130px;
     }
 
     .quality-card h3 {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
     .quality-detail,
     .quality-description {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 
     .quality-header h2 {
-        font-size: 1.75rem;
+        font-size: 1.4rem;
     }
 
     .quality-subtitle {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 </style>
