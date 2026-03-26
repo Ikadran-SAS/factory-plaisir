@@ -3149,12 +3149,12 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
 .hero:hover .hero-bg { transform: scale(1); }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(27,38,58,.85) 0%, rgba(27,38,58,.5) 100%); }
 .hero-content { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 6rem 1.5rem 4rem; }
-.hero-location { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--pink); margin-bottom: 1.25rem; }
+.hero-location { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--pink); margin-bottom: 1.25rem; }
 .hero-title { color: var(--white); margin-bottom: 1rem; }
 .hero-title em { color: var(--pink); font-style: normal; }
 .hero-sub { color: rgba(255,255,255,.6); font-size: .9rem; margin-bottom: .5rem; }
 .hero-hours { color: rgba(255,255,255,.5); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 2.5rem; }
-.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
 
 /* ── Ticker ── */
 .ticker { background: var(--pink); overflow: hidden; padding: .75rem 0; white-space: nowrap; }
@@ -7014,7 +7014,7 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 600px;
+  margin: 0 auto;
 }
 
 .section-tag {
@@ -7030,7 +7030,7 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
 .hero-content h1 {
   color: var(--white);
   margin-bottom: 1rem;
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(3rem, 7vw, 5rem);
   line-height: 1.2;
 }
 

@@ -29,20 +29,16 @@
      HERO SECTION - PLEIN ÉCRAN
 ════════════════════════════════════════════ --}}
 <section class="hero" aria-label="Factory & Co Val d'Europe">
-    <div class="hero-bg" style="background-image:url('{{ asset('images/factory-val.webp') }}')" aria-hidden="true"></div>
+    <div class="hero-bg" style="background-image:url('{{ asset('images/PHOTO-2026-03-26-10-27-33.jpg') }}')" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
         <p class="hero-location">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             CC Val d'Europe · 14 Rue du Danube · Serris
         </p>
-        <h1 class="hero-title">
-            Factory &amp; Co<br>
-            Val d'Europe :<br>
-            L'<em>Authentique Diner</em> Américain
-        </h1>
-        <p class="hero-sub">Smash Burgers · Bagels New-Yorkais · Cheesecake Factory · Healthy Bowls</p>
-        <p class="hero-hours">Ouvert 7j/7 · 07:00 – 22:30 · Delicious since 2008</p>
+        <h1 class="hero-title">Factory &amp; Co Val d'Europe : L'<em>Authentique Diner Américain</em></h1>
+        <p class="hero-sub">Smash burgers &amp; New York cheesecakes</p>
+        <p class="hero-hours">Lun-Jeu, Dim: 8h30 - 22h · Ven-Sam: 8h30 - 23h · Delicious since 1989</p>
         <div class="hero-ctas">
             <a href="javascript:void(0)" onclick="window.factoryCoNav && window.factoryCoNav.openNavigationModal()" class="btn btn-pink">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -62,8 +58,8 @@
 <section class="section section-dark stats-section">
     <div class="stats-grid">
         <div class="stat-item">
-            <div class="stat-number">2008</div>
-            <div class="stat-label">Année de création</div>
+            <div class="stat-number">2016</div>
+            <div class="stat-label">Ouverture Val d'Europe</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">100%</div>
@@ -74,8 +70,8 @@
             <div class="stat-label">Note Google</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">320+</div>
-            <div class="stat-label">Avis clients</div>
+            <div class="stat-number">6000+</div>
+            <div class="stat-label">Avis Google</div>
         </div>
     </div>
 </section>
@@ -92,7 +88,7 @@
                     Une escale gourmande<br>
                     Authentiquement américaine
                 </h2>
-                <p>Factory &amp; Co, c'est l'histoire d'une passion : celle du chef <strong>Jonathan Jablonski</strong>, formé aux côtés des plus grands cuisiniers de <strong>Brooklyn</strong>. En 2008, il a décidé de transporter l'âme authentique des diners new-yorkais au cœur du centre commercial Val d'Europe.</p>
+                <p>Factory &amp; Co, c'est l'histoire d'une passion : celle du chef <strong>Jonathan Jablonski</strong>, rêveur depuis 1989 d'ouvrir un vrai restaurant new-yorkais. <strong>En 2016</strong>, il réalise ce rêve en installant Factory &amp; Co au cœur de Val d'Europe, avec le même savoir-faire des plus grands cuisiniers de <strong>Brooklyn</strong>.</p>
                 <p>Chez nous, <strong>rien n'est surgelé, tout est préparé à la minute</strong>. Chaque burger est smashé sur plaque brûlante. Chaque bagel est frais du jour. Chaque cheesecake respire les meilleures traditions new-yorkaises.</p>
                 <p><strong>Factory &amp; Co, c'est la liberté de bien manger, sans compromis.</strong></p>
                 <a href="{{ route('concept') }}" class="btn btn-pink">
