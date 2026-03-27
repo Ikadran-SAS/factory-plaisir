@@ -19,17 +19,74 @@
             [
                 '@type' => 'ListItem',
                 'position' => 2,
-                'name' => 'Notre Concept',
+                'name' => 'Notre concept',
                 'item' => route('concept')
+            ]
+        ]
+    ];
+
+    $webPageSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'WebPage',
+        '@id' => route('concept') . '#webpage',
+        'url' => route('concept'),
+        'name' => 'Notre Concept – Factory & Co Val d\'Europe',
+        'description' => 'Découvrez l\'univers de Factory & Co : une philosophie basée sur l\'authenticité, la passion et le savoir-faire artisanal.',
+        'isPartOf' => [
+            '@id' => route('home') . '#website'
+        ],
+        'inLanguage' => 'fr-FR',
+        'breadcrumb' => [
+            '@id' => route('concept') . '#breadcrumb'
+        ]
+    ];
+
+    $faqSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => 'Quel est le concept de Factory & Co ?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Factory & Co propose une expérience de cuisine gourmande et qualitative, inspirée des diners new-yorkais, avec burgers smashés, bagels frais et desserts artisanaux. Nous alions rapidité et qualité premium.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => 'Depuis quand existe Factory & Co ?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Factory & Co existe depuis 1989. Nous sommes implantés à Val d\'Europe depuis 2016, au cœur du centre commercial.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => 'Quels sont les horaires d\'ouverture ?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Nous sommes ouverts 7 jours sur 7. Lun-Mar-Mer-Jeu-Dim: 8h30-22h. Ven-Sam: 8h30-23h.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => 'Proposez-vous des options végétariennes et halal ?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Oui, Factory & Co propose des options pour tous : menus végétariens et halal disponibles pour accompagner tous nos clients.'
+                ]
             ]
         ]
     ];
 @endphp
 <script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+<script type="application/ld+json">{!! json_encode($webPageSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+<script type="application/ld+json">{!! json_encode($faqSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
 @endpush
 
 @section('content')
-<nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Notre Concept</span></div></nav>
+<nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Notre concept</span></div></nav>
 
 {{-- ════════════════════════════════════════════
      HERO SECTION
@@ -57,7 +114,7 @@
                 {{-- Badge --}}
                 <span class="pitch-badge">
                     <span class="pitch-badge-icon">💭</span>
-                    Notre Philosophie
+                    Notre philosophie
                 </span>
 
                 {{-- Titre principal avec highlight --}}
@@ -112,7 +169,7 @@
         {{-- Header Premium --}}
         <div class="concept-header-redesigned">
             <h2 class="concept-title-redesigned">
-                Notre <span class="concept-highlight">Concept</span>
+                Notre <span class="concept-highlight">concept</span>
             </h2>
             <p class="concept-subtitle-redesigned">L'énergie new-yorkaise, le savoir-faire français</p>
         </div>
@@ -127,7 +184,10 @@
             {{-- Pilier 1 --}}
             <div class="concept-pillar-card">
                 <svg class="pillar-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="32" height="32">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    <circle cx="12" cy="13" r="9" stroke-width="2"></circle>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v4l3 1.5"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 4h6"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 4a3 3 0 013-3 3 3 0 013 3"></path>
                 </svg>
                 <div class="pillar-content">
                     <h3 class="pillar-title">La rapidité<br>rencontre la qualité</h3>
@@ -141,7 +201,10 @@
             {{-- Pilier 2 --}}
             <div class="concept-pillar-card">
                 <svg class="pillar-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="32" height="32">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12c0-1.5 1-2 2-2h12c1 0 2 .5 2 2"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 10c0 1 2 2 6 2s6-1 6-2"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 12h10M7 14h10M7 16h10"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18c0-1.5 1-2 2-2h12c1 0 2 .5 2 2"></path>
                 </svg>
                 <div class="pillar-content">
                     <h3 class="pillar-title">La street food<br>devient expérience</h3>
@@ -187,7 +250,7 @@
         {{-- Header Premium --}}
         <div class="experience-header-redesigned">
             <h2 class="experience-title-redesigned">
-                L'<span class="experience-highlight">Expérience Client</span>
+                L'<span class="experience-highlight">expérience client</span>
             </h2>
             <p class="experience-subtitle-redesigned">Un moment qui s'adapte à vous</p>
         </div>
@@ -217,7 +280,8 @@
             <div class="experience-moment-card">
                 <div class="moment-icon-wrapper">
                     <svg class="moment-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 6l7 7m0 0l-7 7m7-7H3"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 9h4l1 3v5h4v-5l1-3h4"></path>
                     </svg>
                 </div>
                 <div class="moment-content">
@@ -231,7 +295,10 @@
             <div class="experience-moment-card">
                 <div class="moment-icon-wrapper">
                     <svg class="moment-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+                        <circle cx="8" cy="14" r="5" stroke-width="1.5"></circle>
+                        <circle cx="16" cy="14" r="5" stroke-width="1.5"></circle>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9v3M16 9v3M10 12h4"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 18l2 2M16 18l-2 2"></path>
                     </svg>
                 </div>
                 <div class="moment-content">
@@ -245,7 +312,12 @@
             <div class="experience-moment-card">
                 <div class="moment-icon-wrapper">
                     <svg class="moment-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h2v8H9zM13 7h2v8h-2z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 17h12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 10c0-2 .5-4 2-4h6c1.5 0 2 2 2 4"></path>
+                        <circle cx="9" cy="5" r="0.5" fill="currentColor"></circle>
+                        <circle cx="12" cy="4" r="0.5" fill="currentColor"></circle>
+                        <circle cx="15" cy="5" r="0.5" fill="currentColor"></circle>
                     </svg>
                 </div>
                 <div class="moment-content">
@@ -277,19 +349,19 @@
         <div class="cuisine-header-redesigned">
             <span class="cuisine-badge">
                 <span class="cuisine-badge-icon">🍔</span>
-                Notre Cuisine
+                Notre cuisine
             </span>
             <h2 class="cuisine-title-redesigned">
                 Généreuse, <span class="cuisine-highlight">gourmande,</span> assumée
             </h2>
             <p class="cuisine-subtitle-redesigned">
-                Notre cuisine célèbre le plaisir
+                Le savoir-faire au cœur de chaque assiette
             </p>
         </div>
 
         {{-- Intro text avec accent --}}
         <blockquote class="cuisine-intro-quote">
-            Chaque assiette est une promesse de gourmandise, chaque détail pensé pour créer un moment mémorable. Nos pâtisseries, buns et pains bagels sont produits par nos soins, avec le savoir-faire du chef Jonathan.
+            Chaque assiette est une promesse de gourmandise, chaque détail pensé pour créer un moment mémorable. Pâtisseries, buns et pains bagels sont fabriqués par nos soins, avec le savoir-faire du chef Jonathan et l'engagement envers la qualité artisanale. Ici, rien n'est laissé au hasard. Tout est pensé, préparé, maîtrisé.
         </blockquote>
 
         {{-- Slider Wrapper avec Navigation --}}
@@ -529,7 +601,7 @@
         <div class="why-choose-header">
             <span class="why-choose-badge">
                 <span class="why-choose-badge-icon">⭐</span>
-                Pourquoi Nous Choisir
+                Pourquoi nous choisir
             </span>
             <h2 class="why-choose-title">
                 <span class="why-choose-highlight">L'expérience</span> fait la différence
@@ -557,7 +629,7 @@
                         <path d="M32 18 C32 18, 28 24, 28 28 C28 31.314, 29.791 34, 32 34 C34.209 34, 36 31.314, 36 28 C36 24, 32 18, 32 18 Z" stroke="url(#grad-visual-1)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3 class="card-visual-title">Identité Forte</h3>
+                <h3 class="card-visual-title">Identité forte</h3>
                 <p class="card-visual-description">Un design unique et reconnaissable qui marque les esprits dès l'entrée</p>
                 <div class="card-visual-accent"></div>
             </div>
@@ -579,13 +651,30 @@
                                 <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
                             </linearGradient>
                         </defs>
-                        <rect x="12" y="16" width="40" height="32" rx="2" stroke="url(#grad-visual-2)" stroke-width="2.5" fill="none"/>
-                        <path d="M12 24 L52 24" stroke="url(#grad-visual-2)" stroke-width="2.5"/>
-                        <rect x="18" y="18" width="12" height="6" stroke="url(#grad-visual-2)" stroke-width="2.5" fill="none"/>
-                        <rect x="34" y="18" width="12" height="6" stroke="url(#grad-visual-2)" stroke-width="2.5" fill="none"/>
+                        <!-- Personne gauche -->
+                        <circle cx="16" cy="12" r="3" stroke="url(#grad-visual-2)" stroke-width="2" fill="none"/>
+                        <rect x="13" y="16" width="6" height="10" stroke="url(#grad-visual-2)" stroke-width="2" fill="none"/>
+                        <line x1="8" y1="18" x2="4" y2="6" stroke="url(#grad-visual-2)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="24" y1="18" x2="28" y2="6" stroke="url(#grad-visual-2)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16" y1="26" x2="14" y2="36" stroke="url(#grad-visual-2)" stroke-width="2"/>
+                        <line x1="16" y1="26" x2="18" y2="36" stroke="url(#grad-visual-2)" stroke-width="2"/>
+                        <!-- Personne centre -->
+                        <circle cx="32" cy="10" r="3.5" stroke="url(#grad-visual-2)" stroke-width="2" fill="none"/>
+                        <rect x="28.5" y="14" width="7" height="12" stroke="url(#grad-visual-2)" stroke-width="2" fill="none"/>
+                        <line x1="24" y1="16" x2="18" y2="4" stroke="url(#grad-visual-2)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="40" y1="16" x2="46" y2="4" stroke="url(#grad-visual-2)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="32" y1="26" x2="30" y2="36" stroke="url(#grad-visual-2)" stroke-width="2"/>
+                        <line x1="32" y1="26" x2="34" y2="36" stroke="url(#grad-visual-2)" stroke-width="2"/>
+                        <!-- Personne droite -->
+                        <circle cx="48" cy="12" r="3" stroke="url(#grad-visual-2)" stroke-width="2" fill="none"/>
+                        <rect x="45" y="16" width="6" height="10" stroke="url(#grad-visual-2)" stroke-width="2" fill="none"/>
+                        <line x1="40" y1="18" x2="36" y2="6" stroke="url(#grad-visual-2)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="56" y1="18" x2="60" y2="6" stroke="url(#grad-visual-2)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="48" y1="26" x2="46" y2="36" stroke="url(#grad-visual-2)" stroke-width="2"/>
+                        <line x1="48" y1="26" x2="50" y2="36" stroke="url(#grad-visual-2)" stroke-width="2"/>
                     </svg>
                 </div>
-                <h3 class="card-visual-title">Ambiance Immersive</h3>
+                <h3 class="card-visual-title">Ambiance immersive</h3>
                 <p class="card-visual-description">Une atmosphère energique qui vous transporte loin de l'ordinaire</p>
                 <div class="card-visual-accent"></div>
             </div>
@@ -612,7 +701,7 @@
                         <path d="M20 35 Q32 40, 44 35" stroke="url(#grad-visual-3)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3 class="card-visual-title">Cuisine Généreuse</h3>
+                <h3 class="card-visual-title">Cuisine généreuse</h3>
                 <p class="card-visual-description">Des produits frais, des portions généreuses, une qualité sans compromis</p>
                 <div class="card-visual-accent"></div>
             </div>
@@ -637,7 +726,7 @@
                         <path d="M32 48 C32 48, 16 36, 16 26 C16 20, 20 16, 24 16 C26.5 16, 28.8 17.2, 30.4 19 C31.2 19.9, 32 20.8, 32 20.8 C32 20.8, 32.8 19.9, 33.6 19 C35.2 17.2, 37.5 16, 40 16 C44 16, 48 20, 48 26 C48 36, 32 48, 32 48 Z" stroke="url(#grad-visual-4)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3 class="card-visual-title">Expérience Complète</h3>
+                <h3 class="card-visual-title">Expérience complète</h3>
                 <p class="card-visual-description">Entrée, plat, dessert et moment précieux, tout en un seul endroit</p>
                 <div class="card-visual-accent"></div>
             </div>
@@ -701,7 +790,7 @@
                             <rect x="42" y="20" width="6" height="6" stroke="url(#grad-ambiance-1)" stroke-width="2" fill="none"/>
                         </svg>
                     </div>
-                    <h3 class="ambiance-card-title">Design Urbain</h3>
+                    <h3 class="ambiance-card-title">Design urbain</h3>
                     <p class="ambiance-card-description">Inspiré des grandes villes, notre intérieur fusionne style new-yorkais et savoir-faire français</p>
                     <div class="ambiance-card-accent"></div>
                 </div>
@@ -728,7 +817,7 @@
                             <path d="M18 38 Q18 44, 32 48 Q46 44, 46 38" stroke="url(#grad-ambiance-2)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="ambiance-card-title">Ambiance Conviviale</h3>
+                    <h3 class="ambiance-card-title">Ambiance conviviale</h3>
                     <p class="ambiance-card-description">Un espace chaleureux pensé pour les moments partagés, où chacun se sent bienvenu</p>
                     <div class="ambiance-card-accent"></div>
                 </div>
@@ -755,7 +844,7 @@
                             <path d="M26 40 L 26 45 M 38 40 L 38 45" stroke="url(#grad-ambiance-3)" stroke-width="2.5" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="ambiance-card-title">Espace Détente</h3>
+                    <h3 class="ambiance-card-title">Espace détente</h3>
                     <p class="ambiance-card-description">Que ce soit rapide ou détente, nos installations vous offrent le confort et la sérénité</p>
                     <div class="ambiance-card-accent"></div>
                 </div>
@@ -781,7 +870,7 @@
         <div class="moments-header-redesigned">
             <span class="moments-badge">
                 <span class="moments-badge-icon">⏰</span>
-                Pour Tous les Moments
+                Pour tous les moments
             </span>
             <h2 class="moments-title-redesigned">
                 Chaque heure a sa <span class="moments-highlight">bonne raison</span>
@@ -817,8 +906,8 @@
                             <path d="M 32 32 L 32 40" stroke="url(#grad-moment-1)" stroke-width="2.5" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="moments-card-title">Pause Déjeuner</h3>
-                    <p class="moments-card-description">Rapide, satisfaisante et délicieuse. Idéale pour votre pause shopping ou professionnelle</p>
+                    <h3 class="moments-card-title">Pause déjeuner</h3>
+                    <p class="moments-card-description">Burgers savoureux et bagels généreux pour votre pause shopping ou pause professionnelle. Nourrissant, rapide et délicieux</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>
@@ -844,8 +933,8 @@
                             <path d="M 32 20 Q 30 18, 28 20" stroke="url(#grad-moment-2)" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="moments-card-title">Goûter Gourmand</h3>
-                    <p class="moments-card-description">Une pause sucrée et réconfortante pour vos moments de détente l'après-midi</p>
+                    <h3 class="moments-card-title">Goûter gourmand</h3>
+                    <p class="moments-card-description">Nos cheesecakes onctueux, pâtisseries artisanales et douceurs faites maison. La pause sucrée qu'on attend avec impatience</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>
@@ -871,8 +960,8 @@
                             <path d="M 20 32 Q 20 28, 24 26 M 44 32 Q 44 28, 40 26" stroke="url(#grad-moment-3)" stroke-width="2.5" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="moments-card-title">Dîner Décontracté</h3>
-                    <p class="moments-card-description">Entre détente et plaisir gustatif, savourez une soirée en toute sérénité</p>
+                    <h3 class="moments-card-title">Dîner décontracté</h3>
+                    <p class="moments-card-description">Burgers savoureux, bagels généreux et cheesecakes gourmands pour une soirée en famille ou entre amis, en toute détente</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>
@@ -899,8 +988,8 @@
                             <path d="M 18 33 Q 18 40, 32 44 Q 46 40, 46 33" stroke="url(#grad-moment-4)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="moments-card-title">Petit-Déjeuner Américain</h3>
-                    <p class="moments-card-description">Dès 8h30, bagels frais, œufs brouillés, bacon croustillant et café de qualité</p>
+                    <h3 class="moments-card-title">Petit-déjeuner américain</h3>
+                    <p class="moments-card-description">Dès 8h30, bagels frais, œufs brouillés, bacon croustillant, pâtisseries artisanales et café de qualité pour bien commencer la journée</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>
@@ -925,7 +1014,7 @@
         <div class="clients-love-header">
             <span class="clients-love-badge">
                 <span class="clients-love-badge-icon">❤️</span>
-                Ce que Nos Clients Aiment
+                Ce que nos clients aiment
             </span>
             <h2 class="clients-love-title">
                 Pourquoi on <span class="clients-love-highlight">revient</span>
@@ -954,8 +1043,8 @@
                         <path d="M 28 28 L 32 32 L 36 28 M 28 36 L 32 32 L 36 36" stroke="url(#grad-love-1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                     </svg>
                 </div>
-                <h3 class="clients-love-card-title">La Générosité</h3>
-                <p class="clients-love-card-text">Des plats copieux et réconfortants qui satisfont les plus grands appétits</p>
+                <h3 class="clients-love-card-title">La générosité</h3>
+                <p class="clients-love-card-text">Des portions généreuses et copieuses, conçues pour satisfaire les plus grands appétits. Chaque assiette déborde de saveurs</p>
             </div>
 
             {{-- Card 2: Qualité --}}
@@ -971,8 +1060,8 @@
                         <path d="M 32 18 L 38 26 L 46 27 L 40 32 L 42 40 L 32 36 L 22 40 L 24 32 L 18 27 L 26 26 Z" stroke="url(#grad-love-2)" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <h3 class="clients-love-card-title">La Qualité</h3>
-                <p class="clients-love-card-text">Des produits choisis avec soin, aucun compromis sur l'excellence</p>
+                <h3 class="clients-love-card-title">La qualité</h3>
+                <p class="clients-love-card-text">Des ingrédients premium, des recettes maison et aucun compromis. L'excellence, c'est notre standard</p>
             </div>
 
             {{-- Card 3: Ambiance --}}
@@ -985,15 +1074,31 @@
                                 <stop offset="100%" style="stop-color:#CC3366;stop-opacity:1" />
                             </linearGradient>
                         </defs>
-                        <rect x="14" y="18" width="36" height="28" rx="2" stroke="url(#grad-love-3)" stroke-width="2.5" fill="none"/>
-                        <circle cx="22" cy="24" r="2" fill="url(#grad-love-3)"/>
-                        <circle cx="32" cy="24" r="2" fill="url(#grad-love-3)"/>
-                        <circle cx="42" cy="24" r="2" fill="url(#grad-love-3)"/>
-                        <path d="M 16 38 Q 32 42, 48 38" stroke="url(#grad-love-3)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <!-- Personne gauche -->
+                        <circle cx="16" cy="12" r="3" stroke="url(#grad-love-3)" stroke-width="2" fill="none"/>
+                        <rect x="13" y="16" width="6" height="10" stroke="url(#grad-love-3)" stroke-width="2" fill="none"/>
+                        <line x1="8" y1="18" x2="4" y2="6" stroke="url(#grad-love-3)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="24" y1="18" x2="28" y2="6" stroke="url(#grad-love-3)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16" y1="26" x2="14" y2="36" stroke="url(#grad-love-3)" stroke-width="2"/>
+                        <line x1="16" y1="26" x2="18" y2="36" stroke="url(#grad-love-3)" stroke-width="2"/>
+                        <!-- Personne centre -->
+                        <circle cx="32" cy="10" r="3.5" stroke="url(#grad-love-3)" stroke-width="2" fill="none"/>
+                        <rect x="28.5" y="14" width="7" height="12" stroke="url(#grad-love-3)" stroke-width="2" fill="none"/>
+                        <line x1="24" y1="16" x2="18" y2="4" stroke="url(#grad-love-3)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="40" y1="16" x2="46" y2="4" stroke="url(#grad-love-3)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="32" y1="26" x2="30" y2="36" stroke="url(#grad-love-3)" stroke-width="2"/>
+                        <line x1="32" y1="26" x2="34" y2="36" stroke="url(#grad-love-3)" stroke-width="2"/>
+                        <!-- Personne droite -->
+                        <circle cx="48" cy="12" r="3" stroke="url(#grad-love-3)" stroke-width="2" fill="none"/>
+                        <rect x="45" y="16" width="6" height="10" stroke="url(#grad-love-3)" stroke-width="2" fill="none"/>
+                        <line x1="40" y1="18" x2="36" y2="6" stroke="url(#grad-love-3)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="56" y1="18" x2="60" y2="6" stroke="url(#grad-love-3)" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="48" y1="26" x2="46" y2="36" stroke="url(#grad-love-3)" stroke-width="2"/>
+                        <line x1="48" y1="26" x2="50" y2="36" stroke="url(#grad-love-3)" stroke-width="2"/>
                     </svg>
                 </div>
-                <h3 class="clients-love-card-title">L'Ambiance</h3>
-                <p class="clients-love-card-text">Un lieu agréable et accueillant où se sentir à la maison</p>
+                <h3 class="clients-love-card-title">L'ambiance</h3>
+                <p class="clients-love-card-text">Un espace chaleureux, moderne et accueillant où on se sent bien et où on aime revenir. Notre lieu, votre deuxième maison</p>
             </div>
 
             {{-- Card 4: Plaisir --}}
@@ -1012,8 +1117,8 @@
                         <circle cx="36" cy="36" r="1.5" fill="url(#grad-love-4)"/>
                     </svg>
                 </div>
-                <h3 class="clients-love-card-title">Le Plaisir</h3>
-                <p class="clients-love-card-text">Simple de bien manger et de profiter de chaque moment</p>
+                <h3 class="clients-love-card-title">Le plaisir</h3>
+                <p class="clients-love-card-text">La simplicité du bien-manger, l'absence de prise de tête, juste du plaisir à chaque moment. Manger, c'est vivre</p>
             </div>
         </div>
 
@@ -1035,7 +1140,7 @@
         <div class="location-header">
             <span class="location-badge">
                 <span class="location-badge-icon">📍</span>
-                Au Cœur de Votre Centre Commercial
+                Au cœur de votre centre commercial
             </span>
             <h2 class="location-title">
                 Facile, <span class="location-highlight">accessible,</span> évident
@@ -1064,7 +1169,7 @@
                         <circle cx="32" cy="30" r="4" stroke="url(#grad-location-1)" stroke-width="2" fill="none"/>
                     </svg>
                 </div>
-                <h3 class="location-benefit-title">Au Milieu du Shopping</h3>
+                <h3 class="location-benefit-title">Au milieu du shopping</h3>
                 <p class="location-benefit-text">Situé stratégiquement pour une pause naturelle dans votre parcours</p>
             </div>
 
@@ -1082,7 +1187,7 @@
                         <circle cx="32" cy="32" r="6" stroke="url(#grad-location-2)" stroke-width="2" fill="none"/>
                     </svg>
                 </div>
-                <h3 class="location-benefit-title">Accessible Rapidement</h3>
+                <h3 class="location-benefit-title">Accessible rapidement</h3>
                 <p class="location-benefit-text">Facile à trouver, entièrement accessible de tous les sens du centre</p>
             </div>
 
@@ -1101,7 +1206,7 @@
                         <circle cx="32" cy="32" r="2" fill="url(#grad-location-3)"/>
                     </svg>
                 </div>
-                <h3 class="location-benefit-title">Adapté à Tous les Rythmes</h3>
+                <h3 class="location-benefit-title">Adapté à tous les rythmes</h3>
                 <p class="location-benefit-text">Ouvert à tous les moments, du matin jusqu'au soir, 7 jours sur 7</p>
             </div>
         </div>
@@ -1159,7 +1264,7 @@
 
             {{-- Tagline finale ── --}}
             <p class="cta-tagline">
-                ✓ Factory & Co Depuis 2008<br>
+                ✓ Factory & Co Depuis 1989<br>
                 <span class="cta-tagline-small">Une vraie différence. Un vrai plaisir.</span>
             </p>
         </div>

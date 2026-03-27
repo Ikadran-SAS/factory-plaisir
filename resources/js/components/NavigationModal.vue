@@ -35,7 +35,7 @@
             <!-- Waze Option -->
             <a href="https://waze.com/ul?q=14%20Rue%20du%20Danube%2C%2077700%20Serris" target="_blank" class="nav-option waze" @click="trackNavigation('waze')">
               <div class="nav-icon">
-                <img src="/images/logos/waze-logo.png" alt="Waze" width="48" height="48">
+                <img src="/images/waze-logo.png" alt="Waze" width="48" height="48">
               </div>
               <div class="nav-info">
                 <h3>Waze</h3>
@@ -49,7 +49,7 @@
             <!-- Apple Plans Option -->
             <a href="https://maps.apple.com/?address=14%20Rue%20du%20Danube%2C%2077700%20Serris%2C%20France&adr=1" target="_blank" class="nav-option apple-maps" @click="trackNavigation('apple-maps')">
               <div class="nav-icon">
-                <img src="/images/logos/apple-maps-logo.png" alt="Apple Maps" width="48" height="48">
+                <img src="/images/apple-maps-logo.png" alt="Apple Maps" width="48" height="48">
               </div>
               <div class="nav-info">
                 <h3>Apple Plans</h3>

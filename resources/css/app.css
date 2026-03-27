@@ -528,6 +528,7 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
 .hero-concept .hero-content {
   position: relative;
   z-index: 2;
+  text-align: center;
 }
 
 .hero-concept h1 {
@@ -540,6 +541,8 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
   color: rgba(245, 195, 219, 0.9);
   font-size: 1.1rem;
   max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .concept-grid {
