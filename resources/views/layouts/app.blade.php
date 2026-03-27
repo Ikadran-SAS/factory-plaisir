@@ -68,27 +68,21 @@
             'openingHoursSpecification' => [
                 [
                     '@type' => 'OpeningHoursSpecification',
-                    'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday'],
-                    'opens' => '07:00',
-                    'closes' => '21:30'
-                ],
-                [
-                    '@type' => 'OpeningHoursSpecification',
-                    'dayOfWeek' => ['Thursday', 'Friday'],
-                    'opens' => '07:00',
+                    'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Sunday'],
+                    'opens' => '08:30',
                     'closes' => '22:00'
                 ],
                 [
                     '@type' => 'OpeningHoursSpecification',
-                    'dayOfWeek' => ['Saturday', 'Sunday'],
-                    'opens' => '07:00',
-                    'closes' => '22:30'
+                    'dayOfWeek' => ['Friday', 'Saturday'],
+                    'opens' => '08:30',
+                    'closes' => '23:00'
                 ]
             ],
             'aggregateRating' => [
                 '@type' => 'AggregateRating',
                 'ratingValue' => '4.5',
-                'reviewCount' => '320',
+                'reviewCount' => '6000',
                 'bestRating' => '5'
             ],
             'amenityFeature' => [

@@ -3152,7 +3152,7 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
 .hero-location { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--pink); margin-bottom: 1.25rem; }
 .hero-title { color: var(--white); margin-bottom: 1rem; }
 .hero-title em { color: var(--pink); font-style: normal; }
-.hero-sub { color: rgba(255,255,255,.6); font-size: .9rem; margin-bottom: .5rem; }
+.hero-sub { color: rgba(255,255,255,.6); font-size: .75rem; margin-bottom: .5rem; }
 .hero-hours { color: rgba(255,255,255,.5); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 2.5rem; }
 .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
 
@@ -7030,7 +7030,7 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
 .hero-content h1 {
   color: var(--white);
   margin-bottom: 1rem;
-  font-size: clamp(3rem, 7vw, 5rem);
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
   line-height: 1.2;
 }
 

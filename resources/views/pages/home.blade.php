@@ -36,7 +36,7 @@
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             CC Val d'Europe · 14 Rue du Danube · Serris
         </p>
-        <h1 class="hero-title">Factory &amp; Co Val d'Europe : L'<em>Authentique Diner Américain</em></h1>
+        <h1 class="hero-title">Factory &amp; Co Val d'Europe : <em>L'Authentique Diner Américain</em></h1>
         <p class="hero-sub">Smash burgers &amp; New York cheesecakes</p>
         <p class="hero-hours">Lun-Jeu, Dim: 8h30 - 22h · Ven-Sam: 8h30 - 23h · Delicious since 1989</p>
         <div class="hero-ctas">
@@ -102,8 +102,8 @@
                      loading="lazy" width="700" height="500">
                 <div class="concept-badge">
                     <span class="concept-badge-title">Delicious</span>
-                    <span class="concept-badge-sub">since 2008</span>
-                    <span class="concept-badge-detail">Fait maison · À la commande</span>
+                    <span class="concept-badge-sub">since 1989</span>
+                    <span class="concept-badge-detail">À la commande</span>
                 </div>
             </div>
         </div>
@@ -228,7 +228,7 @@
                 <h3>🚗 Accès & transport</h3>
                 <ul>
                     <li>🅿️ Parking gratuit du centre commercial</li>
-                    <li>🚆 RER E Gare du Val d'Europe</li>
+                    <li>🚆 RER A Val d'Europe</li>
                     <li>✨ À 15 min de Disneyland Paris</li>
                 </ul>
             </div>
@@ -253,7 +253,7 @@
             <img src="{{ asset('images/ashley.webp') }}" alt="Commander chez Factory & Co" class="cta-image">
             <div class="cta-text">
                 <h2>À emporter sur place</h2>
-                <p>Venez nous rendre visite ! Composez votre menu sur place, à la minute, et savourez votre repas à emporter. Parfait pour les visiteurs pressés qui veulent un vrai burger fait maison, sans attente excessive.</p>
+                <p>Venez nous rendre visite ! Composez votre menu sur place, à la minute, et savourez votre repas à emporter. Parfait pour les visiteurs pressés qui veulent un vrai burger préparé avec savoir-faire, sans attente excessive.</p>
                 <a href="{{ route('menu.burgers') }}" class="btn btn-pink">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                     Voir la carte

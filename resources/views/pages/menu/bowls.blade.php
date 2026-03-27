@@ -45,7 +45,7 @@
         <div class="section-header"><h2 class="section-title light">Découvrez aussi</h2></div>
         <div class="internal-nav-grid">
             <a href="{{ route('menu.burgers') }}" class="internal-nav-card"><span>🍔</span><h3>L'Atelier Burger</h3><p>Smash Burgers, options Halal</p></a>
-            <a href="{{ route('menu.bagels') }}" class="internal-nav-card"><span>🥯</span><h3>Bagels New-Yorkais</h3><p>Breakfast dès 07h00</p></a>
+            <a href="{{ route('menu.bagels') }}" class="internal-nav-card"><span>🥯</span><h3>Bagels New-Yorkais</h3><p>Breakfast dès 8h30</p></a>
             <a href="{{ route('menu.cheesecake') }}" class="internal-nav-card"><span>🍰</span><h3>Cheesecake Factory</h3><p>Recettes du chef Jonathan</p></a>
         </div>
     </div>

@@ -173,7 +173,7 @@
                 Ici, tout est préparé avec exigence, dans un esprit <span class="concept-conclusion-highlight">fast casual premium</span> : rapide, mais jamais bâclé.
             </p>
             <p class="concept-conclusion-subtext">
-                ✓ Factory & Co Depuis 2008
+                ✓ Factory & Co Depuis 1989 – Ouvert à Val d'Europe depuis 2016
             </p>
         </div>
     </div>
@@ -289,7 +289,7 @@
 
         {{-- Intro text avec accent --}}
         <blockquote class="cuisine-intro-quote">
-            Chaque assiette est une promesse de gourmandise, chaque détail pensé pour créer un moment mémorable.
+            Chaque assiette est une promesse de gourmandise, chaque détail pensé pour créer un moment mémorable. Nos pâtisseries, buns et pains bagels sont produits par nos soins, avec le savoir-faire du chef Jonathan.
         </blockquote>
 
         {{-- Slider Wrapper avec Navigation --}}
@@ -786,7 +786,7 @@
             <h2 class="moments-title-redesigned">
                 Chaque heure a sa <span class="moments-highlight">bonne raison</span>
             </h2>
-            <p class="moments-subtitle-redesigned">Du déjeuner au goûter… jusqu'au dîner et au-delà</p>
+            <p class="moments-subtitle-redesigned">Petit-déjeuner, déjeuner, goûter, dîner… à chaque heure sa spécialité</p>
         </div>
 
         {{-- Intro Quote --}}
@@ -899,8 +899,8 @@
                             <path d="M 18 33 Q 18 40, 32 44 Q 46 40, 46 33" stroke="url(#grad-moment-4)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="moments-card-title">Moment entre Amis</h3>
-                    <p class="moments-card-description">À partager en bonne compagnie, créez des souvenirs délicieux ensemble</p>
+                    <h3 class="moments-card-title">Petit-Déjeuner Américain</h3>
+                    <p class="moments-card-description">Dès 8h30, bagels frais, œufs brouillés, bacon croustillant et café de qualité</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>

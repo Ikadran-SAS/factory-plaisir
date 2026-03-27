@@ -99,7 +99,7 @@
                 NYC SMASH BURGERS
             </div>
             <h2 class="category-title">L'Atelier Burger</h2>
-            <p class="category-subtitle">Du bœuf de race, smashé à la commande, jamais surgelé</p>
+            <p class="category-subtitle">Viande Angus Rance d'origine Irlandaise, certifiée halal, smashée à la commande</p>
             <p class="category-description">Chaque burger est une création culinaire pensée pour séduire vos papilles. Sauce secrète depuis 1989, garnitures fraîches, pain grillé à la perfection.</p>
         </div>
 
@@ -132,7 +132,7 @@
                 BAGELS NEW-YORKAIS
             </div>
             <h2 class="category-title">Breakfast Américain</h2>
-            <p class="category-subtitle">Dès 07h00 - Recette authen tique à farine canadienne</p>
+            <p class="category-subtitle">Dès 8h30 - Recette authentique à farine canadienne</p>
             <p class="category-description">Nos bagels sont préparés en-house avec la farine canadienne traditionnelle. Chauds, froids, à composer selon vos envies.</p>
         </div>
 
@@ -229,7 +229,7 @@
     <div class="container">
         <div class="cta-content">
             <h2>Prêt à déguster ?</h2>
-            <p>Commandez maintenant en restaurant, en click & collect, ou en delivery</p>
+            <p>Venez nous retrouver au cœur de Val d'Europe</p>
             <div class="cta-buttons">
                 <a href="javascript:void(0)" onclick="window.factoryCoNav && window.factoryCoNav.openNavigationModal()" class="btn btn-pink btn-lg">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
@@ -237,12 +237,6 @@
                         <circle cx="12" cy="10" r="3"></circle>
                     </svg>
                     Venir au restaurant
-                </a>
-                <a href="javascript:void(0)" class="btn btn-outline-dark btn-lg">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2z"></path>
-                    </svg>
-                    Click & Collect
                 </a>
             </div>
         </div>

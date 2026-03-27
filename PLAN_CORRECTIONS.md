@@ -63,8 +63,19 @@
 
 **URL:** `/specialites`
 
-- [ ] Réduire la taille des photos (actuellement trop grosses, ne comprend-on pas qu'il faut swiper)
-- [ ] Corriger la photo de « Cheesecake » (affiche actuellement une citronnade)
+- [x] Réduire la taille des photos (actuellement trop grosses, ne comprend-on pas qu'il faut swiper)
+- [x] Corriger la photo de « Cheesecake » (affiche actuellement une citronnade)
+
+---
+
+## 📰 BLOG (Articles corrigés)
+
+- [x] Supprimer article "Transporter cheesecake en avion"
+- [x] Corriger article "5 astuces Val d'Europe" (RER A, horaires, Click & collect)
+- [x] Corriger article "RER E Val d'Europe" (RER A, localisation)
+- [x] Corriger article "Smash burger" (viande Angus Rance)
+- [x] Corriger article "Petit-déjeuner" (offres, horaires)
+- [x] Corriger article "Histoire Factory & Co" (Jonathan, années)
 
 ---
 
@@ -72,9 +83,9 @@
 
 **URL:** `/carte/burgers`
 
-- [ ] Ajouter: Viande Angus Rance d'origine Irlandaise
-- [ ] Clarifier: Viande certifiée halal (pas une option)
-- [ ] Ajouter: Option veggie proposée pour tous les burgers
+- [x] Ajouter: Viande Angus Rance d'origine Irlandaise
+- [x] Clarifier: Viande certifiée halal (pas une option)
+- [x] Ajouter: Option veggie proposée pour tous les burgers
 
 ---
 
@@ -82,8 +93,8 @@
 
 **URL:** `/carte/bagels`
 
-- [ ] Supprimer: « Zone réservée Hall C »
-- [ ] Corriger les infos production:
+- [x] Supprimer: « Zone réservée Hall C »
+- [x] Corriger les infos production:
   - Pains bagels produits dans atelier central (Ivry-sur-Seine) selon recette Jonathan
   - Surgelés pour transport/logistique (corriger la mention actuelle)
 
@@ -93,37 +104,43 @@
 
 **URL:** `/concept`
 
-- [ ] Changer « since 2008 » en « since 1989 »
-- [ ] Section « Notre Cuisine »: Mettre davantage en avant:
+- [x] Changer « since 2008 » en « since 1989 »
+- [x] Section « Notre Cuisine »: Mettre davantage en avant:
   - Le savoir-faire
   - Pâtisseries, buns et pains bagels produits par nos soins
-- [ ] Section « ⏰ POUR TOUS LES MOMENTS »:
+- [x] Section « ⏰ POUR TOUS LES MOMENTS »:
   - Présenter l'offre petit-déj, déjeuner, goûter, dîner
-- [ ] Section « ❤️ CE QUE NOS CLIENTS AIMENT »:
+- [x] Section « ❤️ CE QUE NOS CLIENTS AIMENT »:
   - Revoir les symboles (générosité, ambiance, plaisir) - clarifier ce qu'ils illustrent
+
+---
+
+## 🎯 TOPBAR
+
+- [x] Retirer « Click & collect »
+- [x] Mettre à jour les horaires (L-M-M-J-D : 8h30-22h | V-S : 8h30-23h)
 
 ---
 
 ## 🔄 MISES À JOUR GLOBALES
 
-Ces changements concernent plusieurs pages et doivent être appliqués partout où ils apparaissent:
+Ces changements ont été appliqués partout où ils apparaissent:
 
-- [ ] **Horaires**: L-M-M-J-D : 8h30-22h | V-S : 8h30-23h
-- [ ] **Historique**: « since 1989 » (pas 2008), ouverture Val d'Europe 2016
-- [ ] **Accès**: RER A (pas RER E)
-- [ ] **Viande**: Angus Rance, Irlandaise, certifiée halal
-- [ ] **Burgers**: Option veggie disponible
+- [x] **Horaires**: L-M-M-J-D : 8h30-22h | V-S : 8h30-23h
+- [x] **Historique**: « since 1989 » (pas 2008), ouverture Val d'Europe 2016
+- [x] **Accès**: RER A (pas RER E)
+- [x] **Viande**: Angus Rance, Irlandaise, certifiée halal
+- [x] **Burgers**: Option veggie disponible
 
 ---
 
 ## 📊 Progression Globale
 
 **Total d'éléments à corriger:** ~50
-**Complétés:** 0
-**En cours:** 0
-**Restants:** 50
+**Complétés:** 48+ ✅
+**Restants:** 2 (RER E mentions résiduelles si d'autres pages)
 
-**Progression:** 0%
+**Progression:** 95%+ 🎉
 
 ---
 

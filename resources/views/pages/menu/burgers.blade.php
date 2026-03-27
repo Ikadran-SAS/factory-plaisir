@@ -72,7 +72,7 @@
     <div class="page-hero-inner">
         <span class="section-tag">Silo 1 · Best-seller</span>
         <h1>{{ $seo['h1'] }}</h1>
-        <p>Bœuf français 100%, smashé à la commande, jamais surgelé. Options Halal certifiées et menus enfants disponibles.</p>
+        <p>Viande Angus Rance d'origine Irlandaise, certifiée halal, smashée à la commande, jamais surgelée. Alternatives veggie disponibles pour tous les burgers et menus enfants.</p>
     </div>
 </div>
 
@@ -124,7 +124,7 @@
             <a href="{{ route('menu.bagels') }}" class="internal-nav-card">
                 <span>🥯</span>
                 <h3>Bagels New-Yorkais</h3>
-                <p>Breakfast dès 07h00</p>
+                <p>Breakfast dès 8h30</p>
             </a>
             <a href="{{ route('menu.cheesecake') }}" class="internal-nav-card">
                 <span>🍰</span>

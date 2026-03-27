@@ -32,7 +32,7 @@
     <div class="page-hero-inner">
         <span class="section-tag">Silo 2 · Breakfast &amp; Déjeuner</span>
         <h1>{{ $seo['h1'] }}</h1>
-        <p>Bagels frais, jamais surgelés. Chauds, froids ou à composer parmi 12 ingrédients. Dès 07h00 en zone réservée Hall C.</p>
+        <p>Bagels produits dans notre atelier central (Ivry-sur-Seine) selon la recette de Jonathan. Chauds, froids ou à composer parmi 12 ingrédients. Dès 8h30.</p>
     </div>
 </div>
 <section class="section section-light">

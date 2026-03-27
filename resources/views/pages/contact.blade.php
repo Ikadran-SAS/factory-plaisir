@@ -70,7 +70,6 @@
                         <select id="sujet" name="sujet" class="form-select @error('sujet') is-invalid @enderror" required>
                             <option value="">Choisissez un sujet</option>
                             <option value="allergenes"    @selected(old('sujet')=='allergenes')>Question sur les allergènes</option>
-                            <option value="click-collect" @selected(old('sujet')=='click-collect')>Click &amp; collect</option>
                             <option value="recrutement"   @selected(old('sujet')=='recrutement')>Recrutement</option>
                             <option value="franchise"     @selected(old('sujet')=='franchise')>Devenir franchisé</option>
                             <option value="avis"          @selected(old('sujet')=='avis')>Retour d'expérience</option>
@@ -93,7 +92,7 @@
                 <div class="info-card">
                     <h3>📍 Adresse &amp; accès</h3>
                     <p><strong>Centre Commercial Val d'Europe</strong><br>14 Rue du Danube<br>77700 Serris, France</p>
-                    <p>🅿️ Parking gratuit – 🚆 RER E Gare du Val d'Europe</p>
+                    <p>🅿️ Parking gratuit – 🚆 RER A Val d'Europe</p>
                     <p><a href="tel:0164632889">01 64 63 28 89</a></p>
                     <p><a href="mailto:contact@factoryandco.com">contact@factoryandco.com</a></p>
                 </div>

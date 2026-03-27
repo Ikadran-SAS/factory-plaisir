@@ -6,7 +6,7 @@
             {{-- Colonne marque + NAP --}}
             <div>
                 <p class="footer-logo-text">Factory &amp; Co</p>
-                <p class="footer-tagline">Delicious since 2008</p>
+                <p class="footer-tagline">Delicious since 1989</p>
                 {{-- NAP cohérent pour le SEO local --}}
                 <address class="footer-address" itemscope itemtype="https://schema.org/Restaurant">
                     <span itemprop="name" style="display:none">Factory &amp; Co Val d'Europe</span>
@@ -37,7 +37,6 @@
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="{{ route('click-collect') }}">Click &amp; collect</a></li>
                     <li><a href="{{ route('faq') }}">FAQ Allergènes</a></li>
                     <li><a href="{{ route('contact') }}">Contactez-nous</a></li>
                 </ul>

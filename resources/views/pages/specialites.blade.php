@@ -138,7 +138,7 @@
             {{-- CHEESECAKE --}}
             <div class="specialite-card">
                 <div class="specialite-image">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/Factory_And_Co_Claye_Souilly_Jon_Filin_Burger_Cheesecake_Sports_Bar-6.png" alt="Cheesecake Factory & Co" loading="lazy">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/cheesecake.webp" alt="Cheesecake Factory & Co" loading="lazy">
                     <span class="specialite-badge">Must-try</span>
                 </div>
                 <div class="specialite-content">
@@ -163,7 +163,7 @@
                 </div>
                 <div class="specialite-content">
                     <h3>Breakfast Américain</h3>
-                    <p>Ouverts dès 07h00. Bagels frais, œufs brouillés, bacon croustillant, café de qualité. Le vrai breakfast, pas la version pauvre.</p>
+                    <p>Ouverts dès 8h30. Bagels frais, œufs brouillés, bacon croustillant, café de qualité. Le vrai breakfast, pas la version pauvre.</p>
                     <div class="specialite-meta">
                         <span>☕ Matinal</span>
                         <span>🥓 Copieux</span>
@@ -324,7 +324,7 @@
     transition: all var(--transition);
     display: flex;
     flex-direction: column;
-    min-width: 260px;
+    min-width: 180px;
     flex-shrink: 0;
 }
 
