@@ -53,4 +53,5 @@ Route::get('/confidentialite', function () {
 
 /* ── SEO Technique ── */
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+Route::get('/sitemap', [SitemapController::class, 'html'])->name('sitemap.html');
 Route::get('/robots.txt', [SitemapController::class, 'robots'])->name('robots');

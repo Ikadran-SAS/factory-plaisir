@@ -3142,9 +3142,9 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
 .bc-sep { color: var(--border); }
 
 /* ── Page Hero ── */
-.page-hero { background: var(--navy); padding: 4rem 0 3rem; }
+.page-hero { background: var(--navy); padding: 6rem 0 5rem; }
 .page-hero-inner { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; text-align: center; }
-.page-hero h1 { color: var(--white); margin: .75rem 0; }
+.page-hero h1 { color: var(--white); margin: 1.5rem 0; font-size: 2.5rem; }
 .page-hero h1 em { color: var(--pink); font-style: normal; }
 .page-hero p { color: rgba(255,255,255,.65); font-size: 1.1rem; }
 

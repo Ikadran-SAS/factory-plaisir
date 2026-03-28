@@ -46,9 +46,8 @@
                 <h3>Infos pratiques</h3>
                 <ul>
                     <li><a href="{{ route('faq') }}">FAQ complète</a></li>
-                    <li><a href="{{ route('faq') }}#allergenes">Allergènes</a></li>
                     <li><a href="{{ route('contact') }}">Nous contacter</a></li>
-                    <li><a href="/sitemap.xml">Plan du site</a></li>
+                    <li><a href="{{ route('sitemap.html') }}">Plan du site</a></li>
                     <li><a href="#">Horaires d'ouverture</a></li>
                 </ul>
             </div>

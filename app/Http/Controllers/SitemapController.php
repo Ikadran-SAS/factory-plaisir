@@ -18,6 +18,22 @@ class SitemapController extends Controller
         ]);
     }
 
+    public function html()
+    {
+        $routes = [
+            ['url' => route('home'), 'title' => 'Accueil', 'priority' => '1.0', 'description' => 'Page d\'accueil'],
+            ['url' => route('menu.index'), 'title' => 'La carte', 'priority' => '0.9', 'description' => 'Découvrez notre menu complet'],
+            ['url' => route('concept'), 'title' => 'Notre concept', 'priority' => '0.8', 'description' => 'En savoir plus sur Factory & Co'],
+            ['url' => route('specialites'), 'title' => 'Nos spécialités', 'priority' => '0.7', 'description' => 'Nos 4 spécialités qui font notre réputation'],
+            ['url' => route('avis'), 'title' => 'Avis clients', 'priority' => '0.7', 'description' => 'Voir les avis de nos clients'],
+            ['url' => route('faq'), 'title' => 'FAQ', 'priority' => '0.7', 'description' => 'Questions fréquentes et allergènes'],
+            ['url' => route('click-collect'), 'title' => 'Click & Collect', 'priority' => '0.6', 'description' => 'Commandez en ligne'],
+            ['url' => route('contact'), 'title' => 'Contact', 'priority' => '0.5', 'description' => 'Nous contacter'],
+        ];
+
+        return view('pages.sitemap-html', compact('routes'));
+    }
+
     public function robots()
     {
         $content = "User-agent: *\nAllow: /\nSitemap: ".route('sitemap');
