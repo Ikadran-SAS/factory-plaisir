@@ -64,7 +64,7 @@
             'servesCuisine' => ['American', 'Burger', 'Bagel', 'Cheesecake', 'Fast Casual', 'Healthy'],
             'priceRange' => '€€',
             'acceptsReservations' => false,
-            'hasMenu' => route('menu.burgers'),
+            'hasMenu' => route('menu.index'),
             'openingHoursSpecification' => [
                 [
                     '@type' => 'OpeningHoursSpecification',

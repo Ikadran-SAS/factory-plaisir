@@ -21,10 +21,10 @@
             <div class="footer-col">
                 <h3>Notre carte</h3>
                 <ul>
-                    <li><a href="{{ route('menu.burgers') }}">Burgers Gourmets</a></li>
-                    <li><a href="{{ route('menu.bagels') }}">Bagels Authentiques</a></li>
-                    <li><a href="{{ route('menu.cheesecake') }}">Cheesecakes</a></li>
-                    <li><a href="{{ route('menu.bowls') }}">Bowls &amp; salades</a></li>
+                    <li><a href="{{ route('menu.index') }}#burgers">Burgers Gourmets</a></li>
+                    <li><a href="{{ route('menu.index') }}#bagels">Bagels Authentiques</a></li>
+                    <li><a href="{{ route('menu.index') }}#bowls">Bowls &amp; salades</a></li>
+                    <li><a href="{{ route('menu.index') }}#cheesecake">Cheesecakes</a></li>
                 </ul>
             </div>
 
@@ -42,7 +42,7 @@
                 <h3>Informations</h3>
                 <ul>
                     <li><a href="{{ route('specialites') }}">Nos spécialités</a></li>
-                    <li><a href="{{ route('blog.index') }}">Blog</a></li>
+                    {{-- <li><a href="{{ route('blog.index') }}">Blog</a></li> --}}
                     <li><a href="#">Recrutement</a></li>
                     <li><a href="#">Mentions légales</a></li>
                     <li><a href="#">Devenez franchise</a></li>

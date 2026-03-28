@@ -32,7 +32,7 @@
             </div>
         </div>
         <div style="text-align:center;margin-top:3rem">
-            <a href="{{ route('menu.burgers') }}" class="btn btn-pink" style="font-size:1.1rem;padding:1rem 2.5rem">
+            <a href="{{ route('menu.index') }}" class="btn btn-pink" style="font-size:1.1rem;padding:1rem 2.5rem">
                 Voir la carte et commander
             </a>
         </div>

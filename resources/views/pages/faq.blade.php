@@ -58,10 +58,15 @@
     </div>
 </div>
 
+@php
+$faqsFlat = collect($faqs)->flatten(1)->values()->all();
+$faqsEncoded = base64_encode(json_encode($faqsFlat));
+@endphp
+
 <section class="section section-light">
     <div class="container">
         {{-- Composant Vue.js FAQ Accordion --}}
-        <faq-accordion :faqs="{{ json_encode($faqs) }}"></faq-accordion>
+        <div id="faq-accordion-app" data-faqs="{{ $faqsEncoded }}"></div>
 
         {{-- Fallback HTML --}}
         <noscript>

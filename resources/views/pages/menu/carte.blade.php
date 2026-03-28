@@ -25,8 +25,58 @@
             ]
         ]
     ];
+
+    $webPageSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'WebPage',
+        '@id' => route('menu.index'),
+        'url' => route('menu.index'),
+        'name' => 'La Carte – Factory & Co Val d\'Europe',
+        'description' => 'Découvrez la carte complète de Factory & Co à Val d\'Europe. Smash Burgers anglais, Bagels New-Yorkais, Cheesecake premium, Bowls sains.',
+        'isPartOf' => [
+            '@type' => 'WebSite',
+            '@id' => route('home')
+        ],
+        'breadcrumb' => [
+            '@id' => '#breadcrumb'
+        ]
+    ];
+
+    $menuSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Menu',
+        'name' => 'La Carte – Factory & Co',
+        'hasMenuSection' => [
+            [
+                '@type' => 'MenuSection',
+                'name' => 'Burgers',
+                'description' => 'Nos incontournables smash burgers avec viande Angus certifiée halal',
+                'position' => 1
+            ],
+            [
+                '@type' => 'MenuSection',
+                'name' => 'Bagels',
+                'description' => 'Bagels authentiques New-Yorkais, breakfast dès 8h30',
+                'position' => 2
+            ],
+            [
+                '@type' => 'MenuSection',
+                'name' => 'Bowls',
+                'description' => 'Bowls sains, vegan et végétariens',
+                'position' => 3
+            ],
+            [
+                '@type' => 'MenuSection',
+                'name' => 'Cheesecake',
+                'description' => 'Cheesecake premium signatures du chef Jonathan',
+                'position' => 4
+            ]
+        ]
+    ];
 @endphp
 <script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+<script type="application/ld+json">{!! json_encode($webPageSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+<script type="application/ld+json">{!! json_encode($menuSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
 @endpush
 
 @section('content')
@@ -100,13 +150,13 @@
         <span class="pill-icon">🥯</span>
         <span class="pill-label">Bagels</span>
     </a>
-    <a href="#cheesecake" class="category-pill" data-category="cheesecake">
-        <span class="pill-icon">🍰</span>
-        <span class="pill-label">Cheesecake</span>
-    </a>
     <a href="#bowls" class="category-pill" data-category="bowls">
         <span class="pill-icon">🥗</span>
         <span class="pill-label">Bowls</span>
+    </a>
+    <a href="#cheesecake" class="category-pill" data-category="cheesecake">
+        <span class="pill-icon">🍰</span>
+        <span class="pill-label">Cheesecake</span>
     </a>
 </nav>
 
@@ -164,7 +214,7 @@
             @forelse ($bagels as $subcategory => $items)
                 @foreach ($items as $product)
                     <div class="item-card">
-                        <div class="item-image" style="background: linear-gradient(135deg, #F5C3DB 0%, #E8A0C0 100%)">
+                        <div class="item-image" style="background-image: url('{{ asset('images/recettes.webp') }}')">
                             <span class="price-badge">{{ number_format($product->price, 2, ',', '') }}€</span>
                         </div>
                         <div class="item-content">
@@ -180,8 +230,41 @@
     </div>
 </section>
 
+{{-- BOWLS --}}
+<section class="category-section" id="bowls">
+    <div class="container">
+        <div class="category-hero">
+            <div class="category-badge">
+                <span class="badge-icon">🥗</span>
+                SUPER BOWLS SAINS
+            </div>
+            <h2 class="category-title">Healthy & Bien-être</h2>
+            <p class="category-subtitle">Vegan, Végétarien, et délicieux</p>
+            <p class="category-description">Manger sain sans compromis sur le goût. Nos bowls sont composés avec des ingrédients frais, biologiques quand possible.</p>
+        </div>
+
+        <div class="items-grid">
+            @forelse ($bowls as $subcategory => $items)
+                @foreach ($items as $product)
+                    <div class="item-card">
+                        <div class="item-image" style="background-image: url('{{ asset('images/boissons.webp') }}')">
+                            <span class="price-badge">{{ number_format($product->price, 2, ',', '') }}€</span>
+                        </div>
+                        <div class="item-content">
+                            <h3>{{ $product->name }}</h3>
+                            <p>{{ $product->description }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            @empty
+                <p class="text-center">Aucun bowl disponible</p>
+            @endforelse
+        </div>
+    </div>
+</section>
+
 {{-- CHEESECAKE --}}
-<section class="category-section" id="cheesecake">
+<section class="category-section category-section-alt" id="cheesecake">
     <div class="container">
         <div class="category-hero">
             <div class="category-badge">
@@ -189,7 +272,7 @@
                 CHEESECAKE FACTORY
             </div>
             <h2 class="category-title">Pâtisseries Premium</h2>
-            <p class="category-subtitle">Recettes authen tiques du Chef Jonathan</p>
+            <p class="category-subtitle">Recettes authentiques du Chef Jonathan</p>
             <p class="category-description">Le vrai New York cheesecake préparé selon les traditions. Textures parfaites, saveurs authentiques, portions généreuses.</p>
         </div>
 
@@ -213,55 +296,48 @@
     </div>
 </section>
 
-{{-- BOWLS --}}
-<section class="category-section category-section-alt" id="bowls">
-    <div class="container">
-        <div class="category-hero">
-            <div class="category-badge">
-                <span class="badge-icon">🥗</span>
-                SUPER BOWLS SAINS
-            </div>
-            <h2 class="category-title">Healthy & Bien-être</h2>
-            <p class="category-subtitle">Vegan, Végétarien, et délicieux</p>
-            <p class="category-description">Manger sain sans compromis sur le goût. Nos bowls sont composés avec des ingrédients frais, biologiques quand possible.</p>
-        </div>
-
-        <div class="items-grid">
-            @forelse ($bowls as $subcategory => $items)
-                @foreach ($items as $product)
-                    <div class="item-card">
-                        <div class="item-image" style="background: linear-gradient(135deg, #90EE90 0%, #7CFC00 100%)">
-                            <span class="price-badge">{{ number_format($product->price, 2, ',', '') }}€</span>
-                        </div>
-                        <div class="item-content">
-                            <h3>{{ $product->name }}</h3>
-                            <p>{{ $product->description }}</p>
-                        </div>
-                    </div>
-                @endforeach
-            @empty
-                <p class="text-center">Aucun bowl disponible</p>
-            @endforelse
-        </div>
+{{-- ════════════════════════════════════════════
+     LOCALISATION - GOOGLE MAPS
+════════════════════════════════════════════ --}}
+<section class="section location-section">
+    <div class="location-info">
+        <h2>Prêt à déguster ?</h2>
+        <p class="location-subtitle">Venez nous retrouver au cœur de Val d'Europe</p>
+        <address class="location-address">
+            14 Rue du Danube<br>
+            CC Val d'Europe<br>
+            77700 Serris, France
+        </address>
+    </div>
+    <div class="location-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.9938339559873!2d2.7733!3d48.8753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5e6d8e6d8e6d9%3A0x1234567890!2s14%20Rue%20du%20Danube%2C%2077700%20Serris!5e0!3m2!1sfr!2sfr!4v1234567890" width="100%" height="400" style="border:0;border-radius:1.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
 
 {{-- ════════════════════════════════════════════
-     CTA FINAL - COMMANDER MAINTENANT
+     SECTION AVIS
 ════════════════════════════════════════════ --}}
-<section class="section cta-final-carte">
+<section class="section reviews-section">
     <div class="container">
-        <div class="cta-content">
-            <h2>Prêt à déguster ?</h2>
-            <p>Venez nous retrouver au cœur de Val d'Europe</p>
-            <div class="cta-buttons">
-                <a href="javascript:void(0)" onclick="window.factoryCoNav && window.factoryCoNav.openNavigationModal()" class="btn btn-pink btn-lg">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    Venir au restaurant
-                </a>
+        <div class="reviews-header">
+            <h2>Ce que nos clients aiment 💬</h2>
+            <a href="{{ route('avis') }}" class="btn btn-outline-pink">Voir tous les avis</a>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Les meilleurs burgers de Val d'Europe ! Qualité au rendez-vous et équipe très sympa."</p>
+                <p class="review-author">— Sarah M.</p>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Cadre moderne, burgers savoureux et service rapide. Je recommande vivement !"</p>
+                <p class="review-author">— Thomas D.</p>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                <p class="review-text">"Les cheesecakes sont divins et les options halal/végétariennes sont très variées."</p>
+                <p class="review-author">— Fatima K.</p>
             </div>
         </div>
     </div>

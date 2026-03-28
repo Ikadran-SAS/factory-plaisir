@@ -25,6 +25,12 @@ class HomeController extends Controller
             ->take(3)
             ->get();
 
+        // Get Google reviews aggregate rating
+        $googleReviewsController = new GoogleReviewsController();
+        $aggregateData = $googleReviewsController->getAggregateRating();
+        $averageRating = $aggregateData['rating'] ?? ($featuredReviews->count() > 0 ? $featuredReviews->avg('rating') : 0);
+        $totalReviews = $aggregateData['total'] ?? Review::where('is_visible', true)->count();
+
         $openingHours = OpeningHour::orderBy('sort_order')->get();
 
         $faqsGrouped = FaqItem::grouped();
@@ -38,7 +44,7 @@ class HomeController extends Controller
             'canonical' => route('home'),
         ];
 
-        return view('pages.home', compact('featuredProducts', 'featuredReviews', 'openingHours', 'faqs', 'seo'));
+        return view('pages.home', compact('featuredProducts', 'featuredReviews', 'openingHours', 'faqs', 'seo', 'averageRating', 'totalReviews'));
     }
 
     /**

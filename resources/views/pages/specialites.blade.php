@@ -24,8 +24,113 @@
             ]
         ]
     ];
+
+    $webPageSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'WebPage',
+        '@id' => route('specialites'),
+        'url' => route('specialites'),
+        'name' => 'Nos Spécialités – Factory & Co Val d\'Europe',
+        'description' => 'Smash Burgers, Bagels New-Yorkais, Cheesecake & Breakfast. Découvrez les 4 spécialités premium qui font notre réputation.',
+        'isPartOf' => [
+            '@type' => 'WebSite',
+            '@id' => route('home')
+        ],
+        'breadcrumb' => [
+            '@id' => '#breadcrumb'
+        ]
+    ];
+
+    $specialitesSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'ItemList',
+        'itemListElement' => [
+            [
+                '@type' => 'ListItem',
+                'position' => 1,
+                'item' => [
+                    '@type' => 'Product',
+                    'name' => 'Smash Burgers',
+                    'description' => 'L\'art de la simplicité. Plaque brûlante, viande frémissante, fromage coulant. Le burger comme il faut.',
+                    'brand' => [
+                        '@type' => 'Brand',
+                        'name' => 'Factory & Co'
+                    ]
+                ]
+            ],
+            [
+                '@type' => 'ListItem',
+                'position' => 2,
+                'item' => [
+                    '@type' => 'Product',
+                    'name' => 'Bagels Authentiques',
+                    'description' => 'Directement de Brooklyn. Croquant dehors, moelleux dedans. Un aller simple pour New York, sans quitter votre table.',
+                    'brand' => [
+                        '@type' => 'Brand',
+                        'name' => 'Factory & Co'
+                    ]
+                ]
+            ],
+            [
+                '@type' => 'ListItem',
+                'position' => 3,
+                'item' => [
+                    '@type' => 'Product',
+                    'name' => 'Cheesecake Factory',
+                    'description' => 'Noir New-Yorkais. Fromage frais, biscuit beurre, crème fouettée. L\'indulgence en assiette, signée Factory & Co.',
+                    'brand' => [
+                        '@type' => 'Brand',
+                        'name' => 'Factory & Co'
+                    ]
+                ]
+            ],
+            [
+                '@type' => 'ListItem',
+                'position' => 4,
+                'item' => [
+                    '@type' => 'Product',
+                    'name' => 'Breakfast Américain',
+                    'description' => 'Ouverts dès 8h30. Bagels frais, œufs brouillés, bacon croustillant, café de qualité. Le vrai breakfast, pas la version pauvre.',
+                    'brand' => [
+                        '@type' => 'Brand',
+                        'name' => 'Factory & Co'
+                    ]
+                ]
+            ]
+        ]
+    ];
+
+    // Build FAQ schema from $faqs
+    $faqItems = [];
+    if (!empty($faqs)) {
+        foreach ($faqs as $index => $faq) {
+            $faqItems[] = [
+                '@type' => 'Question',
+                'position' => $index + 1,
+                'name' => $faq['question'] ?? '',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => $faq['answer'] ?? ''
+                ]
+            ];
+        }
+    }
+
+    $faqSchema = null;
+    if (!empty($faqItems)) {
+        $faqSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'FAQPage',
+            'mainEntity' => $faqItems
+        ];
+    }
 @endphp
 <script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+<script type="application/ld+json">{!! json_encode($webPageSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+<script type="application/ld+json">{!! json_encode($specialitesSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+@if($faqSchema)
+<script type="application/ld+json">{!! json_encode($faqSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+@endif
 @endpush
 
 @section('content')
@@ -46,7 +151,7 @@
         <h1>Nos Spécialités<br><em>L'Excellence à chaque bouchée</em></h1>
         <p class="hero-sub">Smash, Bagels, Cheesecake & Breakfast : 4 piliers du goût authentique</p>
         <div class="hero-ctas">
-            <a href="{{ route('menu.burgers') }}" class="btn btn-pink">
+            <a href="{{ route('menu.index') }}" class="btn btn-pink">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
                 Découvrir la carte
             </a>
@@ -108,7 +213,7 @@
                         <span>⏱️ Rapide</span>
                         <span>🔥 Gourmand</span>
                     </div>
-                    <a href="{{ route('menu.burgers') }}" class="btn btn-pink btn-sm">
+                    <a href="{{ route('menu.index') }}" class="btn btn-pink btn-sm">
                         Découvrir
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
@@ -128,7 +233,7 @@
                         <span>🌅 Breakfast</span>
                         <span>✨ Artisanal</span>
                     </div>
-                    <a href="{{ route('menu.bagels') }}" class="btn btn-pink btn-sm">
+                    <a href="{{ route('menu.index') }}" class="btn btn-pink btn-sm">
                         Découvrir
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
@@ -148,7 +253,7 @@
                         <span>🎂 Dessert</span>
                         <span>💎 Iconique</span>
                     </div>
-                    <a href="{{ route('menu.cheesecake') }}" class="btn btn-pink btn-sm">
+                    <a href="{{ route('menu.index') }}" class="btn btn-pink btn-sm">
                         Découvrir
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
@@ -306,13 +411,10 @@
 <style>
 {{-- Styles CSS pour la page spécialités --}}
 .specialites-grid {
-    display: flex;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     margin-bottom: 3rem;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 0.5rem 0;
-    -webkit-overflow-scrolling: touch;
 }
 
 .specialite-card {
@@ -324,8 +426,6 @@
     transition: all var(--transition);
     display: flex;
     flex-direction: column;
-    min-width: 180px;
-    flex-shrink: 0;
 }
 
 .specialite-card:hover {
@@ -337,7 +437,8 @@
 .specialite-image {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 16/9;
+    aspect-ratio: 1/1;
+    height: 200px;
 }
 
 .specialite-image img {
@@ -366,15 +467,15 @@
 }
 
 .specialite-content {
-    padding: 1rem;
+    padding: 0.75rem;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.4rem;
     flex-grow: 1;
 }
 
 .specialite-content h3 {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     color: var(--white);
     margin: 0;
     font-family: var(--font-title);
@@ -383,8 +484,8 @@
 .specialite-content p {
     color: rgba(255, 255, 255, 0.75);
     margin: 0;
-    font-size: 0.8rem;
-    line-height: 1.5;
+    font-size: 0.75rem;
+    line-height: 1.4;
 }
 
 .specialite-meta {
@@ -585,6 +686,11 @@
 
 /* Media Queries */
 @media (max-width: 1024px) {
+    .specialites-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
     .quality-cards-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
@@ -597,13 +703,9 @@
 }
 
 @media (max-width: 768px) {
-    .specialite-card {
-        min-width: 180px;
-    }
-
     .specialites-grid {
-        gap: 0.8rem;
-        padding: 0.3rem 0;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .quality-section {
@@ -662,13 +764,9 @@
 }
 
 @media (max-width: 480px) {
-    .specialite-card {
-        min-width: 140px;
-    }
-
     .specialites-grid {
-        gap: 0.5rem;
-        padding: 0.2rem 0;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
     }
 
     .quality-section {

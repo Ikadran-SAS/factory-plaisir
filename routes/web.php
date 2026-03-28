@@ -29,12 +29,6 @@ Route::get('/avis', [AvisController::class, 'index'])->name('avis');
 
 /* ── NIVEAU 2 : Silos produits ── */
 Route::get('/carte', [MenuController::class, 'index'])->name('menu.index');
-Route::prefix('carte')->name('menu.')->group(function () {
-    Route::get('/burgers', [MenuController::class, 'burgers'])->name('burgers');
-    Route::get('/bagels', [MenuController::class, 'bagels'])->name('bagels');
-    Route::get('/cheesecake', [MenuController::class, 'cheesecake'])->name('cheesecake');
-    Route::get('/bowls', [MenuController::class, 'bowls'])->name('bowls');
-});
 
 /* ── NIVEAU 3 : Services & Engagement ── */
 Route::get('/click-collect', [HomeController::class, 'clickCollect'])->name('click-collect');
