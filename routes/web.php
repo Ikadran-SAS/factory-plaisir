@@ -47,9 +47,15 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 // Legal
+Route::get('/mentions-legales', function () {
+    return view('pages.mentions-legales');
+})->name('mentions-legales');
 Route::get('/confidentialite', function () {
     return view('pages.confidentialite');
 })->name('confidentialite');
+Route::get('/conditions-utilisation', function () {
+    return view('pages.conditions-utilisation');
+})->name('conditions-utilisation');
 
 /* ── SEO Technique ── */
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');

@@ -3403,6 +3403,11 @@ p  { font-size: 1rem; line-height: 1.7; color: var(--text-light); }
 .footer-social a:hover { background: var(--pink-dark); transform: translateY(-2px); }
 .footer-social svg { width: 16px; height: 16px; fill: var(--white); }
 
+/* ── External Links ── */
+.external-link { display: inline-flex; align-items: center; gap: 0.35rem; }
+.external-icon { width: 0.75rem; height: 0.75rem; margin-left: 0.15rem; opacity: 0.7; transition: opacity var(--transition); }
+.external-link:hover .external-icon { opacity: 1; }
+
 /* ── Menu Product Grid ── */
 .menu-filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 2rem; }
 .filter-btn { padding: .5rem 1.25rem; border-radius: 2px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border: 2px solid var(--border); color: var(--text-light); transition: all var(--transition); }

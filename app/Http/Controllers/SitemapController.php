@@ -29,6 +29,9 @@ class SitemapController extends Controller
             ['url' => route('faq'), 'title' => 'FAQ', 'priority' => '0.7', 'description' => 'Questions fréquentes et allergènes'],
             ['url' => route('click-collect'), 'title' => 'Click & Collect', 'priority' => '0.6', 'description' => 'Commandez en ligne'],
             ['url' => route('contact'), 'title' => 'Contact', 'priority' => '0.5', 'description' => 'Nous contacter'],
+            ['url' => route('mentions-legales'), 'title' => 'Mentions légales', 'priority' => '0.3', 'description' => 'Informations légales et éditoriales'],
+            ['url' => route('confidentialite'), 'title' => 'Politique de confidentialité', 'priority' => '0.3', 'description' => 'Politique de protection des données'],
+            ['url' => route('conditions-utilisation'), 'title' => 'Conditions d\'utilisation', 'priority' => '0.3', 'description' => 'Conditions régissant l\'utilisation du site'],
         ];
 
         return view('pages.sitemap-html', compact('routes'));

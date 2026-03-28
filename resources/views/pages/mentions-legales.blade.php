@@ -1,0 +1,112 @@
+@extends('layouts.app')
+
+@section('title', 'Mentions Légales – Factory & Co Val d\'Europe')
+@section('description', 'Mentions légales et informations éditoriales de Factory & Co Val d\'Europe. Découvrez les responsabilités légales et les informations sur l\'entreprise.')
+@section('keywords', 'mentions légales, informations légales, Factory & Co, éditeur du site')
+
+@section('content')
+
+<nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+        <a href="{{ route('home') }}">Accueil</a>
+        <span class="bc-sep">›</span>
+        <span>Mentions Légales</span>
+    </div>
+</nav>
+
+<div class="page-hero">
+    <div class="page-hero-inner">
+        <h1>Mentions Légales</h1>
+        <p>Informations légales et éditoriales relatives au site Factory & Co Val d'Europe</p>
+    </div>
+</div>
+
+<section class="section section-light">
+    <div class="container">
+        <div class="legal-content">
+            <h2>1. Identification de l'éditeur</h2>
+            <p><strong>Raison sociale :</strong> Factory & Co Val d'Europe<br>
+            <strong>Statut juridique :</strong> Entreprise commerciale<br>
+            <strong>Adresse :</strong> 14 Rue du Danube, Centre Commercial Val d'Europe<br>
+            77700 Serris, France<br>
+            <strong>Téléphone :</strong> <a href="tel:+33164632889">+33 1 64 63 28 89</a><br>
+            <strong>Email :</strong> <a href="mailto:contact@factoryandco.com">contact@factoryandco.com</a></p>
+
+            <h2>2. Responsable de la publication</h2>
+            <p>Le présent site est édité par Factory & Co Val d'Europe. Le responsable de la publication est la direction générale de l'entreprise.</p>
+
+            <h2>3. Hébergement du site</h2>
+            <p><strong>Nom de l'hébergeur :</strong> [À compléter avec les informations d'hébergement]<br>
+            <strong>Adresse :</strong> [À compléter avec l'adresse de l'hébergeur]</p>
+
+            <h2>4. Conditions d'utilisation</h2>
+            <p>Le présent site est mis à disposition gratuitement. L'accès et l'utilisation de ce site est soumis aux conditions suivantes :</p>
+            <ul>
+                <li>Les utilisateurs s'engagent à respecter les lois et réglementations en vigueur en France</li>
+                <li>Toute reproduction, distribution ou transmission des contenus du site est interdite sans autorisation préalable</li>
+                <li>Les utilisateurs ne doivent pas utiliser le site pour des activités illégales ou nuisibles</li>
+                <li>Factory & Co se réserve le droit de supprimer tout contenu contraire à ces conditions</li>
+            </ul>
+
+            <h2>5. Propriété intellectuelle</h2>
+            <p>Tous les contenus du site (textes, images, logos, éléments graphiques) sont protégés par les droits d'auteur et les droits de propriété intellectuelle. Toute reproduction sans autorisation est strictement interdite.</p>
+            <p>Les droits d'auteur du site et de ses contenus sont la propriété de Factory & Co Val d'Europe.</p>
+
+            <h2>6. Responsabilité</h2>
+            <p>Factory & Co Val d'Europe s'efforce de fournir des informations précises et à jour sur son site. Cependant, nous ne pouvons pas garantir :</p>
+            <ul>
+                <li>L'absence d'erreurs ou d'omissions</li>
+                <li>La disponibilité permanente du site</li>
+                <li>L'absence de virus ou de contenu nuisible</li>
+            </ul>
+            <p>Factory & Co Val d'Europe ne peut être tenue responsable des dommages directs ou indirects résultant de l'utilisation du site.</p>
+
+            <h2>7. Liens externes</h2>
+            <p>Le site peut contenir des liens vers des sites externes. Factory & Co Val d'Europe n'est pas responsable du contenu de ces sites tiers et ne peut être tenue responsable de tout dommage résultant de leur accès ou utilisation.</p>
+
+            <h2>8. Données personnelles et cookies</h2>
+            <p>Pour plus d'informations sur la collecte, l'utilisation et la protection de vos données personnelles, veuillez consulter notre <a href="{{ route('confidentialite') }}">politique de confidentialité</a>.</p>
+
+            <h2>9. Modifications</h2>
+            <p>Factory & Co Val d'Europe se réserve le droit de modifier à tout moment les présentes mentions légales. Les modifications seront effectives dès leur mise en ligne. Il est de votre responsabilité de consulter régulièrement ces mentions légales.</p>
+
+            <h2>10. Contact</h2>
+            <p>Pour toute question concernant le site ou les présentes mentions légales, vous pouvez nous contacter :</p>
+            <ul>
+                <li>Par email : <a href="mailto:contact@factoryandco.com">contact@factoryandco.com</a></li>
+                <li>Par téléphone : <a href="tel:+33164632889">+33 1 64 63 28 89</a></li>
+                <li>Par courrier : 14 Rue du Danube, 77700 Serris, France</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+@endsection
+
+<style>
+.legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legal-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--navy);
+}
+
+.legal-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content ul li {
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+}
+
+.legal-content a {
+    color: var(--pink-dark);
+    text-decoration: underline;
+}
+</style>

@@ -72,6 +72,23 @@
                         @endforeach
                     </ul>
                 </div>
+
+                {{-- Section Légal --}}
+                <div class="sitemap-section">
+                    <h2 class="sitemap-title">Légal</h2>
+                    <ul class="sitemap-list">
+                        @foreach($routes as $route)
+                            @if(in_array($route['title'], ['Mentions légales', 'Politique de confidentialité', 'Conditions d\'utilisation']))
+                                <li class="sitemap-item">
+                                    <a href="{{ $route['url'] }}" class="sitemap-link">
+                                        <span class="sitemap-link-title">{{ $route['title'] }}</span>
+                                        <span class="sitemap-link-desc">{{ $route['description'] }}</span>
+                                    </a>
+                                </li>
+                            @endif
+                        @endforeach
+                    </ul>
+                </div>
             </div>
 
         </div>
@@ -111,7 +128,7 @@
 
 .sitemap-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     margin-bottom: 3rem;
 }
