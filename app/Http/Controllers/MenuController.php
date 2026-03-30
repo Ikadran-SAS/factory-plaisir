@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Review;
 
 class MenuController extends Controller
 {
@@ -35,6 +36,16 @@ class MenuController extends Controller
             ->get()
             ->groupBy('subcategory');
 
+        $featuredReviews = Review::featured()
+            ->orderBy('sort_order')
+            ->take(3)
+            ->get();
+
+        $googleReviewsController = new GoogleReviewsController;
+        $aggregateData = $googleReviewsController->getAggregateRating();
+        $averageRating = $aggregateData['rating'] ?? ($featuredReviews->count() > 0 ? $featuredReviews->avg('rating') : 0);
+        $totalReviews = $aggregateData['total'] ?? Review::where('is_visible', true)->count();
+
         $seo = [
             'title' => 'Carte & Menu | Factory & Co Plaisir 78 – Mon Grand Plaisir',
             'description' => 'Menu Factory & Co Plaisir : smash burgers artisanaux, bagels new-yorkais, cheesecakes, bowls. Options végétariennes. Mon Grand Plaisir, Yvelines.',
@@ -43,6 +54,6 @@ class MenuController extends Controller
             'h1' => 'La Carte – Factory & Co Plaisir',
         ];
 
-        return view('pages.menu.carte', compact('seo', 'burgers', 'bagels', 'cheesecakes', 'bowls'));
+        return view('pages.menu.carte', compact('seo', 'burgers', 'bagels', 'cheesecakes', 'bowls', 'featuredReviews', 'averageRating', 'totalReviews'));
     }
 }

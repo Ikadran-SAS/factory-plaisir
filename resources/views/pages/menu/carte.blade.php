@@ -300,13 +300,11 @@
      LOCALISATION - GOOGLE MAPS
 ════════════════════════════════════════════ --}}
 <section class="section location-section">
-    <div class="location-info">
+    <div class="location-info text-center">
         <h2>Prêt à déguster ?</h2>
         <p class="location-subtitle">Venez nous retrouver au cœur de Mon Grand Plaisir</p>
         <address class="location-address">
-            1170 Av. de Saint-Germain<br>
-            CC Mon Grand Plaisir<br>
-            78370 Plaisir, France
+            1170 Av. de Saint-Germain — CC Mon Grand Plaisir — 78370 Plaisir, France
         </address>
     </div>
     <div class="location-map">
@@ -317,28 +315,37 @@
 {{-- ════════════════════════════════════════════
      SECTION AVIS
 ════════════════════════════════════════════ --}}
-<section class="section reviews-section">
+<section class="section section-dark" id="avis">
     <div class="container">
-        <div class="reviews-header">
-            <h2>Ce que nos clients aiment 💬</h2>
-            <a href="{{ route('avis') }}" class="btn btn-outline-pink">Voir tous les avis</a>
+        <div class="reviews-header-section">
+            <h2 class="section-title light">Ce que nos clients<br><em>aiment</em></h2>
+            <div class="reviews-rating">
+                <div class="reviews-stars">@for($i = 1; $i <= 5; $i++)★@endfor</div>
+                <div class="reviews-score">{{ number_format($averageRating, 1, ',', '') }} <span>/5 · {{ $totalReviews }} avis Google</span></div>
+            </div>
         </div>
-        <div class="reviews-grid">
-            <div class="review-card">
-                <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <p class="review-text">"Les meilleurs burgers de Plaisir ! Qualité au rendez-vous et équipe très sympa."</p>
-                <p class="review-author">— Sarah M.</p>
-            </div>
-            <div class="review-card">
-                <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <p class="review-text">"Cadre moderne, burgers savoureux et service rapide. Je recommande vivement !"</p>
-                <p class="review-author">— Thomas D.</p>
-            </div>
-            <div class="review-card">
-                <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <p class="review-text">"Les cheesecakes sont divins et les options halal/végétariennes sont très variées."</p>
-                <p class="review-author">— Fatima K.</p>
-            </div>
+
+        <div class="reviews-grid-clean">
+            @foreach($featuredReviews as $review)
+                <div class="review-card-clean">
+                    <div class="review-card-header-clean">
+                        <div class="review-avatar-clean">
+                            {{ strtoupper(substr($review->author_name, 0, 1)) }}{{ strtoupper(substr(explode(' ', $review->author_name)[count(explode(' ', $review->author_name))-1], 0, 1)) }}
+                        </div>
+                        <div class="review-info-clean">
+                            <h3>{{ $review->author_name }}</h3>
+                            <p class="review-time">{{ $review->date_label }}</p>
+                        </div>
+                        <svg class="google-logo-clean" viewBox="0 0 24 24" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path></svg>
+                    </div>
+                    <div class="review-stars-clean">
+                        @for ($i = 1; $i <= 5; $i++)
+                            <span>@if($i <= $review->rating)★@else☆@endif</span>
+                        @endfor
+                    </div>
+                    <p class="review-text-clean">{{ $review->content }}</p>
+                </div>
+            @endforeach
         </div>
     </div>
 </section>

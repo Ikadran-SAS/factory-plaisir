@@ -131,4 +131,8 @@ return [
 
     'google_places_api_key' => env('GOOGLE_PLACES_API_KEY'),
 
+    'google_business_account_email' => env('GOOGLE_BUSINESS_ACCOUNT_EMAIL'),
+    'google_business_private_key' => env('GOOGLE_BUSINESS_PRIVATE_KEY'),
+    'google_business_location_id' => env('GOOGLE_BUSINESS_LOCATION_ID'),
+
 ];
