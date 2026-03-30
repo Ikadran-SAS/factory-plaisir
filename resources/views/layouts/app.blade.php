@@ -118,18 +118,6 @@
     });
     </script>
 
-    {{-- ── Google Analytics 4 ── --}}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSJJ1E3F4P"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WSJJ1E3F4P', {
-      'allow_google_signals': false,
-      'allow_ad_personalization_signals': false
-    });
-    </script>
-
     {{-- ── Google Tag Manager ── --}}
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
