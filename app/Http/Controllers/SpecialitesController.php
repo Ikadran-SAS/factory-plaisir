@@ -15,9 +15,9 @@ class SpecialitesController extends Controller
             ->toArray();
 
         $seo = [
-            'title' => 'Nos Spécialités – Factory & Co Val d\'Europe',
-            'description' => 'Smash Burgers, Bagels New-Yorkais, Cheesecake & Breakfast. Découvrez les 4 spécialités premium qui font notre réputation.',
-            'keywords' => 'smash burger, bagels, cheesecake, breakfast factory and co, specialites restaurant serris',
+            'title' => 'Spécialités Factory & Co Plaisir 78 | Smash Burger, Bagel, Cheesecake',
+            'description' => 'Spécialités Factory & Co Plaisir : smash burgers artisanaux, bagels new-yorkais, cheesecakes, breakfast dès 8h. Terrasse, végétarien. Mon Grand Plaisir, Yvelines.',
+            'keywords' => 'smash burger plaisir 78, bagels new-yorkais yvelines, cheesecake plaisir, breakfast factory co, spécialités mon grand plaisir',
             'canonical' => route('specialites'),
         ];
 

@@ -31,8 +31,8 @@
         '@type' => 'WebPage',
         '@id' => route('menu.index'),
         'url' => route('menu.index'),
-        'name' => 'La Carte – Factory & Co Val d\'Europe',
-        'description' => 'Découvrez la carte complète de Factory & Co à Val d\'Europe. Smash Burgers anglais, Bagels New-Yorkais, Cheesecake premium, Bowls sains.',
+        'name' => 'La Carte – Factory & Co Plaisir (Yvelines 78)',
+        'description' => 'Menu complet Factory & Co Plaisir : smash burgers, bagels new-yorkais, cheesecakes, bowls. Options végétariennes. Mon Grand Plaisir.',
         'isPartOf' => [
             '@type' => 'WebSite',
             '@id' => route('home')
@@ -56,7 +56,7 @@
             [
                 '@type' => 'MenuSection',
                 'name' => 'Bagels',
-                'description' => 'Bagels authentiques New-Yorkais, breakfast dès 8h30',
+                'description' => 'Bagels authentiques New-Yorkais, breakfast dès 8h00',
                 'position' => 2
             ],
             [
@@ -114,8 +114,8 @@
     {{-- Hero Content --}}
     <div class="hero-content">
         <span class="section-tag">🍔 LA CARTE</span>
-        <h1>Un voyage culinaire<br>sans fin</h1>
-        <p>Découvrez nos incontournables New York et nos créations exclusives</p>
+        <h1>La carte Factory &amp; Co<br>Plaisir</h1>
+        <p>Smash burgers, bagels, cheesecakes &amp; bowls — préparés à la minute à Mon Grand Plaisir</p>
         <div class="hero-buttons">
             <button class="btn btn-pink scroll-to-categories" aria-label="Parcourir la carte">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18">
@@ -206,7 +206,7 @@
                 BAGELS NEW-YORKAIS
             </div>
             <h2 class="category-title">Breakfast Américain</h2>
-            <p class="category-subtitle">Dès 8h30 - Recette authentique à farine canadienne</p>
+            <p class="category-subtitle">Dès 8h00 - Recette authentique à farine canadienne</p>
             <p class="category-description">Nos bagels sont préparés en-house avec la farine canadienne traditionnelle. Chauds, froids, à composer selon vos envies.</p>
         </div>
 
@@ -302,15 +302,15 @@
 <section class="section location-section">
     <div class="location-info">
         <h2>Prêt à déguster ?</h2>
-        <p class="location-subtitle">Venez nous retrouver au cœur de Val d'Europe</p>
+        <p class="location-subtitle">Venez nous retrouver au cœur de Mon Grand Plaisir</p>
         <address class="location-address">
-            14 Rue du Danube<br>
-            CC Val d'Europe<br>
-            77700 Serris, France
+            1170 Av. de Saint-Germain<br>
+            CC Mon Grand Plaisir<br>
+            78370 Plaisir, France
         </address>
     </div>
     <div class="location-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.9938339559873!2d2.7733!3d48.8753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5e6d8e6d8e6d9%3A0x1234567890!2s14%20Rue%20du%20Danube%2C%2077700%20Serris!5e0!3m2!1sfr!2sfr!4v1234567890" width="100%" height="400" style="border:0;border-radius:1.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.0!2d1.9480!3d48.8225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s1170+Av+de+Saint-Germain+78370+Plaisir!5e0!3m2!1sfr!2sfr!4v1" width="100%" height="400" style="border:0;border-radius:1.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
 
@@ -326,7 +326,7 @@
         <div class="reviews-grid">
             <div class="review-card">
                 <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <p class="review-text">"Les meilleurs burgers de Val d'Europe ! Qualité au rendez-vous et équipe très sympa."</p>
+                <p class="review-text">"Les meilleurs burgers de Plaisir ! Qualité au rendez-vous et équipe très sympa."</p>
                 <p class="review-author">— Sarah M.</p>
             </div>
             <div class="review-card">

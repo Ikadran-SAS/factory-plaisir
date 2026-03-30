@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Politique de Confidentialité – Factory & Co Val d\'Europe')
+@section('title', 'Politique de Confidentialité – Factory & Co Plaisir')
 @section('description', 'Découvrez notre politique de confidentialité et comment nous protégeons vos données personnelles chez Factory & Co.')
 @section('keywords', 'politique de confidentialité, RGPD, protection des données, Factory & Co')
 
@@ -25,9 +25,9 @@
     <div class="container">
         <div class="legal-content">
             <h2>1. Responsable du traitement</h2>
-            <p>Factory & Co Val d'Europe<br>
-            14 Rue du Danube, CC Val d'Europe<br>
-            77700 Serris<br>
+            <p>Factory & Co Plaisir<br>
+            1170 Av. de Saint-Germain, CC Mon Grand Plaisir<br>
+            78370 Plaisir<br>
             <a href="mailto:contact@factoryandco.com">contact@factoryandco.com</a></p>
 
             <h2>2. Données collectées</h2>

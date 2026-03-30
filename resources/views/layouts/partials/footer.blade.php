@@ -8,12 +8,12 @@
                 <p class="footer-logo-text">Factory &amp; Co</p>
                 <p class="footer-tagline">Delicious since 1989</p>
                 <address class="footer-address">
-                    <strong>14 Rue du Danube</strong><br>
-                    CC Val d'Europe<br>
-                    77700 Serris, France<br><br>
-                    <a href="tel:+33164632889" style="color:var(--pink-dark);font-weight:600">+33 1 64 63 28 89</a><br>
+                    <strong>1170 Av. de Saint-Germain</strong><br>
+                    CC Mon Grand Plaisir<br>
+                    78370 Plaisir, France<br><br>
+                    <a href="tel:+33130966152" style="color:var(--pink-dark);font-weight:600">+33 1 30 96 61 52</a><br>
                     <a href="mailto:contact@factoryandco.com" style="color:var(--pink-dark);font-weight:600">contact@factoryandco.com</a><br><br>
-                    <small style="color:#888">Parking gratuit • RER A Val d'Europe</small>
+                    <small style="color:#888">Parking gratuit • Terrasse • Wi-Fi</small>
                 </address>
             </div>
 
@@ -69,7 +69,7 @@
         <div class="footer-bottom">
             <div class="footer-bottom-left">
                 <p class="footer-copy">
-                    © {{ date('Y') }} Factory &amp; Co Val d'Europe. Tous droits réservés.
+                    © {{ date('Y') }} Factory &amp; Co Plaisir. Tous droits réservés.
                 </p>
             </div>
             <div class="footer-social">

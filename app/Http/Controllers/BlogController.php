@@ -12,9 +12,9 @@ class BlogController extends Controller
         $featured = BlogPost::published()->featured()->first();
 
         $seo = [
-            'title' => 'Blog – Conseils & Astuces Val d\'Europe | Factory & Co',
-            'description' => 'Découvrez nos articles sur Val d\'Europe à Serris : accès transports, conseils pratiques, breakfast américain, cheesecake à emporter et histoire de Factory & Co.',
-            'keywords' => 'blog factory co, conseils val d\'europe serris, transports val d\'europe, manger val d\'europe, restaurant serris',
+            'title' => 'Blog Factory & Co Plaisir 78 | Conseils, Recettes, Actualités',
+            'description' => 'Blog Factory & Co Plaisir : conseils restaurant, recettes, breakfast américain, cheesecake, accès Mon Grand Plaisir. Yvelines, N12/A12.',
+            'keywords' => 'blog factory co plaisir 78, conseils manger plaisir, recettes cheesecake breakfast, actualités restaurant mon grand plaisir yvelines',
             'canonical' => route('blog.index'),
         ];
 

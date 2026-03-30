@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Avis Clients | Factory & Co – Nos Clients Témoignent')
-@section('description', 'Découvrez les avis vérifiés de nos clients satisfaits. 4.8★ - Plus de 500 avis positifs. Factory & Co Val d\'Europe.')
-@section('keywords', 'avis clients factory co, témoignages factory co, avis burgers serris, reviews factory and co')
+@section('description', 'Avis Google vérifiés de Factory & Co Plaisir (Yvelines 78). Terrasse, Wi-Fi, végétarien. Mon Grand Plaisir.')
+@section('keywords', 'avis factory co plaisir 78, témoignages restaurant yvelines, avis burgers smash plaisir, reviews mon grand plaisir')
 @section('canonical', route('avis'))
 
 @push('schema')
@@ -31,7 +31,7 @@
         '@type' => 'WebPage',
         '@id' => route('avis'),
         'url' => route('avis'),
-        'name' => 'Avis Clients – Factory & Co Val d\'Europe',
+        'name' => 'Avis Clients – Factory & Co Plaisir (Yvelines 78)',
         'description' => 'Découvrez les avis vérifiés de nos clients satisfaits.',
         'isPartOf' => [
             '@type' => 'WebSite',
@@ -97,8 +97,8 @@
     <div class="avis-hero-overlay"></div>
     <div class="avis-hero-content">
         <span class="section-tag">⭐ CE QUE NOS CLIENTS DISENT</span>
-        <h1>Pourquoi ils nous<br><em>ont choisi</em></h1>
-        <p>Découvrez pourquoi les clients de Factory & Co nous font confiance</p>
+        <h1>Pourquoi ils reviennent<br><em>à Mon Grand Plaisir</em></h1>
+        <p>Terrasse, Wi-Fi, cuisine fait maison : découvrez ce qu'en disent nos clients à Plaisir</p>
 
         <div class="avis-trust-metrics">
             <div class="reviews-stars">@for($i = 1; $i <= 5; $i++)★@endfor</div>

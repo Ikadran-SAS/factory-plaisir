@@ -14,15 +14,16 @@ class GoogleBusinessController extends Controller
     {
         $apiKey = config('app.google_places_api_key');
 
-        if (!$apiKey) {
+        if (! $apiKey) {
             \Log::warning('Google Places API Key not configured');
+
             return $this->getStaticReviews();
         }
 
         try {
             // Étape 1: Récupérer le Place ID via Text Search
             $searchResponse = Http::get('https://maps.googleapis.com/maps/api/place/textsearch/json', [
-                'query' => 'Factory & Co Val d\'Europe, Serris',
+                'query' => 'Factory & Co Plaisir, Mon Grand Plaisir',
                 'key' => $apiKey,
             ]);
 
@@ -79,7 +80,7 @@ class GoogleBusinessController extends Controller
     {
         $apiKey = config('app.google_places_api_key');
 
-        if (!$apiKey) {
+        if (! $apiKey) {
             return [
                 'rating' => 4.8,
                 'total' => 6,
@@ -88,7 +89,7 @@ class GoogleBusinessController extends Controller
 
         try {
             $searchResponse = Http::get('https://maps.googleapis.com/maps/api/place/textsearch/json', [
-                'query' => 'Factory & Co Val d\'Europe, Serris',
+                'query' => 'Factory & Co Plaisir, Mon Grand Plaisir',
                 'key' => $apiKey,
             ]);
 
@@ -136,7 +137,7 @@ class GoogleBusinessController extends Controller
                 'date_label' => 'il y a 2 semaines',
                 'source' => 'google',
                 'rating' => 5,
-                'content' => 'Excellent restaurant à Val d\'Europe ! Le smash burger est vraiment délicieux, la viande est de qualité et la sauce maison est top. Service rapide et souriant. Je recommande vivement !',
+                'content' => 'Excellent restaurant à Plaisir ! Le smash burger est vraiment délicieux, la viande est de qualité et la sauce maison est top. Service rapide et souriant. Je recommande vivement !',
             ],
             [
                 'author_name' => 'Thomas R.',
@@ -152,7 +153,7 @@ class GoogleBusinessController extends Controller
                 'date_label' => 'il y a 3 semaines',
                 'source' => 'google',
                 'rating' => 4,
-                'content' => 'Très bonne adresse à Val d\'Europe. Idéal pour une pause shopping ou une visite à Disneyland, les portions sont généreuses et les prix raisonnables. Le milkshake Oreo est incroyable !',
+                'content' => 'Très bonne adresse à Plaisir. Idéal pour une pause shopping ou une journée shopping, les portions sont généreuses et les prix raisonnables. Le milkshake Oreo est incroyable !',
             ],
             [
                 'author_name' => 'Jean-Pierre D.',
@@ -160,7 +161,7 @@ class GoogleBusinessController extends Controller
                 'date_label' => 'il y a 2 mois',
                 'source' => 'google',
                 'rating' => 5,
-                'content' => 'Halal et délicieux ! Rare de trouver une option Halal de qualité dans un centre commercial. Le Halal Smash Burger était juteux et bien assaisonné. Je reviendrai à chaque passage à Val d\'Europe.',
+                'content' => 'Halal et délicieux ! Rare de trouver une option Halal de qualité dans un centre commercial. Le Halal Smash Burger était juteux et bien assaisonné. Je reviendrai à chaque passage à Plaisir.',
             ],
             [
                 'author_name' => 'Camille B.',

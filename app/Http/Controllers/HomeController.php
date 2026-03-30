@@ -26,7 +26,7 @@ class HomeController extends Controller
             ->get();
 
         // Get Google reviews aggregate rating
-        $googleReviewsController = new GoogleReviewsController();
+        $googleReviewsController = new GoogleReviewsController;
         $aggregateData = $googleReviewsController->getAggregateRating();
         $averageRating = $aggregateData['rating'] ?? ($featuredReviews->count() > 0 ? $featuredReviews->avg('rating') : 0);
         $totalReviews = $aggregateData['total'] ?? Review::where('is_visible', true)->count();
@@ -38,9 +38,9 @@ class HomeController extends Controller
         $faqs = collect($faqsGrouped)->flatten(1)->values()->all();
 
         $seo = [
-            'title' => 'Factory & Co Val d\'Europe – Restaurant Burger Serris',
-            'description' => 'Factory & Co, restaurant burger, bagel et cheesecake à Val d\'Europe à Serris. Centre commercial ouvert 7j/7. Smash Burgers, Bagels New-Yorkais, Cheesecake Factory.',
-            'keywords' => 'restaurant burger val d\'europe, factory and co serris, manger val d\'europe serris, smash burger serris, cheesecake serris, bagel val d\'europe',
+            'title' => 'Factory & Co Plaisir 78 – Burgers, Bagels | Mon Grand Plaisir',
+            'description' => 'Factory & Co à Plaisir (78) : smash burgers artisanaux, bagels new-yorkais, cheesecakes. Terrasse, Wi-Fi, options végétariennes. Mon Grand Plaisir, Yvelines.',
+            'keywords' => 'restaurant burger plaisir 78, factory and co plaisir yvelines, manger mon grand plaisir, smash burger plaisir, cheesecake plaisir, restaurant terrasse plaisir',
             'canonical' => route('home'),
         ];
 
@@ -53,9 +53,9 @@ class HomeController extends Controller
     public function clickCollect()
     {
         $seo = [
-            'title' => 'Click & Collect – Commandez en avance | Factory & Co Val d\'Europe',
-            'description' => 'Commandez votre repas en ligne et récupérez-le sans attendre à Val d\'Europe à Serris. Click & Collect disponible 7j/7.',
-            'keywords' => 'click collect restaurant val d\'europe, commander en ligne factory co serris, commande à emporter serris',
+            'title' => 'Click & Collect Plaisir 78 | Factory & Co Mon Grand Plaisir',
+            'description' => 'Click & Collect Factory & Co Plaisir : commandez en ligne, récupérez sans attendre. Mon Grand Plaisir, 1170 Av. Saint-Germain. Burgers, bagels, cheesecakes.',
+            'keywords' => 'click collect plaisir 78, commander en ligne factory co yvelines, commande emporter plaisir, retrait mon grand plaisir',
             'canonical' => route('click-collect'),
         ];
 

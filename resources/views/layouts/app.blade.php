@@ -12,29 +12,29 @@
     <meta name="theme-color" content="#000000">
 
     {{-- ── SEO Meta ── --}}
-    <title>{!! $__env->yieldContent('title', 'Factory & Co Val d\'Europe – Restaurant Burger Serris') !!}</title>
-    <meta name="description" content="{!! $__env->yieldContent('description', 'Factory & Co, restaurant burger, bagel et cheesecake à Val d\'Europe à Serris. 14 Rue du Danube. Ouvert 7j/7.') !!}">
-    <meta name="keywords"    content="{!! $__env->yieldContent('keywords', 'restaurant burger val d\'europe serris, factory and co serris, manger val d\'europe') !!}">
+    <title>{!! $__env->yieldContent('title', 'Factory & Co Plaisir – Restaurant Burger Mon Grand Plaisir') !!}</title>
+    <meta name="description" content="{!! $__env->yieldContent('description', 'Factory & Co Plaisir : smash burgers artisanaux, bagels new-yorkais, cheesecake. Terrasse, Wi-Fi, végétarien. Mon Grand Plaisir, Yvelines 78. Ouvert 7j/7.') !!}">
+    <meta name="keywords"    content="{!! $__env->yieldContent('keywords', 'restaurant burger plaisir, factory and co plaisir, manger plaisir 78') !!}">
     <link rel="canonical"    href="{{ $__env->yieldContent('canonical', url()->current()) }}">
     <meta name="robots"      content="@yield('robots', 'index, follow')">
-    <meta name="geo.region"      content="FR-75">
-    <meta name="geo.placename"   content="Serris, Île-de-France">
-    <meta name="geo.position"    content="48.8753;2.7758">
-    <meta name="ICBM"            content="43.6290, 1.3678">
+    <meta name="geo.region"      content="FR-78">
+    <meta name="geo.placename"   content="Plaisir, Île-de-France">
+    <meta name="geo.position"    content="48.8225;1.9480">
+    <meta name="ICBM"            content="48.8225, 1.9480">
 
     {{-- ── Open Graph ── --}}
     <meta property="og:type"        content="restaurant">
-    <meta property="og:site_name"   content="Factory & Co Val d'Europe">
-    <meta property="og:title"       content="@yield('og_title', 'Factory & Co – Restaurant Burger Val d\'Europe')">
-    <meta property="og:description" content="@yield('og_description', 'Burgers, bagels et cheesecakes à Val d\'Europe à Serris. 14 Rue du Danube. Ouvert 7j/7.')">
+    <meta property="og:site_name"   content="Factory & Co Plaisir">
+    <meta property="og:title"       content="@yield('og_title', 'Factory & Co – Restaurant Burger Plaisir')">
+    <meta property="og:description" content="@yield('og_description', 'Smash burgers artisanaux, bagels new-yorkais et cheesecake à Plaisir (78). Terrasse, Wi-Fi. Mon Grand Plaisir, Yvelines.')">
     <meta property="og:image"       content="@yield('og_image', asset('images/og-factory-co.jpg'))">
     <meta property="og:url"         content="{{ url()->current() }}">
     <meta property="og:locale"      content="fr_FR">
 
     {{-- ── Twitter Card ── --}}
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:title"       content="@yield('og_title', 'Factory & Co Val d\'Europe')">
-    <meta name="twitter:description" content="@yield('og_description', 'Burgers, bagels et cheesecakes à Val d\'Europe à Serris.')">
+    <meta name="twitter:title"       content="@yield('og_title', 'Factory & Co Plaisir')">
+    <meta name="twitter:description" content="@yield('og_description', 'Smash burgers, bagels new-yorkais et cheesecake à Plaisir (78). Terrasse, Wi-Fi, végétarien. Mon Grand Plaisir.')">
     <meta name="twitter:image"       content="@yield('og_image', asset('images/og-factory-co.jpg'))">
 
     {{-- ── JSON-LD Schema.org Restaurant (global) ── --}}
@@ -42,24 +42,24 @@
         $schemaData = [
             '@context' => 'https://schema.org',
             '@type' => 'Restaurant',
-            'name' => 'Factory & Co Val d\'Europe',
-            'description' => 'Restaurant burger, bagel et cheesecake à Val d\'Europe à Serris. Fast-casual américain, ouvert 7j/7.',
+            'name' => 'Factory & Co Plaisir',
+            'description' => 'Restaurant burger, bagel et cheesecake à Plaisir, centre commercial Mon Grand Plaisir. Fast-casual américain, ouvert 7j/7.',
             'url' => url('/'),
-            'telephone' => '0164632889',
+            'telephone' => '0130966152',
             'email' => 'contact@factoryandco.com',
             'image' => asset('images/og-factory-co.jpg'),
             'logo' => asset('images/logo.png'),
             'address' => [
                 '@type' => 'PostalAddress',
-                'streetAddress' => '14 Rue du Danube, CC Val d\'Europe',
-                'addressLocality' => 'Serris',
-                'postalCode' => '77700',
+                'streetAddress' => '1170 Av. de Saint-Germain, Centre Commercial Mon Grand Plaisir',
+                'addressLocality' => 'Plaisir',
+                'postalCode' => '78370',
                 'addressCountry' => 'FR'
             ],
             'geo' => [
                 '@type' => 'GeoCoordinates',
-                'latitude' => 48.8753,
-                'longitude' => 2.7758
+                'latitude' => 48.8225,
+                'longitude' => 1.9480
             ],
             'servesCuisine' => ['American', 'Burger', 'Bagel', 'Cheesecake', 'Fast Casual', 'Healthy'],
             'priceRange' => '€€',
@@ -69,27 +69,21 @@
                 [
                     '@type' => 'OpeningHoursSpecification',
                     'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Sunday'],
-                    'opens' => '08:30',
-                    'closes' => '22:00'
+                    'opens' => '08:00',
+                    'closes' => '21:30'
                 ],
                 [
                     '@type' => 'OpeningHoursSpecification',
                     'dayOfWeek' => ['Friday', 'Saturday'],
-                    'opens' => '08:30',
+                    'opens' => '08:00',
                     'closes' => '23:00'
                 ]
             ],
-            'aggregateRating' => [
-                '@type' => 'AggregateRating',
-                'ratingValue' => '4.5',
-                'reviewCount' => '6000',
-                'bestRating' => '5'
-            ],
             'amenityFeature' => [
-                ['@type' => 'LocationFeatureSpecification', 'name' => 'Accessible PMR', 'value' => true],
+                ['@type' => 'LocationFeatureSpecification', 'name' => 'Terrasse', 'value' => true],
+                ['@type' => 'LocationFeatureSpecification', 'name' => 'Wi-Fi', 'value' => true],
                 ['@type' => 'LocationFeatureSpecification', 'name' => 'Family Friendly', 'value' => true],
                 ['@type' => 'LocationFeatureSpecification', 'name' => 'À emporter', 'value' => true],
-                ['@type' => 'LocationFeatureSpecification', 'name' => 'Halal', 'value' => true],
                 ['@type' => 'LocationFeatureSpecification', 'name' => 'Végétarien', 'value' => true]
             ],
             'sameAs' => ['https://www.instagram.com/factoryandco/', 'https://www.facebook.com/factoryandco/']

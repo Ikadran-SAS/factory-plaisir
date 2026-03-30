@@ -47,17 +47,17 @@
 {{-- ════════════════════════════════════════════
      HERO SECTION - PLEIN ÉCRAN
 ════════════════════════════════════════════ --}}
-<section class="hero" aria-label="Factory & Co Val d'Europe">
+<section class="hero" aria-label="Factory & Co Plaisir">
     <div class="hero-bg" style="background-image:url('{{ asset('images/PHOTO-2026-03-26-10-27-33.jpg') }}')" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
         <p class="hero-location">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            CC Val d'Europe · 14 Rue du Danube · Serris
+            CC Mon Grand Plaisir · 1170 Av. de Saint-Germain · Plaisir
         </p>
-        <h1 class="hero-title">Factory &amp; Co Val d'Europe : <em>L'Authentique Diner Américain</em></h1>
-        <p class="hero-sub">Smash burgers &amp; New York cheesecakes</p>
-        <p class="hero-hours">Lun-Jeu, Dim: 8h30 - 22h · Ven-Sam: 8h30 - 23h · Delicious since 1989</p>
+        <h1 class="hero-title">Factory &amp; Co Plaisir : <em>votre pause new-yorkaise aux Yvelines</em></h1>
+        <p class="hero-sub">Terrasse, smash burgers &amp; cheesecakes artisanaux</p>
+        <p class="hero-hours">Lun-Jeu, Dim: 8h - 21h30 · Ven-Sam: 8h - 23h · Delicious since 1989</p>
         <div class="hero-ctas">
             <a href="javascript:void(0)" onclick="window.factoryCoNav && window.factoryCoNav.openNavigationModal()" class="btn btn-pink">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -77,8 +77,8 @@
 <section class="section section-dark stats-section">
     <div class="stats-grid">
         <div class="stat-item">
-            <div class="stat-number">2016</div>
-            <div class="stat-label">Ouverture Val d'Europe</div>
+            <div class="stat-number">2024</div>
+            <div class="stat-label">Ouverture Plaisir</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">100%</div>
@@ -102,14 +102,15 @@
     <div class="container">
         <div class="concept-grid">
             <div class="concept-text">
-                <span class="section-tag">La liberté de la gastronomie</span>
+                <span class="section-tag">Un goût de Brooklyn aux Yvelines</span>
                 <h2 class="section-title dark">
-                    Une escale gourmande<br>
-                    Authentiquement américaine
+                    Votre nouvelle adresse<br>
+                    gourmande à Plaisir
                 </h2>
-                <p>Factory &amp; Co, c'est l'histoire d'une passion : celle du chef <strong>Jonathan Jablonski</strong>, rêveur depuis 1989 d'ouvrir un vrai restaurant new-yorkais. <strong>En 2016</strong>, il réalise ce rêve en installant Factory &amp; Co au cœur de Val d'Europe, avec le même savoir-faire des plus grands cuisiniers de <strong>Brooklyn</strong>.</p>
-                <p>Chez nous, <strong>rien n'est surgelé, tout est préparé à la minute</strong>. Chaque burger est smashé sur plaque brûlante. Chaque bagel est frais du jour. Chaque cheesecake respire les meilleures traditions new-yorkaises.</p>
-                <p><strong>Factory &amp; Co, c'est la liberté de bien manger, sans compromis.</strong></p>
+
+                <p>Au cœur du centre commercial <strong>Mon Grand Plaisir</strong>, Factory &amp; Co vous fait voyager à <strong>Brooklyn</strong> le temps d'un repas. Des recettes authentiques, des ingrédients frais, un savoir-faire qui ne triche pas.</p>
+                <p>Ici, <strong>tout est frais, tout est fait maison</strong>. Nos burgers sont smashés à la commande sur plaque brûlante. Nos bagels arrivent chaque matin, croustillants et moelleux. Nos cheesecakes suivent la recette originale new-yorkaise, sans raccourci.</p>
+                <p><strong>Installez-vous en terrasse, connectez-vous au Wi-Fi, et laissez-vous transporter.</strong></p>
                 <a href="{{ route('concept') }}" class="btn btn-pink">
                     Découvrir notre concept
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -117,7 +118,7 @@
             </div>
             <div class="concept-image">
                 <img src="{{ asset('images/factory-val-interieur.webp') }}"
-                     alt="Ambiance diner américain Factory & Co Val d'Europe"
+                     alt="Intérieur du restaurant Factory & Co Plaisir Yvelines - terrasse et ambiance diner"
                      loading="lazy" width="700" height="500">
                 <div class="concept-badge">
                     <span class="concept-badge-title">Delicious</span>
@@ -136,14 +137,14 @@
     <div class="container">
         <div class="section-header text-center">
             <span class="section-tag">Galerie</span>
-            <h2 class="section-title light">Le meilleur de Factory &amp; Co Val d'Europe</h2>
+            <h2 class="section-title light">Le meilleur de Factory &amp; Co Plaisir</h2>
         </div>
 
         {{-- Slider d'images produits --}}
         <div class="products-slider-wrapper">
             <div class="products-slider">
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp" alt="Smash Burgers préparés à la minute au restaurant Factory & Co Val d'Europe" loading="lazy">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp" alt="Smash Burgers préparés à la minute au restaurant Factory & Co Plaisir" loading="lazy">
                     <figcaption>Smash Burgers</figcaption>
                 </div>
                 <div class="product-item-slide">
@@ -159,7 +160,7 @@
                     <figcaption>Milkshakes</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/Factory_And_Co_Claye_Souilly_Jon_Filin_Burger_Cheesecake_Sports_Bar-6.png" alt="Cheesecake New-Yorkais signature du chef Jonathan Factory & Co" loading="lazy">
+                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/Factory_And_Co_Claye_Souilly_Jon_Filin_Burger_Cheesecake_Sports_Bar-6.png" alt="Cheesecake new-yorkais artisanal Factory & Co Plaisir" loading="lazy">
                     <figcaption>Cheesecake</figcaption>
                 </div>
                 <div class="product-item-slide">
@@ -225,13 +226,13 @@
     <div class="container">
         <div class="section-header text-center">
             <span class="section-tag">Nous visiter</span>
-            <h2 class="section-title dark">Au cœur de Val d'Europe</h2>
+            <h2 class="section-title dark">Au cœur de Mon Grand Plaisir</h2>
         </div>
 
         <div class="location-info-compact">
             <div class="location-block">
-                <strong>14 Rue du Danube, 77700 Serris</strong>
-                <p>Parking gratuit • RER A Val d'Europe • 15 min Disneyland Paris</p>
+                <strong>1170 Av. de Saint-Germain, 78370 Plaisir</strong>
+                <p>Parking gratuit • Terrasse • Wi-Fi</p>
             </div>
             <div class="location-block">
                 <strong>Horaires</strong>
@@ -245,8 +246,8 @@
 
         <div class="map-wrap">
             <iframe
-                title="Localisation Factory & Co Val d'Europe"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.0!2d2.7758!3d48.8753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e614d4c8c8c8c8%3A0x1!2sFactory+%26+Co+Val+d%27Europe!5e0!3m2!1sfr!2sfr!4v1"
+                title="Localisation Factory & Co Plaisir"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.0!2d1.9480!3d48.8225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s1170+Av+de+Saint-Germain+78370+Plaisir!5e0!3m2!1sfr!2sfr!4v1"
                 allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
@@ -259,10 +260,10 @@
 <section class="section section-cta-large">
     <div class="container">
         <div class="cta-large-content">
-            <img src="{{ asset('images/ashley.webp') }}" alt="Client commandant à emporter chez Factory & Co Val d'Europe" class="cta-image">
+            <img src="{{ asset('images/ashley.webp') }}" alt="Client commandant à emporter chez Factory & Co Plaisir" class="cta-image">
             <div class="cta-text">
-                <h2>À emporter sur place</h2>
-                <p>Venez nous rendre visite ! Composez votre menu sur place, à la minute, et savourez votre repas à emporter. Parfait pour les visiteurs pressés qui veulent un vrai burger préparé avec savoir-faire, sans attente excessive.</p>
+                <h2>À emporter ou en terrasse</h2>
+                <p>En pause shopping à Mon Grand Plaisir ou de passage dans les Yvelines ? Composez votre menu sur place, préparé à la minute. Savourez-le sur notre terrasse ou emportez-le — un vrai repas fait maison, sans compromis ni attente.</p>
                 <a href="{{ route('menu.index') }}" class="btn btn-pink">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                     Voir la carte

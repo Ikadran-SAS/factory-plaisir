@@ -7,9 +7,9 @@ class ConceptController extends Controller
     public function index()
     {
         $seo = [
-            'title' => 'Notre Concept – Factory & Co Val d\'Europe',
-            'description' => 'Découvrez l\'univers de Factory & Co : une philosophie basée sur l\'authenticité, la passion et le savoir-faire artisanal. Depuis 1989, nous préparons des burgers de qualité avec des ingrédients frais.',
-            'keywords' => 'concept factory and co, restaurant authentique, diner américain, burgers artisanaux',
+            'title' => 'Notre Concept | Factory & Co Plaisir 78 – Diner Américain',
+            'description' => 'Concept Factory & Co Plaisir : authenticité, passion, savoir-faire depuis 1989. Burgers artisanaux, ingrédients frais. Terrasse, Wi-Fi à Mon Grand Plaisir, Yvelines.',
+            'keywords' => 'concept restaurant plaisir 78, burger authentique yvelines, diner américain mon grand plaisir, factory co plaisir, restaurant artisanal plaisir',
             'canonical' => route('concept'),
         ];
 

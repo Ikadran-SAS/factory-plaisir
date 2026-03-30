@@ -36,14 +36,13 @@ class MenuController extends Controller
             ->groupBy('subcategory');
 
         $seo = [
-            'title' => 'La Carte | Factory & Co Val d\'Europe',
-            'description' => 'Découvrez la carte complète de Factory & Co à Val d\'Europe. Smash Burgers anglais, Bagels New-Yorkais, Cheesecake premium, Bowls sains. Tous les ingrédients frais et délicieux.',
-            'keywords' => 'carte factory co serris, menu factory co val d\'europe, burger bagel cheesecake serris',
+            'title' => 'Carte & Menu | Factory & Co Plaisir 78 – Mon Grand Plaisir',
+            'description' => 'Menu Factory & Co Plaisir : smash burgers artisanaux, bagels new-yorkais, cheesecakes, bowls. Options végétariennes. Mon Grand Plaisir, Yvelines.',
+            'keywords' => 'carte factory co plaisir 78, menu restaurant plaisir yvelines, burger smash plaisir, bagel cheesecake mon grand plaisir, bowl végétarien plaisir',
             'canonical' => route('menu.index'),
-            'h1' => 'La Carte – Factory & Co',
+            'h1' => 'La Carte – Factory & Co Plaisir',
         ];
 
         return view('pages.menu.carte', compact('seo', 'burgers', 'bagels', 'cheesecakes', 'bowls'));
     }
-
 }

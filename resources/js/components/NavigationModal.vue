@@ -14,12 +14,12 @@
 
           <div class="modal-header">
             <h2>Choisir votre application de navigation</h2>
-            <p>14 Rue du Danube, 77700 Serris</p>
+            <p>1170 Av. de Saint-Germain, 78370 Plaisir</p>
           </div>
 
           <div class="modal-body">
             <!-- Google Maps Option -->
-            <a href="https://www.google.com/maps/search/14+Rue+du+Danube,+77700+Serris/@48.8753,2.7758,15z" target="_blank" class="nav-option google-maps" @click="trackNavigation('google-maps')">
+            <a href="https://www.google.com/maps/search/1170+Av.+de+Saint-Germain,+78370+Plaisir/@48.8225,1.9480,15z" target="_blank" class="nav-option google-maps" @click="trackNavigation('google-maps')">
               <div class="nav-icon">
                 <img src="https://www.gstatic.com/images/branding/product/1x/maps_64dp.png" alt="Google Maps" width="48" height="48">
               </div>
@@ -33,7 +33,7 @@
             </a>
 
             <!-- Waze Option -->
-            <a href="https://waze.com/ul?q=14%20Rue%20du%20Danube%2C%2077700%20Serris" target="_blank" class="nav-option waze" @click="trackNavigation('waze')">
+            <a href="https://waze.com/ul?q=1170%20Av.%20de%20Saint-Germain%2C%2078370%20Plaisir" target="_blank" class="nav-option waze" @click="trackNavigation('waze')">
               <div class="nav-icon">
                 <img src="/images/waze-logo.png" alt="Waze" width="48" height="48">
               </div>
@@ -47,7 +47,7 @@
             </a>
 
             <!-- Apple Plans Option -->
-            <a href="https://maps.apple.com/?address=14%20Rue%20du%20Danube%2C%2077700%20Serris%2C%20France&adr=1" target="_blank" class="nav-option apple-maps" @click="trackNavigation('apple-maps')">
+            <a href="https://maps.apple.com/?address=1170%20Av.%20de%20Saint-Germain%2C%2078370%20Plaisir%2C%20France&adr=1" target="_blank" class="nav-option apple-maps" @click="trackNavigation('apple-maps')">
               <div class="nav-icon">
                 <img src="/images/apple-maps-logo.png" alt="Apple Maps" width="48" height="48">
               </div>

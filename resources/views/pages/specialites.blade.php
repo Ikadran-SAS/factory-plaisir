@@ -30,7 +30,7 @@
         '@type' => 'WebPage',
         '@id' => route('specialites'),
         'url' => route('specialites'),
-        'name' => 'Nos Spécialités – Factory & Co Val d\'Europe',
+        'name' => 'Nos Spécialités – Factory & Co Plaisir (Yvelines 78)',
         'description' => 'Smash Burgers, Bagels New-Yorkais, Cheesecake & Breakfast. Découvrez les 4 spécialités premium qui font notre réputation.',
         'isPartOf' => [
             '@type' => 'WebSite',
@@ -90,7 +90,7 @@
                 'item' => [
                     '@type' => 'Product',
                     'name' => 'Breakfast Américain',
-                    'description' => 'Ouverts dès 8h30. Bagels frais, œufs brouillés, bacon croustillant, café de qualité. Le vrai breakfast, pas la version pauvre.',
+                    'description' => 'Ouverts dès 8h00. Bagels frais, œufs brouillés, bacon croustillant, café de qualité. Le vrai breakfast, pas la version pauvre.',
                     'brand' => [
                         '@type' => 'Brand',
                         'name' => 'Factory & Co'
@@ -148,8 +148,8 @@
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
         <span class="section-tag">🌟 Nos Spécialités</span>
-        <h1>Nos Spécialités<br><em>L'Excellence à chaque bouchée</em></h1>
-        <p class="hero-sub">Smash, Bagels, Cheesecake & Breakfast : 4 piliers du goût authentique</p>
+        <h1>Nos Spécialités à Plaisir<br><em>Le goût de Brooklyn aux Yvelines</em></h1>
+        <p class="hero-sub">Smash Burgers, Bagels, Cheesecake &amp; Breakfast : savourez-les en terrasse à Mon Grand Plaisir</p>
         <div class="hero-ctas">
             <a href="{{ route('menu.index') }}" class="btn btn-pink">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
@@ -171,13 +171,13 @@
                     Chaque spécialité<br>
                     <em>raconte une histoire</em>
                 </h2>
-                <p>Chez Factory &amp; Co, nos spécialités ne sont pas juste des plats. Ce sont des célébrations du savoir-faire, nées de la passion du chef <strong>Jonathan Jablonski</strong> et de son engagement envers l'authenticité.</p>
-                <p>Chaque recette a été affinée au fil des années. Chaque ingrédient sélectionné avec soin. Chaque préparation respecte des standards qu'on ne compromet jamais.</p>
-                <p><strong>Ici, on ne fait pas des compromis. Jamais.</strong></p>
+                <p>À Factory &amp; Co Plaisir, nos spécialités portent l'ADN de Brooklyn. Nées de la passion du chef <strong>Jonathan Jablonski</strong>, elles sont préparées chaque jour avec des ingrédients frais, directement dans notre cuisine ouverte à Mon Grand Plaisir.</p>
+                <p>Chaque recette a été perfectionnée au fil des ans. Le smash se fait sur plaque brûlante, le bagel est bouilli puis cuit, le cheesecake repose 24h. Aucun raccourci, aucune concession.</p>
+                <p><strong>Dégustez-les en terrasse ou à emporter — le goût reste le même : authentique.</strong></p>
             </div>
             <div class="concept-image">
                 <img src="{{ asset('images/factory-val-interieur.webp') }}"
-                     alt="Intérieur Factory & Co Val d'Europe"
+                     alt="Intérieur Factory & Co Plaisir"
                      loading="lazy" width="700" height="500">
                 <div class="concept-badge">
                     <span class="concept-badge-title">Premium</span>
@@ -208,7 +208,7 @@
                 </div>
                 <div class="specialite-content">
                     <h3>Smash Burgers</h3>
-                    <p>L'art de la simplicité. Plaque brûlante, viande frémissante, fromage coulant. Le burger comme il faut.</p>
+                    <p>Viande française smashée sur plaque brûlante, cheddar fondant, sauce secrète. À déguster en terrasse à Plaisir.</p>
                     <div class="specialite-meta">
                         <span>⏱️ Rapide</span>
                         <span>🔥 Gourmand</span>
@@ -228,7 +228,7 @@
                 </div>
                 <div class="specialite-content">
                     <h3>Bagels Authentiques</h3>
-                    <p>Directement de Brooklyn. Croquant dehors, moelleux dedans. Un aller simple pour New York, sans quitter votre table.</p>
+                    <p>Recette Brooklyn, préparés chaque matin à Plaisir. Bouillis puis cuits, croquants dehors, moelleux dedans. New York aux Yvelines.</p>
                     <div class="specialite-meta">
                         <span>🌅 Breakfast</span>
                         <span>✨ Artisanal</span>
@@ -248,7 +248,7 @@
                 </div>
                 <div class="specialite-content">
                     <h3>Cheesecake Factory</h3>
-                    <p>Noir New-Yorkais. Fromage frais, biscuit beurre, crème fouettée. L'indulgence en assiette, signée Factory &amp; Co.</p>
+                    <p>Recette originale new-yorkaise : fromage frais, biscuit beurre, crème fouettée. Repos 24h pour un goût parfait. Végétarien.</p>
                     <div class="specialite-meta">
                         <span>🎂 Dessert</span>
                         <span>💎 Iconique</span>
@@ -268,7 +268,7 @@
                 </div>
                 <div class="specialite-content">
                     <h3>Breakfast Américain</h3>
-                    <p>Ouverts dès 8h30. Bagels frais, œufs brouillés, bacon croustillant, café de qualité. Le vrai breakfast, pas la version pauvre.</p>
+                    <p>Dès 8h00 à Mon Grand Plaisir. Bagels frais, œufs brouillés, bacon croustillant, café de spécialité. Le vrai breakfast américain.</p>
                     <div class="specialite-meta">
                         <span>☕ Matinal</span>
                         <span>🥓 Copieux</span>
@@ -333,7 +333,7 @@
                 </div>
                 <div class="quality-card-content">
                     <h3>Authenticité</h3>
-                    <p class="quality-detail">Ingrédients sélectionnés avec soin. Goût New-Yorkais authentique. L'ADN des diners américains, au cœur de Val d'Europe.</p>
+                    <p class="quality-detail">Ingrédients sélectionnés avec soin. Goût New-Yorkais authentique. L'ADN des diners américains, au cœur de Plaisir.</p>
                     <span class="quality-badge">New-York Heritage</span>
                 </div>
             </div>

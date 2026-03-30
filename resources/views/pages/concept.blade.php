@@ -30,7 +30,7 @@
         '@type' => 'WebPage',
         '@id' => route('concept') . '#webpage',
         'url' => route('concept'),
-        'name' => 'Notre Concept – Factory & Co Val d\'Europe',
+        'name' => 'Notre Concept – Factory & Co Plaisir',
         'description' => 'Découvrez l\'univers de Factory & Co : une philosophie basée sur l\'authenticité, la passion et le savoir-faire artisanal.',
         'isPartOf' => [
             '@id' => route('home') . '#website'
@@ -58,7 +58,7 @@
                 'name' => 'Depuis quand existe Factory & Co ?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Factory & Co existe depuis 1989. Nous sommes implantés à Val d\'Europe depuis 2016, au cœur du centre commercial.'
+                    'text' => 'Factory & Co existe depuis 1989. Nous sommes implantés à Plaisir, au cœur du centre commercial Mon Grand Plaisir.'
                 ]
             ],
             [
@@ -66,7 +66,7 @@
                 'name' => 'Quels sont les horaires d\'ouverture ?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Nous sommes ouverts 7 jours sur 7. Lun-Mar-Mer-Jeu-Dim: 8h30-22h. Ven-Sam: 8h30-23h.'
+                    'text' => 'Nous sommes ouverts 7 jours sur 7. Lun-Mar-Mer-Jeu-Dim: 8h-21h30. Ven-Sam: 8h-23h.'
                 ]
             ],
             [
@@ -98,8 +98,8 @@
     <div class="hero-concept-overlay"></div>
     <div class="hero-content">
         <span class="section-tag">🍔</span>
-        <h1>Bien plus qu'un restaurant. Une expérience.</h1>
-        <p>Un aller simple pour New York… sans quitter votre centre commercial.</p>
+        <h1>Bien plus qu'un restaurant. Un voyage culinaire.</h1>
+        <p>L'énergie de Brooklyn s'installe aux Yvelines, au cœur de Mon Grand Plaisir.</p>
     </div>
 </section>
 
@@ -119,8 +119,8 @@
 
                 {{-- Titre principal avec highlight --}}
                 <h2 class="pitch-redesigned-title">
-                    Chez nous, on ne vient<br>
-                    <span class="pitch-highlight">simplement manger.</span>
+                    Ici, on ne fait pas<br>
+                    <span class="pitch-highlight">que se restaurer.</span>
                 </h2>
 
                 {{-- Accent line --}}
@@ -128,12 +128,12 @@
 
                 {{-- Lead --}}
                 <p class="pitch-redesigned-lead">
-                    On vient vivre un moment : <span class="pitch-emphasis">gourmand, généreux, réconfortant.</span>
+                    On s'accorde une vraie pause : <span class="pitch-emphasis">savoureuse, conviviale, authentique.</span>
                 </p>
 
                 {{-- Description --}}
                 <p class="pitch-redesigned-description">
-                    Entre burgers fondants, desserts iconiques et ambiance chaleureuse, chaque visite devient une parenthèse hors du temps. Ici, chaque détail est conçu pour transformer un simple repas en une véritable expérience.
+                    À Plaisir, entre smash burgers généreux, cheesecakes new-yorkais et notre terrasse ensoleillée, chaque visite se transforme en évasion gourmande. Le Wi-Fi gratuit, le parking à deux pas, l'ambiance chaleureuse : tout est pensé pour que vous profitiez pleinement.
                 </p>
 
                 {{-- CTA Button --}}
@@ -151,7 +151,7 @@
             {{-- Colonne Image --}}
             <div class="pitch-redesigned-image">
                 <div class="pitch-image-wrapper">
-                    <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Intérieur Factory & Co - Atmosphère du diner" loading="lazy">
+                    <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Terrasse et intérieur Factory & Co Plaisir Yvelines" loading="lazy">
                     {{-- Accent corner --}}
                     <div class="pitch-image-accent"></div>
                 </div>
@@ -176,7 +176,7 @@
 
         {{-- Intro text en citation --}}
         <blockquote class="concept-quote">
-            Notre concept repose sur une idée simple : proposer une cuisine gourmande et qualitative, dans un univers inspiré des diners new-yorkais.
+            Notre concept à Plaisir : une cuisine gourmande et qualitative, dans un cadre inspiré des diners new-yorkais — avec terrasse, Wi-Fi et l'énergie de Brooklyn au cœur des Yvelines.
         </blockquote>
 
         {{-- 3 Piliers en cards --}}
@@ -233,10 +233,10 @@
         {{-- Conclusion impactante --}}
         <div class="concept-conclusion">
             <p class="concept-conclusion-text">
-                Ici, tout est préparé avec exigence, dans un esprit <span class="concept-conclusion-highlight">fast casual premium</span> : rapide, mais jamais bâclé.
+                Ici, tout est préparé avec exigence, dans un esprit <span class="concept-conclusion-highlight">fast casual premium</span> : rapide, frais, et toujours fait maison.
             </p>
             <p class="concept-conclusion-subtext">
-                ✓ Factory & Co Depuis 1989 – Ouvert à Val d'Europe depuis 2016
+                ✓ Factory & Co depuis 1989 – Votre adresse gourmande à Mon Grand Plaisir
             </p>
         </div>
     </div>
@@ -257,7 +257,7 @@
 
         {{-- Intro text en citation premium --}}
         <blockquote class="experience-intro-quote">
-            Que vous soyez en pleine session shopping, en pause déjeuner ou en sortie détente, notre restaurant s'intègre naturellement dans votre journée.
+            Que vous arriviez de la N12, du Transilien à Plaisir-Grignon ou en pleine session shopping à Mon Grand Plaisir, notre restaurant s'adapte à votre rythme.
         </blockquote>
 
         {{-- 4 Moments/Expériences en grille 2x2 premium --}}
@@ -331,10 +331,10 @@
         {{-- Conclusion impactante --}}
         <div class="experience-conclusion">
             <p class="experience-conclusion-text">
-                Ici, tout est conçu pour être <span class="experience-conclusion-highlight">simple, fluide et agréable.</span>
+                Ici, tout est conçu pour être <span class="experience-conclusion-highlight">accessible, convivial et savoureux.</span>
             </p>
             <p class="experience-conclusion-subtext">
-                ✓ Factory & Co - À chaque moment de votre journée
+                ✓ Factory & Co Plaisir – Terrasse, Wi-Fi, parking gratuit, ouvert 7j/7
             </p>
         </div>
     </div>
@@ -361,7 +361,7 @@
 
         {{-- Intro text avec accent --}}
         <blockquote class="cuisine-intro-quote">
-            Chaque assiette est une promesse de gourmandise, chaque détail pensé pour créer un moment mémorable. Pâtisseries, buns et pains bagels sont fabriqués par nos soins, avec le savoir-faire du chef Jonathan et l'engagement envers la qualité artisanale. Ici, rien n'est laissé au hasard. Tout est pensé, préparé, maîtrisé.
+            À Plaisir, chaque assiette raconte Brooklyn. Pâtisseries, buns et pains bagels sont fabriqués par nos soins, avec le savoir-faire du chef Jonathan. Dégustez-les en terrasse ou à emporter — chez Factory & Co Mon Grand Plaisir, rien n'est laissé au hasard.
         </blockquote>
 
         {{-- Slider Wrapper avec Navigation --}}
@@ -989,7 +989,7 @@
                         </svg>
                     </div>
                     <h3 class="moments-card-title">Petit-déjeuner américain</h3>
-                    <p class="moments-card-description">Dès 8h30, bagels frais, œufs brouillés, bacon croustillant, pâtisseries artisanales et café de qualité pour bien commencer la journée</p>
+                    <p class="moments-card-description">Dès 8h00, bagels frais, œufs brouillés, bacon croustillant, pâtisseries artisanales et café de qualité pour bien commencer la journée</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>

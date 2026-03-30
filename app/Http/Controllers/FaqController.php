@@ -11,9 +11,9 @@ class FaqController extends Controller
         $faqs = FaqItem::grouped();
 
         $seo = [
-            'title' => 'FAQ – Questions Fréquentes | Factory & Co Val d\'Europe',
-            'description' => 'Toutes les réponses à vos questions sur Factory & Co Val d\'Europe : horaires, accès, options Halal, allergènes, Click & Collect.',
-            'keywords' => 'faq factory and co serris, halal val d\'europe, allergènes restaurant serris, horaires factory co val d\'europe',
+            'title' => 'FAQ Factory & Co Plaisir 78 | Horaires, Allergènes, Végétarien',
+            'description' => 'FAQ Factory & Co Plaisir (78) : horaires lun-jeu/dim 8h-21h30 & ven-sam 8h-23h, allergènes, options végétariennes, terrasse, Wi-Fi, click & collect. Yvelines.',
+            'keywords' => 'faq factory co plaisir 78, horaires mon grand plaisir yvelines, restaurant végétarien plaisir, allergènes cheesecake bagel, click collect plaisir',
             'canonical' => route('faq'),
         ];
 

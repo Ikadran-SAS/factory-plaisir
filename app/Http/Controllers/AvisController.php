@@ -19,7 +19,7 @@ class AvisController extends Controller
             ->get();
 
         // Get aggregate rating (try Google first, fallback to local DB)
-        $googleReviewsController = new GoogleReviewsController();
+        $googleReviewsController = new GoogleReviewsController;
         $aggregateData = $googleReviewsController->getAggregateRating();
 
         // Use Google data if available, otherwise use local DB
@@ -27,9 +27,9 @@ class AvisController extends Controller
         $totalReviews = $aggregateData['total'] ?? $reviews->count();
 
         $seo = [
-            'title' => 'Avis Clients | Factory & Co – Nos Clients Témoignent',
-            'description' => 'Découvrez les avis vérifiés de nos clients satisfaits. '.number_format($averageRating, 1, ',', '').'★ - '.$totalReviews.' avis. Factory & Co Val d\'Europe à Serris.',
-            'keywords' => 'avis clients factory co, témoignages factory co, avis burgers serris, reviews factory and co, avis restaurants val d\'europe',
+            'title' => 'Avis Factory & Co Plaisir 78 | '.number_format($averageRating, 1, ',', '').'★ – '.$totalReviews.' Avis',
+            'description' => 'Avis vérifiés Factory & Co Plaisir : '.number_format($averageRating, 1, ',', '').'★ avec '.$totalReviews.' témoignages. Smash burgers, bagels, cheesecakes, terrasse. Mon Grand Plaisir, Yvelines.',
+            'keywords' => 'avis factory co plaisir 78, témoignages restaurant yvelines, avis burgers smash plaisir, reviews cheesecake bagel, avis mon grand plaisir',
             'canonical' => route('avis'),
         ];
 
