@@ -47,8 +47,8 @@ class MenuController extends Controller
         $totalReviews = $aggregateData['total'] ?? Review::where('is_visible', true)->count();
 
         $seo = [
-            'title' => 'Carte & Menu | Factory & Co Plaisir 78 – Mon Grand Plaisir',
-            'description' => 'Menu Factory & Co Plaisir : smash burgers artisanaux, bagels new-yorkais, cheesecakes, bowls. Options végétariennes. Mon Grand Plaisir, Yvelines.',
+            'title' => 'Carte Factory & Co Plaisir 78 | Menu & Prix',
+            'description' => 'Carte Factory & Co Plaisir : smash burgers artisanaux, bagels new-yorkais, cheesecakes, bowls. Options halal et végétariennes. Mon Grand Plaisir, Yvelines.',
             'keywords' => 'carte factory co plaisir 78, menu restaurant plaisir yvelines, burger smash plaisir, bagel cheesecake mon grand plaisir, bowl végétarien plaisir',
             'canonical' => route('menu.index'),
             'h1' => 'La Carte – Factory & Co Plaisir',

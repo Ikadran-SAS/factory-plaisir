@@ -12,8 +12,8 @@ class ContactController extends Controller
         $openingHours = OpeningHour::orderBy('sort_order')->get();
 
         $seo = [
-            'title' => 'Contact Factory & Co Plaisir | 01 30 96 61 52 | Yvelines 78',
-            'description' => 'Contactez Factory & Co Plaisir : 01 30 96 61 52. 1170 Av. Saint-Germain, Mon Grand Plaisir, 78370. Lun-Jeu/Dim 08h-21h30, Ven-Sam 08h-23h. Terrasse, Wi-Fi.',
+            'title' => 'Contact Factory & Co Plaisir 78 | 01 30 96 61 52',
+            'description' => 'Contactez Factory & Co Plaisir : 01 30 96 61 52. 1170 Av. Saint-Germain, Mon Grand Plaisir, 78370. Ouvert 7j/7 dès 8h. Réponse sous 4h.',
             'keywords' => 'contact factory co plaisir 78, adresse mon grand plaisir yvelines, téléphone restaurant plaisir, horaires factory co plaisir',
             'canonical' => route('contact'),
         ];

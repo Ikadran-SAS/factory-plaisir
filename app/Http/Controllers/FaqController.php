@@ -11,8 +11,8 @@ class FaqController extends Controller
         $faqs = FaqItem::grouped();
 
         $seo = [
-            'title' => 'FAQ Factory & Co Plaisir 78 | Horaires, Allergènes, Végétarien',
-            'description' => 'FAQ Factory & Co Plaisir (78) : horaires lun-jeu/dim 8h-21h30 & ven-sam 8h-23h, allergènes, options végétariennes, terrasse, Wi-Fi, click & collect. Yvelines.',
+            'title' => 'FAQ Factory & Co Plaisir 78 | Horaires & Allergènes',
+            'description' => 'FAQ Factory & Co Plaisir : horaires 7j/7 dès 8h, allergènes détaillés, options halal et végétariennes, terrasse, Wi-Fi gratuit, click & collect. Mon Grand Plaisir.',
             'keywords' => 'faq factory co plaisir 78, horaires mon grand plaisir yvelines, restaurant végétarien plaisir, allergènes cheesecake bagel, click collect plaisir',
             'canonical' => route('faq'),
         ];

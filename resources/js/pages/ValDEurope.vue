@@ -13,15 +13,15 @@
       <div class="hero-content">
         <p class="hero-location">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          CC Val d'Europe · 14 Rue du Danube · Serris
+          CC Mon Grand Plaisir · 1170 Av. de Saint-Germain · Plaisir
         </p>
         <h1 class="hero-title">
           Factory &amp; Co<br>
-          Val d'Europe :<br>
+          Plaisir :<br>
           L'<em>Authentique Diner</em> Américain
         </h1>
         <p class="hero-sub">Smash Burgers · Bagels New-Yorkais · Cheesecake Factory · Healthy Bowls</p>
-        <p class="hero-hours">Ouvert 7j/7 · 07:00 – 22:30 · Delicious since 2008</p>
+        <p class="hero-hours">Ouvert 7j/7 · 08:00 – 23:00 · Delicious since 2008</p>
         <div class="hero-ctas">
           <button @click="openNavigationModal" class="btn btn-pink">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -40,7 +40,7 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Galerie</span>
-          <h2 class="section-title">Le Meilleur de Factory &amp; Co Val d'Europe</h2>
+          <h2 class="section-title">Le Meilleur de Factory &amp; Co Plaisir</h2>
         </div>
         
         <product-grid

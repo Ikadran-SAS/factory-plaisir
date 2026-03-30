@@ -612,7 +612,7 @@
         {{-- CARD 1: Identité Forte --}}
         <div class="why-choose-card-visual">
             <div class="card-visual-image">
-                <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Intérieur Factory & Co Toulouse - Design unique et mémorable" loading="lazy">
+                <img src="{{ asset('images/factory-val-interieur.webp') }}" alt="Intérieur Factory & Co Plaisir - Design unique et mémorable" loading="lazy">
                 <div class="card-visual-overlay-dark"></div>
             </div>
             <div class="card-visual-content">

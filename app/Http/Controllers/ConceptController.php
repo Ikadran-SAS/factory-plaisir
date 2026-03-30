@@ -19,8 +19,8 @@ class ConceptController extends Controller
         $totalReviews = $aggregateData['total'] ?? Review::where('is_visible', true)->count();
 
         $seo = [
-            'title' => 'Notre Concept | Factory & Co Plaisir 78 – Diner Américain',
-            'description' => 'Concept Factory & Co Plaisir : authenticité, passion, savoir-faire depuis 1989. Burgers artisanaux, ingrédients frais. Terrasse, Wi-Fi à Mon Grand Plaisir, Yvelines.',
+            'title' => 'Factory & Co Plaisir | Concept Diner Américain 78',
+            'description' => 'Le concept Factory & Co Plaisir : authenticité et savoir-faire depuis 1989. Burgers artisanaux, ingrédients frais, recettes de Brooklyn. Mon Grand Plaisir, Yvelines.',
             'keywords' => 'concept restaurant plaisir 78, burger authentique yvelines, diner américain mon grand plaisir, factory co plaisir, restaurant artisanal plaisir',
             'canonical' => route('concept'),
         ];

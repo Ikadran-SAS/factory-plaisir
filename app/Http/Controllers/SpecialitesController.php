@@ -15,8 +15,8 @@ class SpecialitesController extends Controller
             ->toArray();
 
         $seo = [
-            'title' => 'Spécialités Factory & Co Plaisir 78 | Smash Burger, Bagel, Cheesecake',
-            'description' => 'Spécialités Factory & Co Plaisir : smash burgers artisanaux, bagels new-yorkais, cheesecakes, breakfast dès 8h. Terrasse, végétarien. Mon Grand Plaisir, Yvelines.',
+            'title' => 'Spécialités Factory & Co Plaisir 78 | Burgers & Bagels',
+            'description' => 'Spécialités Factory & Co Plaisir : smash burgers artisanaux, bagels new-yorkais, cheesecakes maison, breakfast dès 8h. Options halal et végétariennes. Mon Grand Plaisir.',
             'keywords' => 'smash burger plaisir 78, bagels new-yorkais yvelines, cheesecake plaisir, breakfast factory co, spécialités mon grand plaisir',
             'canonical' => route('specialites'),
         ];
