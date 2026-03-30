@@ -85,11 +85,11 @@
             <div class="stat-label">Préparé à la minute</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">4.5★</div>
+            <div class="stat-number">{{ number_format($averageRating, 1, ',', '') }}★</div>
             <div class="stat-label">Note Google</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">6000+</div>
+            <div class="stat-number">{{ number_format($totalReviews, 0, ',', ' ') }}+</div>
             <div class="stat-label">Avis Google</div>
         </div>
     </div>
