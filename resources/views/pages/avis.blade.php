@@ -65,7 +65,7 @@
                 'worstRating' => '1'
             ],
             'reviewBody' => $review->content,
-            'datePublished' => $review->created_at->toIso8601String()
+            'datePublished' => isset($review->created_at) ? (is_string($review->created_at) ? $review->created_at : $review->created_at->toIso8601String()) : now()->toIso8601String()
         ];
     }
 

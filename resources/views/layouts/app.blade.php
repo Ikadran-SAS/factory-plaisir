@@ -86,6 +86,12 @@
                 ['@type' => 'LocationFeatureSpecification', 'name' => 'À emporter', 'value' => true],
                 ['@type' => 'LocationFeatureSpecification', 'name' => 'Végétarien', 'value' => true]
             ],
+            'aggregateRating' => [
+                '@type' => 'AggregateRating',
+                'ratingValue' => '4.3',
+                'reviewCount' => '1200',
+                'bestRating' => '5'
+            ],
             'sameAs' => ['https://www.instagram.com/factoryandco/', 'https://www.facebook.com/factoryandco/']
         ];
     @endphp

@@ -12,7 +12,9 @@
         'image' => $post->image_url,
         'author' => [
             '@type' => 'Organization',
-            'name' => 'Factory & Co Plaisir'
+            'name' => 'Factory & Co Plaisir',
+            'logo' => asset('images/logo-fact.svg'),
+            'url' => route('home')
         ],
         'publisher' => [
             '@type' => 'Organization',

@@ -23,8 +23,20 @@
             ]
         ]
     ];
+
+    $blogPageSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'CollectionPage',
+        '@id' => route('blog.index'),
+        'url' => route('blog.index'),
+        'name' => 'Blog – Factory & Co Plaisir',
+        'description' => 'Conseils pratiques, guides et actualités Factory & Co Plaisir.',
+        'isPartOf' => ['@id' => route('home')],
+        'breadcrumb' => ['@id' => '#breadcrumb']
+    ];
 @endphp
 <script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+<script type="application/ld+json">{!! json_encode($blogPageSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
 @endpush
 @section('content')
 <nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Blog</span></div></nav>

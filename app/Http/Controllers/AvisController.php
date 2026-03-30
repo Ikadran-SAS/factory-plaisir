@@ -23,7 +23,7 @@ class AvisController extends Controller
         $aggregateData = $googleReviewsController->getAggregateRating();
 
         // Use Google data if available, otherwise use local DB
-        $averageRating = $aggregateData['rating'] ?? ($reviews->count() > 0 ? $reviews->avg('rating') : 0);
+        $averageRating = $aggregateData['rating'] ?? ($reviews->count() > 0 ? $reviews->avg('rating') : 4.3);
         $totalReviews = $aggregateData['total'] ?? $reviews->count();
 
         $seo = [

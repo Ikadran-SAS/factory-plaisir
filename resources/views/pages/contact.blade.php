@@ -23,8 +23,33 @@
             ]
         ]
     ];
+
+    $contactPageSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'ContactPage',
+        '@id' => route('contact'),
+        'url' => route('contact'),
+        'name' => 'Contact – Factory & Co Plaisir',
+        'description' => 'Contactez Factory & Co Plaisir au 01 30 96 61 52. 1170 Av. Saint-Germain, Mon Grand Plaisir, 78370 Plaisir.',
+        'mainEntity' => [
+            '@type' => 'LocalBusiness',
+            'name' => 'Factory & Co Plaisir',
+            'telephone' => '+33130966152',
+            'email' => 'contact@factoryandco.com',
+            'address' => [
+                '@type' => 'PostalAddress',
+                'streetAddress' => '1170 Av. Saint-Germain, Mon Grand Plaisir',
+                'addressLocality' => 'Plaisir',
+                'postalCode' => '78370',
+                'addressCountry' => 'FR'
+            ]
+        ],
+        'isPartOf' => ['@id' => route('home')],
+        'breadcrumb' => ['@id' => '#breadcrumb']
+    ];
 @endphp
 <script type="application/ld+json">{!! json_encode($breadcrumbSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+<script type="application/ld+json">{!! json_encode($contactPageSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
 @endpush
 @section('content')
 <nav class="breadcrumb"><div class="breadcrumb-inner"><a href="{{ route('home') }}">Accueil</a><span class="bc-sep">›</span><span>Contact</span></div></nav>
