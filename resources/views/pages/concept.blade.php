@@ -58,7 +58,7 @@
                 'name' => 'Depuis quand existe Factory & Co ?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Factory & Co existe depuis 1989. Nous sommes implantés à Plaisir, au cœur du centre commercial Mon Grand Plaisir.'
+                    'text' => 'Factory & Co a été créé en 2009. "Since 1989" est notre tagline, un clin d'œil à l'inspiration new-yorkaise du fondateur. Nous sommes implantés à Plaisir, au cœur du centre commercial Mon Grand Plaisir.'
                 ]
             ],
             [
@@ -99,7 +99,7 @@
     <div class="hero-content">
         <span class="section-tag">🍔</span>
         <h1>Bien plus qu'un restaurant. Un voyage culinaire.</h1>
-        <p>L'énergie de Brooklyn s'installe aux Yvelines, au cœur de Mon Grand Plaisir.</p>
+        <p>L'énergie de New York s'installe aux Yvelines, au cœur de Mon Grand Plaisir.</p>
     </div>
 </section>
 
@@ -176,7 +176,7 @@
 
         {{-- Intro text en citation --}}
         <blockquote class="concept-quote">
-            Notre concept à Plaisir : une cuisine gourmande et qualitative, dans un cadre inspiré des diners new-yorkais — avec terrasse, Wi-Fi et l'énergie de Brooklyn au cœur des Yvelines.
+            Notre concept à Plaisir : une cuisine gourmande et qualitative, dans un cadre inspiré des diners new-yorkais — avec terrasse, Wi-Fi et l'énergie de New York au cœur des Yvelines.
         </blockquote>
 
         {{-- 3 Piliers en cards --}}
@@ -236,7 +236,7 @@
                 Ici, tout est préparé avec exigence, dans un esprit <span class="concept-conclusion-highlight">fast casual premium</span> : rapide, frais, et toujours fait maison.
             </p>
             <p class="concept-conclusion-subtext">
-                ✓ Factory & Co depuis 1989 – Votre adresse gourmande à Mon Grand Plaisir
+                ✓ Factory & Co depuis 2009 – Votre adresse gourmande à Mon Grand Plaisir
             </p>
         </div>
     </div>
@@ -361,7 +361,7 @@
 
         {{-- Intro text avec accent --}}
         <blockquote class="cuisine-intro-quote">
-            À Plaisir, chaque assiette raconte Brooklyn. Pâtisseries, buns et pains bagels sont fabriqués par nos soins, avec le savoir-faire du chef Jonathan. Dégustez-les en terrasse ou à emporter — chez Factory & Co Mon Grand Plaisir, rien n'est laissé au hasard.
+            À Plaisir, chaque assiette raconte New York. Pâtisseries, buns et pains bagels sont fabriqués par nos soins, avec le savoir-faire du chef Jonathan, formé au New Jersey. Dégustez-les en terrasse ou à emporter — chez Factory & Co Mon Grand Plaisir, rien n'est laissé au hasard.
         </blockquote>
 
         {{-- Slider Wrapper avec Navigation --}}
@@ -1176,7 +1176,7 @@
 
             {{-- Tagline finale ── --}}
             <p class="cta-tagline">
-                ✓ Factory & Co Depuis 1989<br>
+                ✓ Factory & Co Since 1989<br>
                 <span class="cta-tagline-small">Une vraie différence. Un vrai plaisir.</span>
             </p>
         </div>

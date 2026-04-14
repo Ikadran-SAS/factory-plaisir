@@ -64,7 +64,7 @@
                 'item' => [
                     '@type' => 'Product',
                     'name' => 'Bagels Authentiques',
-                    'description' => 'Directement de Brooklyn. Croquant dehors, moelleux dedans. Un aller simple pour New York, sans quitter votre table.',
+                    'description' => 'Recette authentique du New Jersey, 36h de fermentation. Croquant dehors, moelleux dedans. Un aller simple pour New York.',
                     'brand' => [
                         '@type' => 'Brand',
                         'name' => 'Factory & Co'
@@ -148,7 +148,7 @@
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
         <span class="section-tag">🌟 Nos Spécialités</span>
-        <h1>Nos Spécialités à Plaisir<br><em>Le goût de Brooklyn aux Yvelines</em></h1>
+        <h1>Nos Spécialités à Plaisir<br><em>L'Excellence à chaque bouchée</em></h1>
         <p class="hero-sub">Smash Burgers, Bagels, Cheesecake &amp; Breakfast : savourez-les en terrasse à Mon Grand Plaisir</p>
         <div class="hero-ctas">
             <a href="{{ route('menu.index') }}" class="btn btn-pink">
@@ -171,7 +171,7 @@
                     Chaque spécialité<br>
                     <em>raconte une histoire</em>
                 </h2>
-                <p>À Factory &amp; Co Plaisir, nos spécialités portent l'ADN de Brooklyn. Nées de la passion du chef <strong>Jonathan Jablonski</strong>, elles sont préparées chaque jour avec des ingrédients frais, directement dans notre cuisine ouverte à Mon Grand Plaisir.</p>
+                <p>À Factory &amp; Co Plaisir, nos spécialités ne sont pas juste des plats. Ce sont des célébrations du savoir-faire, nées de la passion du chef <strong>Jonathan Jablonski</strong> et de son engagement envers l'authenticité.</p>
                 <p>Chaque recette a été perfectionnée au fil des ans. Le smash se fait sur plaque brûlante, le bagel est bouilli puis cuit, le cheesecake repose 24h. Aucun raccourci, aucune concession.</p>
                 <p><strong>Dégustez-les en terrasse ou à emporter — le goût reste le même : authentique.</strong></p>
             </div>
@@ -228,7 +228,7 @@
                 </div>
                 <div class="specialite-content">
                     <h3>Bagels Authentiques</h3>
-                    <p>Recette Brooklyn, préparés chaque matin à Plaisir. Bouillis puis cuits, croquants dehors, moelleux dedans. New York aux Yvelines.</p>
+                    <p>Recette authentique du New Jersey, <strong>36 heures de fermentation</strong>. Pétrissage artisanal, croquant dehors, moelleux dedans. Une texture et une croûte introuvables ailleurs.</p>
                     <div class="specialite-meta">
                         <span>🌅 Breakfast</span>
                         <span>✨ Artisanal</span>
@@ -319,7 +319,7 @@
                 </div>
                 <div class="quality-card-content">
                     <h3>Craft</h3>
-                    <p class="quality-detail">Recettes exclusives du chef Jonathan Jablonski, formé aux côtés des plus grands de Brooklyn. 15+ ans d'expertise.</p>
+                    <p class="quality-detail">Recettes exclusives du chef Jonathan Jablonski, formé au New Jersey auprès d'artisans boulangers américains. 15+ ans d'expertise en cuisine américaine authentique.</p>
                     <span class="quality-badge">Chef Jonathan</span>
                 </div>
             </div>

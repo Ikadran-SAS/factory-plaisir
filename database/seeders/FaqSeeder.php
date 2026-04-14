@@ -138,7 +138,7 @@ class FaqSeeder extends Seeder
                 'category_label' => 'Nos Spécialités',
                 'category_icon' => '🍔',
                 'question' => 'Les bagels sont-ils vraiment new-yorkais ?',
-                'answer' => 'Absolument. Notre chef Jonathan a apporté les vraies recettes de Brooklyn. Nos bagels sont bouillis avant la cuisson (contrairement aux pains classiques), ce qui leur donne cette texture unique : croustillants dehors, moelleux dedans. Chaque matin, ils sont préparés frais. C\'est l\'authentique recette new-yorkaise, pas une copie commerciale.',
+                'answer' => 'Absolument. Notre chef Jonathan a apporté les vraies recettes du New Jersey. Nos bagels sont bouillis avant la cuisson (contrairement aux pains classiques), ce qui leur donne cette texture unique : croustillants dehors, moelleux dedans. Chaque matin, ils sont préparés frais. C\'est l\'authentique recette new-yorkaise, pas une copie commerciale.',
                 'sort_order' => 15,
             ],
             [

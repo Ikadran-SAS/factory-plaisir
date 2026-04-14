@@ -102,13 +102,13 @@
     <div class="container">
         <div class="concept-grid">
             <div class="concept-text">
-                <span class="section-tag">Un goût de Brooklyn aux Yvelines</span>
+                <span class="section-tag">Un goût de New York aux Yvelines</span>
                 <h2 class="section-title dark">
                     Votre nouvelle adresse<br>
                     gourmande à Plaisir
                 </h2>
 
-                <p>Au cœur du centre commercial <strong>Mon Grand Plaisir</strong>, Factory &amp; Co vous fait voyager à <strong>Brooklyn</strong> le temps d'un repas. Des recettes authentiques, des ingrédients frais, un savoir-faire qui ne triche pas.</p>
+                <p>Au cœur du centre commercial <strong>Mon Grand Plaisir</strong>, Factory &amp; Co vous fait voyager à <strong>New York</strong> le temps d'un repas. Des recettes authentiques, des ingrédients frais, un savoir-faire qui ne triche pas.</p>
                 <p>Ici, <strong>tout est frais, tout est fait maison</strong>. Nos burgers sont smashés à la commande sur plaque brûlante. Nos bagels arrivent chaque matin, croustillants et moelleux. Nos cheesecakes suivent la recette originale new-yorkaise, sans raccourci.</p>
                 <p><strong>Installez-vous en terrasse, connectez-vous au Wi-Fi, et laissez-vous transporter.</strong></p>
                 <a href="{{ route('concept') }}" class="btn btn-pink">
