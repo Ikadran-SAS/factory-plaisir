@@ -104,6 +104,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Homestead';
+            src: url('{{ asset('Typos/Homestead/Homestead-Inline.ttf') }}') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
 
     {{-- ── Vite Assets (CSS + JS) ── --}}
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/modal-app.js'])
@@ -157,8 +166,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div id="modal-app"></div>
 
-{{-- ── Cookie Banner (Google Consent Mode v2) ── --}}
-@include('layouts.partials.cookie-banner')
 
 </body>
 </html>

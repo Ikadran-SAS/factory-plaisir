@@ -48,7 +48,7 @@
      HERO SECTION - PLEIN ÉCRAN
 ════════════════════════════════════════════ --}}
 <section class="hero" aria-label="Factory & Co Plaisir">
-    <div class="hero-bg" style="background-image:url('{{ asset('images/PHOTO-2026-03-26-10-27-33.jpg') }}')" aria-hidden="true"></div>
+    <div class="hero-bg" style="background-image:url('{{ asset('restaurant/plaisir/img_0246-2.jpg') }}')" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
         <p class="hero-location">
@@ -63,8 +63,14 @@
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 Venir chez nous
             </a>
-            <a href="{{ route('menu.index') }}" class="btn btn-outline-white">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            <a href="https://www.ubereats.com/fr" target="_blank" rel="noopener" class="btn btn-pink">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+                Se faire livrer
+            </a>
+        </div>
+        <div class="hero-ctas-secondary">
+            <a href="{{ route('menu.index') }}" class="hero-badge-link">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
                 Découvrir la carte
             </a>
         </div>
@@ -109,7 +115,7 @@
                 </h2>
 
                 <p>Au cœur du centre commercial <strong>Mon Grand Plaisir</strong>, Factory &amp; Co vous fait voyager à <strong>New York</strong> le temps d'un repas. Des recettes authentiques, des ingrédients frais, un savoir-faire qui ne triche pas.</p>
-                <p>Ici, <strong>tout est frais, tout est fait maison</strong>. Nos burgers sont smashés à la commande sur plaque brûlante. Nos bagels arrivent chaque matin, croustillants et moelleux. Nos cheesecakes suivent la recette originale new-yorkaise, sans raccourci.</p>
+                <p>Ici, <strong>tout est frais, tout est préparé à la commande</strong>. Nos burgers sont smashés sur plaque brûlante. Nos bagels arrivent chaque matin, croustillants et moelleux. Nos cheesecakes suivent la recette originale new-yorkaise, sans raccourci.</p>
                 <p><strong>Installez-vous en terrasse, connectez-vous au Wi-Fi, et laissez-vous transporter.</strong></p>
                 <a href="{{ route('concept') }}" class="btn btn-pink">
                     Découvrir notre concept
@@ -117,7 +123,7 @@
                 </a>
             </div>
             <div class="concept-image">
-                <img src="{{ asset('images/factory-val-interieur.webp') }}"
+                <img src="{{ asset('restaurant/plaisir/whatsapp-image-2021-12-07-at-21-45-21-4-.jpg') }}"
                      alt="Intérieur du restaurant Factory & Co Plaisir Yvelines - terrasse et ambiance diner"
                      loading="lazy" width="700" height="500">
                 <div class="concept-badge">
@@ -263,7 +269,7 @@
             <img src="{{ asset('images/ashley.webp') }}" alt="Client commandant à emporter chez Factory & Co Plaisir" class="cta-image">
             <div class="cta-text">
                 <h2>À emporter ou en terrasse</h2>
-                <p>En pause shopping à Mon Grand Plaisir ou de passage dans les Yvelines ? Composez votre menu sur place, préparé à la minute. Savourez-le sur notre terrasse ou emportez-le — un vrai repas fait maison, sans compromis ni attente.</p>
+                <p>En pause shopping à Mon Grand Plaisir ou de passage dans les Yvelines ? Composez votre menu sur place, préparé à la minute. Savourez-le sur notre terrasse ou emportez-le — un vrai repas préparé à la minute, sans compromis ni attente.</p>
                 <a href="{{ route('menu.index') }}" class="btn btn-pink">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                     Voir la carte

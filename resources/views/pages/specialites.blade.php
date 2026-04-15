@@ -144,10 +144,10 @@
      HERO SECTION
 ════════════════════════════════════════════ --}}
 <section class="hero hero-specialites">
-    <div class="hero-bg" style="background-image: url('https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp')" aria-hidden="true"></div>
+    <div class="hero-bg" style="background-image: url('{{ asset('menu/SAL%C3%89/BURGER/Smash%20Burgers/Monster/DSC03550.jpg') }}')" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-content">
-        <span class="section-tag">🌟 Nos Spécialités</span>
+        <span class="section-tag">Nos spécialités</span>
         <h1>Nos Spécialités à Plaisir<br><em>L'Excellence à chaque bouchée</em></h1>
         <p class="hero-sub">Smash Burgers, Bagels, Cheesecake &amp; Breakfast : savourez-les en terrasse à Mon Grand Plaisir</p>
         <div class="hero-ctas">
@@ -203,15 +203,15 @@
             {{-- SMASH BURGERS --}}
             <div class="specialite-card">
                 <div class="specialite-image">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp" alt="Smash Burgers Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/BURGER/Smash%20Burgers/Monster/DSC03550.jpg') }}" alt="Smash Burgers Factory & Co" loading="lazy">
                     <span class="specialite-badge">Signature</span>
                 </div>
                 <div class="specialite-content">
                     <h3>Smash Burgers</h3>
                     <p>Viande française smashée sur plaque brûlante, cheddar fondant, sauce secrète. À déguster en terrasse à Plaisir.</p>
                     <div class="specialite-meta">
-                        <span>⏱️ Rapide</span>
-                        <span>🔥 Gourmand</span>
+                        <span>Rapide</span>
+                        <span>Gourmand</span>
                     </div>
                     <a href="{{ route('menu.index') }}" class="btn btn-pink btn-sm">
                         Découvrir
@@ -223,15 +223,15 @@
             {{-- BAGELS --}}
             <div class="specialite-card">
                 <div class="specialite-image">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/BLT-SEUL-2.jpg" alt="Bagels Authentiques Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/BAGELS/DSC00828.jpg') }}" alt="Bagels Authentiques Factory & Co" loading="lazy">
                     <span class="specialite-badge">Star</span>
                 </div>
                 <div class="specialite-content">
                     <h3>Bagels Authentiques</h3>
                     <p>Recette authentique du New Jersey, <strong>36 heures de fermentation</strong>. Pétrissage artisanal, croquant dehors, moelleux dedans. Une texture et une croûte introuvables ailleurs.</p>
                     <div class="specialite-meta">
-                        <span>🌅 Breakfast</span>
-                        <span>✨ Artisanal</span>
+                        <span>Breakfast</span>
+                        <span>36h fermentation</span>
                     </div>
                     <a href="{{ route('menu.index') }}" class="btn btn-pink btn-sm">
                         Découvrir
@@ -243,15 +243,15 @@
             {{-- CHEESECAKE --}}
             <div class="specialite-card">
                 <div class="specialite-image">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/cheesecake.webp" alt="Cheesecake Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/CHEESECAKE/Factory_Claye%204.JPG') }}" alt="Cheesecake Factory & Co" loading="lazy">
                     <span class="specialite-badge">Must-try</span>
                 </div>
                 <div class="specialite-content">
-                    <h3>Cheesecake Factory</h3>
+                    <h3>New York Cheesecake</h3>
                     <p>Recette originale new-yorkaise : fromage frais, biscuit beurre, crème fouettée. Repos 24h pour un goût parfait. Végétarien.</p>
                     <div class="specialite-meta">
-                        <span>🎂 Dessert</span>
-                        <span>💎 Iconique</span>
+                        <span>Signature</span>
+                        <span>Artisanal</span>
                     </div>
                     <a href="{{ route('menu.index') }}" class="btn btn-pink btn-sm">
                         Découvrir
@@ -263,15 +263,15 @@
             {{-- BREAKFAST --}}
             <div class="specialite-card">
                 <div class="specialite-image">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/smoothiee.jpeg" alt="Breakfast Américain Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/BREAKFAST/DSC01073.jpg') }}" alt="Breakfast Américain Factory & Co" loading="lazy">
                     <span class="specialite-badge">Premium</span>
                 </div>
                 <div class="specialite-content">
                     <h3>Breakfast Américain</h3>
                     <p>Dès 8h00 à Mon Grand Plaisir. Bagels frais, œufs brouillés, bacon croustillant, café de spécialité. Le vrai breakfast américain.</p>
                     <div class="specialite-meta">
-                        <span>☕ Matinal</span>
-                        <span>🥓 Copieux</span>
+                        <span>Matinal</span>
+                        <span>Copieux</span>
                     </div>
                     <a href="{{ route('menu.index') }}" class="btn btn-pink btn-sm">
                         Découvrir
@@ -296,27 +296,15 @@
         <div class="quality-cards-grid">
             {{-- PILIER 1: FRAÎCHEUR --}}
             <div class="quality-card quality-card-1">
-                <div class="quality-icon-circle">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="quality-icon">
-                        <circle cx="12" cy="12" r="9"/>
-                        <path d="M12 6v6h4"/>
-                    </svg>
-                </div>
                 <div class="quality-card-content">
                     <h3>Fraîcheur</h3>
-                    <p class="quality-detail">100% préparé à la commande. Zéro surgelé. Chaque assiette respire la fraîcheur du moment.</p>
+                    <p class="quality-detail">100% préparé à la commande. Chaque assiette respire la fraîcheur du moment.</p>
                     <span class="quality-badge">À la commande</span>
                 </div>
             </div>
 
             {{-- PILIER 2: CRAFT --}}
             <div class="quality-card quality-card-2">
-                <div class="quality-icon-circle">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="quality-icon">
-                        <circle cx="12" cy="12" r="9"/>
-                        <path d="M9 12h6M12 9v6"/>
-                    </svg>
-                </div>
                 <div class="quality-card-content">
                     <h3>Craft</h3>
                     <p class="quality-detail">Recettes exclusives du chef Jonathan Jablonski, formé au New Jersey auprès d'artisans boulangers américains. 15+ ans d'expertise en cuisine américaine authentique.</p>
@@ -326,11 +314,6 @@
 
             {{-- PILIER 3: AUTHENTICITÉ --}}
             <div class="quality-card quality-card-3">
-                <div class="quality-icon-circle">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" class="quality-icon">
-                        <path d="M12 1L3 5v7c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-                    </svg>
-                </div>
                 <div class="quality-card-content">
                     <h3>Authenticité</h3>
                     <p class="quality-detail">Ingrédients sélectionnés avec soin. Goût New-Yorkais authentique. L'ADN des diners américains, au cœur de Plaisir.</p>
@@ -499,6 +482,10 @@
 .btn-sm {
     padding: 0.5rem 1rem;
     font-size: 11px;
+}
+
+.specialite-content .btn-sm {
+    margin-top: auto;
 }
 
 /* ═══════════════════════════════════════════════════════════════

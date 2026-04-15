@@ -98,7 +98,7 @@
     <div class="avis-hero-content">
         <span class="section-tag">⭐ CE QUE NOS CLIENTS DISENT</span>
         <h1>Pourquoi ils reviennent <em>à Mon Grand Plaisir</em></h1>
-        <p>Terrasse, Wi-Fi, cuisine fait maison : découvrez ce qu'en disent nos clients à Plaisir</p>
+        <p>Terrasse, Wi-Fi, cuisine authentique : découvrez ce qu'en disent nos clients à Plaisir</p>
 
         <div class="avis-trust-metrics">
             <div class="reviews-stars">@for($i = 1; $i <= 5; $i++)★@endfor</div>
