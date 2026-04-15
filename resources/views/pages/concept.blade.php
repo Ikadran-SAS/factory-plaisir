@@ -58,7 +58,7 @@
                 'name' => 'Depuis quand existe Factory & Co ?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Factory & Co a été créé en 2009. "Since 1989" est notre tagline, un clin d'œil à l'inspiration new-yorkaise du fondateur. Nous sommes implantés à Plaisir, au cœur du centre commercial Mon Grand Plaisir.'
+                    'text' => 'Factory & Co a été créé en 2009. "Since 1989" est notre tagline, un clin d\'œil à l\'inspiration new-yorkaise du fondateur. Nous sommes implantés à Plaisir, au cœur du centre commercial Mon Grand Plaisir.'
                 ]
             ],
             [
@@ -168,12 +168,13 @@
             <h2 class="concept-title-redesigned">
                 Notre <span class="concept-highlight">concept</span>
             </h2>
-            <p class="concept-subtitle-redesigned">L'énergie new-yorkaise, le savoir-faire français</p>
+            <p class="concept-subtitle-redesigned">L'esprit Brooklyn, l'exigence des Yvelines</p>
         </div>
 
         {{-- Intro text en citation --}}
         <blockquote class="concept-quote">
-            Notre concept à Plaisir : une cuisine gourmande et qualitative, dans un cadre inspiré des diners new-yorkais — avec terrasse, Wi-Fi et l'énergie de New York au cœur des Yvelines.
+            Jonathan Jablonski a fondé Factory & Co en 2009, après avoir grandi entre le New Jersey et la France. Chaque recette, chaque technique, chaque ingrédient a été ramené de l'autre côté de l'Atlantique. À Plaisir, cette authenticité prend vie avec une terrasse, du Wi-Fi gratuit et le parking de Mon Grand Plaisir.
+            <cite>— Jonathan Jablonski, Fondateur</cite>
         </blockquote>
 
         {{-- 3 Piliers en cards --}}
@@ -181,9 +182,9 @@
             {{-- Pilier 1 --}}
             <div class="concept-pillar-card">
                 <div class="pillar-content">
-                    <h3 class="pillar-title">La rapidité<br>rencontre la qualité</h3>
+                    <h3 class="pillar-title">L'efficacité<br>au service du goût</h3>
                     <p class="pillar-description">
-                        Chaque burger smashé sur plaque brûlante, chaque commande préparée à la minute. Fast, mais premium.
+                        Plaque chauffée à blanc, smash précis, assemblage soigné. Votre commande est prête en quelques minutes, sans jamais sacrifier la saveur.
                     </p>
                 </div>
                 <div class="pillar-accent-bar"></div>
@@ -192,9 +193,9 @@
             {{-- Pilier 2 --}}
             <div class="concept-pillar-card">
                 <div class="pillar-content">
-                    <h3 class="pillar-title">La street food<br>devient expérience</h3>
+                    <h3 class="pillar-title">Le fast casual<br>version premium</h3>
                     <p class="pillar-description">
-                        Plus qu'un repas, c'est un moment. Chaque détail immersif crée une véritable parenthèse gourmande.
+                        On a pris le meilleur de la street food américaine et on l'a élevé. Produits sélectionnés, recettes calibrées, ambiance soignée.
                     </p>
                 </div>
                 <div class="pillar-accent-bar"></div>
@@ -203,9 +204,9 @@
             {{-- Pilier 3 --}}
             <div class="concept-pillar-card">
                 <div class="pillar-content">
-                    <h3 class="pillar-title">Chaque détail<br>pensé pour vous</h3>
+                    <h3 class="pillar-title">Un cadre<br>qui raconte une histoire</h3>
                     <p class="pillar-description">
-                        De l'ambiance au service, tout est conçu pour transformer un simple repas en souvenir délicieux.
+                        Du mobilier aux luminaires, de la playlist aux uniformes : chaque élément du restaurant prolonge le voyage jusqu'à New York.
                     </p>
                 </div>
                 <div class="pillar-accent-bar"></div>
@@ -215,7 +216,7 @@
         {{-- Conclusion impactante --}}
         <div class="concept-conclusion">
             <p class="concept-conclusion-text">
-                Ici, tout est préparé avec exigence, dans un esprit <span class="concept-conclusion-highlight">fast casual premium</span> : rapide, frais, et toujours authentique.
+                Notre promesse à Plaisir : une cuisine <span class="concept-conclusion-highlight">généreuse et sans concession</span>, servie avec la rigueur d'un chef et la vitesse d'un diner.
             </p>
             <p class="concept-conclusion-subtext">
                 ✓ Factory & Co depuis 2009 – Votre adresse gourmande à Mon Grand Plaisir
@@ -234,7 +235,7 @@
             <h2 class="experience-title-redesigned">
                 L'<span class="experience-highlight">expérience client</span>
             </h2>
-            <p class="experience-subtitle-redesigned">Un moment qui s'adapte à vous</p>
+            <p class="experience-subtitle-redesigned">Votre rythme, notre engagement</p>
         </div>
 
         {{-- Intro text en citation premium --}}
@@ -247,8 +248,8 @@
             {{-- Moment 1: Prendre le temps --}}
             <div class="experience-moment-card">
                 <div class="moment-content">
-                    <h3 class="moment-title">Prendre le temps</h3>
-                    <p class="moment-description">Vous poser et savourer chaque bouchée</p>
+                    <h3 class="moment-title">S'installer en terrasse</h3>
+                    <p class="moment-description">Profiter du soleil des Yvelines et déguster sans se presser</p>
                 </div>
                 <div class="moment-accent"></div>
             </div>
@@ -256,8 +257,8 @@
             {{-- Moment 2: Manger rapidement --}}
             <div class="experience-moment-card">
                 <div class="moment-content">
-                    <h3 class="moment-title">Manger rapidement</h3>
-                    <p class="moment-description">Sans compromis sur la qualité</p>
+                    <h3 class="moment-title">Déjeuner sur le pouce</h3>
+                    <p class="moment-description">Pause express entre deux courses, qualité intacte</p>
                 </div>
                 <div class="moment-accent"></div>
             </div>
@@ -265,8 +266,8 @@
             {{-- Moment 3: Partager un moment --}}
             <div class="experience-moment-card">
                 <div class="moment-content">
-                    <h3 class="moment-title">Partager un moment</h3>
-                    <p class="moment-description">Convivial et chaleureux</p>
+                    <h3 class="moment-title">Réunir sa tribu</h3>
+                    <p class="moment-description">En famille ou entre amis, autour d'une table généreuse</p>
                 </div>
                 <div class="moment-accent"></div>
             </div>
@@ -274,8 +275,8 @@
             {{-- Moment 4: S'offrir une pause --}}
             <div class="experience-moment-card">
                 <div class="moment-content">
-                    <h3 class="moment-title">S'offrir une pause</h3>
-                    <p class="moment-description">Gourmande et réconfortante</p>
+                    <h3 class="moment-title">Se faire plaisir</h3>
+                    <p class="moment-description">Un cheesecake, un café : la parenthèse sucrée idéale</p>
                 </div>
                 <div class="moment-accent"></div>
             </div>
@@ -284,7 +285,7 @@
         {{-- Conclusion impactante --}}
         <div class="experience-conclusion">
             <p class="experience-conclusion-text">
-                Ici, tout est conçu pour être <span class="experience-conclusion-highlight">accessible, convivial et savoureux.</span>
+                Que vous arriviez de la N12 ou du Transilien, tout est pensé pour être <span class="experience-conclusion-highlight">fluide, accueillant et gourmand.</span>
             </p>
             <p class="experience-conclusion-subtext">
                 ✓ Factory & Co Plaisir – Terrasse, Wi-Fi, parking gratuit, ouvert 7j/7
@@ -304,9 +305,9 @@
                 Pourquoi nous choisir
             </span>
             <h2 class="why-choose-title">
-                <span class="why-choose-highlight">L'expérience</span> fait la différence
+                Ce qui nous rend <span class="why-choose-highlight">uniques</span> à Plaisir
             </h2>
-            <p class="why-choose-subtitle">Plus qu'un restaurant, une destination mémorable</p>
+            <p class="why-choose-subtitle">Terrasse, parking gratuit, halal : tout est réuni</p>
         </div>
 
         {{-- CARD 1: Identité Forte --}}
@@ -317,8 +318,8 @@
             </div>
             <div class="card-visual-content">
                 <div class="card-visual-counter">01</div>
-                <h3 class="card-visual-title">Identité forte</h3>
-                <p class="card-visual-description">Un design unique et reconnaissable qui marque les esprits dès l'entrée</p>
+                <h3 class="card-visual-title">ADN new-yorkais</h3>
+                <p class="card-visual-description">Néons, briques, bois brut : l'ambiance du diner américain transplantée au cœur de Mon Grand Plaisir</p>
                 <div class="card-visual-accent"></div>
             </div>
         </div>
@@ -331,8 +332,8 @@
             </div>
             <div class="card-visual-content">
                 <div class="card-visual-counter">02</div>
-                <h3 class="card-visual-title">Ambiance immersive</h3>
-                <p class="card-visual-description">Une atmosphère energique qui vous transporte loin de l'ordinaire</p>
+                <h3 class="card-visual-title">Saveurs authentiques</h3>
+                <p class="card-visual-description">Des recettes ramenées du New Jersey par Jonathan, préparées avec des ingrédients rigoureusement sélectionnés</p>
                 <div class="card-visual-accent"></div>
             </div>
         </div>
@@ -345,8 +346,8 @@
             </div>
             <div class="card-visual-content">
                 <div class="card-visual-counter">03</div>
-                <h3 class="card-visual-title">Cuisine généreuse</h3>
-                <p class="card-visual-description">Des produits frais, des portions généreuses, une qualité sans compromis</p>
+                <h3 class="card-visual-title">Portions XXL</h3>
+                <p class="card-visual-description">Smash burgers doubles, bagels copieux, cheesecakes entiers : ici, on ne fait pas les choses à moitié</p>
                 <div class="card-visual-accent"></div>
             </div>
         </div>
@@ -359,8 +360,8 @@
             </div>
             <div class="card-visual-content">
                 <div class="card-visual-counter">04</div>
-                <h3 class="card-visual-title">Expérience complète</h3>
-                <p class="card-visual-description">Entrée, plat, dessert et moment précieux, tout en un seul endroit</p>
+                <h3 class="card-visual-title">Confort total</h3>
+                <p class="card-visual-description">Terrasse en plein air, Wi-Fi haut débit, parking gratuit et options halal : tout pour passer un bon moment</p>
                 <div class="card-visual-accent"></div>
             </div>
         </div>
@@ -369,8 +370,8 @@
         <div class="why-choose-conclusion-visual">
             <blockquote class="conclusion-quote">
                 <span class="quote-mark">"</span>
-                <p>Ici, vous ne consommez pas une simple commande.</p>
-                <p class="conclusion-highlight">Vous vivez une expérience.</p>
+                <p>Ici, chaque bouchée raconte un voyage.</p>
+                <p class="conclusion-highlight">Du New Jersey jusqu'à Plaisir.</p>
                 <span class="quote-mark close">"</span>
             </blockquote>
         </div>
@@ -389,14 +390,14 @@
                 L'Ambiance du Lieu
             </span>
             <h2 class="ambiance-title-redesigned">
-                Un espace <span class="ambiance-highlight">vivant et mémorable</span>
+                Un décor <span class="ambiance-highlight">qui vous embarque</span>
             </h2>
-            <p class="ambiance-subtitle-redesigned">Dès l'entrée, l'atmosphère vous transporte</p>
+            <p class="ambiance-subtitle-redesigned">Poussez la porte, changez de continent</p>
         </div>
 
         {{-- Intro Quote --}}
         <blockquote class="ambiance-intro-quote">
-            Factory & Co n'est pas juste un restaurant. C'est un univers pensé dans les moindres détails pour transformer chaque visite en souvenir.
+            À Plaisir, on a reproduit l'énergie brute des diners de la côte Est : les matériaux, les couleurs, la lumière. Même la terrasse a ce petit côté sidewalk café.
         </blockquote>
 
         {{-- 3 Premium Ambiance Cards avec images --}}
@@ -408,8 +409,8 @@
                     <div class="ambiance-card-overlay"></div>
                 </div>
                 <div class="ambiance-card-content">
-                    <h3 class="ambiance-card-title">Design urbain</h3>
-                    <p class="ambiance-card-description">Inspiré des grandes villes, notre intérieur fusionne style new-yorkais et savoir-faire français</p>
+                    <h3 class="ambiance-card-title">Esthétique industrielle</h3>
+                    <p class="ambiance-card-description">Briques apparentes, acier brossé et enseignes lumineuses : un décor fidèle aux warehouses de Brooklyn</p>
                     <div class="ambiance-card-accent"></div>
                 </div>
             </div>
@@ -417,12 +418,12 @@
             {{-- Card 2: Ambiance Conviviale --}}
             <div class="ambiance-card-premium">
                 <div class="ambiance-card-image">
-                    <img src="{{ asset('images/factory-val-3.webp') }}" alt="Ambiance conviviale Factory & Co - Moments en famille" loading="lazy">
+                    <img src="{{ asset('restaurant/plaisir/whatsapp-image-2021-12-07-at-21-45-21-5-.jpg') }}" alt="Ambiance conviviale Factory & Co Plaisir" loading="lazy">
                     <div class="ambiance-card-overlay"></div>
                 </div>
                 <div class="ambiance-card-content">
-                    <h3 class="ambiance-card-title">Ambiance conviviale</h3>
-                    <p class="ambiance-card-description">Un espace chaleureux pensé pour les moments partagés, où chacun se sent bienvenu</p>
+                    <h3 class="ambiance-card-title">Terrasse & convivialité</h3>
+                    <p class="ambiance-card-description">En salle ou en extérieur, les tables sont grandes, l'accueil est franc, et les familles se sentent chez elles</p>
                     <div class="ambiance-card-accent"></div>
                 </div>
             </div>
@@ -430,12 +431,12 @@
             {{-- Card 3: Espace Détente --}}
             <div class="ambiance-card-premium">
                 <div class="ambiance-card-image">
-                    <img src="{{ asset('images/ashley.webp') }}" alt="Espace détente Factory & Co - Confort et relaxation" loading="lazy">
+                    <img src="{{ asset('restaurant/plaisir/img_0246-2.jpg') }}" alt="Espace détente Factory & Co Plaisir" loading="lazy">
                     <div class="ambiance-card-overlay"></div>
                 </div>
                 <div class="ambiance-card-content">
-                    <h3 class="ambiance-card-title">Espace détente</h3>
-                    <p class="ambiance-card-description">Que ce soit rapide ou détente, nos installations vous offrent le confort et la sérénité</p>
+                    <h3 class="ambiance-card-title">Votre bulle de décompression</h3>
+                    <p class="ambiance-card-description">Wi-Fi gratuit, prises accessibles, musique calibrée : le spot idéal pour souffler après le shopping</p>
                     <div class="ambiance-card-accent"></div>
                 </div>
             </div>
@@ -444,8 +445,8 @@
         {{-- Ambiance Message --}}
         <div class="ambiance-message">
             <blockquote class="ambiance-tagline">
-                L'ambiance n'est pas une décoration.<br>
-                <span class="ambiance-tagline-emphasis">C'est l'âme du lieu.</span>
+                On ne décore pas un restaurant.<br>
+                <span class="ambiance-tagline-emphasis">On construit une atmosphère.</span>
             </blockquote>
         </div>
     </div>
@@ -462,14 +463,14 @@
                 Pour tous les moments
             </span>
             <h2 class="moments-title-redesigned">
-                Chaque heure a sa <span class="moments-highlight">bonne raison</span>
+                Du matin au soir, <span class="moments-highlight">on assure</span>
             </h2>
-            <p class="moments-subtitle-redesigned">Petit-déjeuner, déjeuner, goûter, dîner… à chaque heure sa spécialité</p>
+            <p class="moments-subtitle-redesigned">Breakfast, lunch, goûter, dinner : quatre ambiances, une seule adresse à Mon Grand Plaisir</p>
         </div>
 
         {{-- Intro Quote --}}
         <blockquote class="moments-intro-quote">
-            Factory & Co s'adapte à votre rythme. Que ce soit une pause rapide ou un moment à savourer, nous sommes là pour chaque occasion.
+            Ouvert 7j/7 dès 8h, Factory & Co Plaisir accompagne toutes vos journées. Avant le bureau, pendant le shopping ou après le ciné : on est toujours prêts.
         </blockquote>
 
         {{-- 4 Premium Moments Cards --}}
@@ -483,7 +484,7 @@
                 <div class="moments-card-content">
                     <div class="moments-card-number">01</div>
                     <h3 class="moments-card-title">Petit-déjeuner américain</h3>
-                    <p class="moments-card-description">Dès 8h00, bagels frais, oeufs brouillés, bacon croustillant, pâtisseries artisanales et café de qualité pour bien commencer la journée</p>
+                    <p class="moments-card-description">Ouvrez grand les yeux dès 8h : pancakes moelleux, bagels garnis, œufs brouillés onctueux et café corsé pour attaquer la journée avec énergie</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>
@@ -497,7 +498,7 @@
                 <div class="moments-card-content">
                     <div class="moments-card-number">02</div>
                     <h3 class="moments-card-title">Pause déjeuner</h3>
-                    <p class="moments-card-description">Burgers savoureux et bagels généreux pour votre pause shopping ou pause professionnelle. Nourrissant, rapide et délicieux</p>
+                    <p class="moments-card-description">Smash burger double, frites croustillantes, bagel loaded : rechargez les batteries entre deux boutiques de Mon Grand Plaisir</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>
@@ -511,7 +512,7 @@
                 <div class="moments-card-content">
                     <div class="moments-card-number">03</div>
                     <h3 class="moments-card-title">Goûter gourmand</h3>
-                    <p class="moments-card-description">Nos cheesecakes onctueux, pâtisseries artisanales et douceurs artisanales. La pause sucrée qu'on attend avec impatience</p>
+                    <p class="moments-card-description">Cheesecake new-yorkais crémeux, cookies XXL, milkshakes épais : la récompense sucrée que toute la famille attend</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>
@@ -525,7 +526,7 @@
                 <div class="moments-card-content">
                     <div class="moments-card-number">04</div>
                     <h3 class="moments-card-title">Dîner décontracté</h3>
-                    <p class="moments-card-description">Burgers savoureux, bagels généreux et cheesecakes gourmands pour une soirée en famille ou entre amis, en toute détente</p>
+                    <p class="moments-card-description">Le vendredi et samedi jusqu'à 23h : posez-vous en terrasse ou en salle pour une soirée burger décontractée, loin du stress de la semaine</p>
                     <div class="moments-card-accent"></div>
                 </div>
             </div>
@@ -534,8 +535,8 @@
         {{-- Closing Message --}}
         <div class="moments-closing-message">
             <p class="moments-closing-text">
-                Peu importe l'heure, il y a toujours une bonne raison de venir.<br>
-                <span class="moments-closing-emphasis">Factory & Co s'adapte à chaque moment de votre vie.</span>
+                8h, 12h, 16h ou 21h : à chaque heure, une spécialité vous attend.<br>
+                <span class="moments-closing-emphasis">Factory & Co Plaisir, ouvert quand vous en avez envie.</span>
             </p>
         </div>
     </div>
@@ -590,41 +591,41 @@
                 Au coeur de votre centre commercial
             </span>
             <h2 class="location-title">
-                Facile, <span class="location-highlight">accessible,</span> évident
+                N12, Transilien, parking : <span class="location-highlight">on est là</span>
             </h2>
-            <p class="location-subtitle">Le point de pause parfait dans votre journée</p>
+            <p class="location-subtitle">1170 Av. de Saint-Germain, 78370 Plaisir — au cœur de Mon Grand Plaisir</p>
         </div>
 
         {{-- Intro Text --}}
         <p class="location-intro">
-            Idéalement situé au coeur de votre centre commercial, Factory & Co est toujours à portée de main pour vos moments de détente.
+            À deux minutes de la N12 et à quelques pas du Transilien Plaisir-Grignon, Factory & Co vous accueille dans le centre commercial Mon Grand Plaisir avec parking gratuit.
         </p>
 
         {{-- 3 Premium Location Benefit Cards --}}
         <div class="location-benefits-grid">
             {{-- Card 1: Localisation --}}
             <div class="location-benefit-card">
-                <h3 class="location-benefit-title">Au milieu du shopping</h3>
-                <p class="location-benefit-text">Situé stratégiquement pour une pause naturelle dans votre parcours</p>
+                <h3 class="location-benefit-title">Accès direct depuis la N12</h3>
+                <p class="location-benefit-text">Sortie Plaisir, direction Mon Grand Plaisir : en 2 minutes vous êtes attablé</p>
             </div>
 
             {{-- Card 2: Accessibilité --}}
             <div class="location-benefit-card">
-                <h3 class="location-benefit-title">Accessible rapidement</h3>
-                <p class="location-benefit-text">Facile à trouver, entièrement accessible de tous les sens du centre</p>
+                <h3 class="location-benefit-title">Parking gratuit</h3>
+                <p class="location-benefit-text">Des milliers de places disponibles au centre commercial, sans stress ni frais supplémentaires</p>
             </div>
 
             {{-- Card 3: Flexibilité --}}
             <div class="location-benefit-card">
-                <h3 class="location-benefit-title">Adapté à tous les rythmes</h3>
-                <p class="location-benefit-text">Ouvert à tous les moments, du matin jusqu'au soir, 7 jours sur 7</p>
+                <h3 class="location-benefit-title">Transilien Plaisir-Grignon</h3>
+                <p class="location-benefit-text">Accessible en transport en commun, à proximité de la gare, pour ceux qui préfèrent le train</p>
             </div>
         </div>
 
         {{-- Closing Message --}}
         <div class="location-closing">
             <p class="location-closing-text">
-                Un lieu pratique, sans aucun compromis sur l'expérience et la qualité.
+                Voiture, train ou à pied : Factory & Co Plaisir est facile d'accès, ouvert 7j/7, avec terrasse.
             </p>
         </div>
     </div>
@@ -638,18 +639,18 @@
     <div class="container">
         <div class="cta-inner">
             {{-- Badge ── --}}
-            <span class="cta-badge">Expérience à vivre</span>
+            <span class="cta-badge">Votre table vous attend</span>
 
             {{-- Titre principal ── --}}
             <h2 class="cta-title">
-                Prêt à découvrir<br>
-                <span class="cta-highlight">l'authentique expérience ?</span>
+                Envie de goûter<br>
+                <span class="cta-highlight">au vrai New York ?</span>
             </h2>
 
             {{-- Description ── --}}
             <p class="cta-description">
-                Bien plus qu'un restaurant, Factory & Co est une parenthèse gourmande<br>
-                et mémorable au cœur de votre centre commercial.
+                Smash burgers, bagels, cheesecakes et options halal vous attendent<br>
+                en terrasse ou en salle, au centre commercial Mon Grand Plaisir.
             </p>
 
             {{-- CTA Buttons ── --}}
@@ -675,7 +676,7 @@
             {{-- Tagline finale ── --}}
             <p class="cta-tagline">
                 ✓ Factory & Co Since 1989<br>
-                <span class="cta-tagline-small">Une vraie différence. Un vrai plaisir.</span>
+                <span class="cta-tagline-small">Le goût de New York, à deux pas de chez vous.</span>
             </p>
         </div>
     </div>

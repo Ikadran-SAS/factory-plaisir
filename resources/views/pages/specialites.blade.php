@@ -166,17 +166,17 @@
     <div class="container">
         <div class="concept-grid">
             <div class="concept-text">
-                <span class="section-tag dark">Chaque spécialité</span>
+                <span class="section-tag dark">Notre identité</span>
                 <h2 class="section-title dark">
-                    Chaque spécialité<br>
-                    <em>raconte une histoire</em>
+                    Un savoir-faire<br>
+                    <em>ancré dans les Yvelines</em>
                 </h2>
-                <p>À Factory &amp; Co Plaisir, nos spécialités ne sont pas juste des plats. Ce sont des célébrations du savoir-faire, nées de la passion du chef <strong>Jonathan Jablonski</strong> et de son engagement envers l'authenticité.</p>
+                <p>Depuis notre ouverture au centre commercial Mon Grand Plaisir, chaque spécialité porte la signature du chef <strong>Jonathan Jablonski</strong>. Des recettes travaillées pendant des années, pensées pour offrir aux Yvelinois une cuisine américaine d'exception, sans artifice.</p>
                 <p>Chaque recette a été perfectionnée au fil des ans. Le smash se fait sur plaque brûlante, le bagel est bouilli puis cuit, le cheesecake repose 24h. Aucun raccourci, aucune concession.</p>
                 <p><strong>Dégustez-les en terrasse ou à emporter — le goût reste le même : authentique.</strong></p>
             </div>
             <div class="concept-image">
-                <img src="{{ asset('images/factory-val-interieur.webp') }}"
+                <img src="{{ asset('restaurant/plaisir/whatsapp-image-2021-12-07-at-21-45-21-4-.jpg') }}"
                      alt="Intérieur Factory & Co Plaisir"
                      loading="lazy" width="700" height="500">
                 <div class="concept-badge">
@@ -196,7 +196,7 @@
     <div class="container">
         <div class="section-header text-center">
             <span class="section-tag">Galerie</span>
-            <h2 class="section-title light">Les 4 piliers<br>qui font notre réputation</h2>
+            <h2 class="section-title light">4 spécialités<br>qui définissent Factory &amp; Co Plaisir</h2>
         </div>
 
         <div class="specialites-grid">
@@ -228,7 +228,7 @@
                 </div>
                 <div class="specialite-content">
                     <h3>Bagels Authentiques</h3>
-                    <p>Recette authentique du New Jersey, <strong>36 heures de fermentation</strong>. Pétrissage artisanal, croquant dehors, moelleux dedans. Une texture et une croûte introuvables ailleurs.</p>
+                    <p>Inspirés de la tradition boulangère du New Jersey, nos bagels exigent <strong>36 heures de fermentation</strong> lente. Le résultat : une croûte dorée et un cœur aérien que vous ne trouverez nulle part ailleurs dans les Yvelines.</p>
                     <div class="specialite-meta">
                         <span>Breakfast</span>
                         <span>36h fermentation</span>
@@ -289,8 +289,8 @@
 <section class="quality-section">
     <div class="container">
         <div class="quality-header">
-            <span class="section-tag dark">Notre promesse</span>
-            <h2 class="section-title dark">Qualité<br><em>sans compromis</em></h2>
+            <span class="section-tag dark">Notre exigence</span>
+            <h2 class="section-title dark">L'excellence<br><em>comme standard</em></h2>
         </div>
 
         <div class="quality-cards-grid">
@@ -307,7 +307,7 @@
             <div class="quality-card quality-card-2">
                 <div class="quality-card-content">
                     <h3>Craft</h3>
-                    <p class="quality-detail">Recettes exclusives du chef Jonathan Jablonski, formé au New Jersey auprès d'artisans boulangers américains. 15+ ans d'expertise en cuisine américaine authentique.</p>
+                    <p class="quality-detail">Le chef Jonathan Jablonski a forgé ses techniques au New Jersey, au contact des meilleurs artisans. Il apporte à Plaisir plus de 15 ans de maîtrise de la cuisine américaine premium.</p>
                     <span class="quality-badge">Chef Jonathan</span>
                 </div>
             </div>
@@ -324,7 +324,7 @@
 
         {{-- Trust Statement --}}
         <div class="quality-promise">
-            <p>Chaque assiette Factory & Co est une promesse tenue.</p>
+            <p>Chez Factory &amp; Co Plaisir, le goût authentique n'est jamais négociable.</p>
         </div>
     </div>
 </section>
@@ -335,10 +335,10 @@
 <section class="section section-cta-large">
     <div class="container">
         <div class="cta-large-content">
-            <img src="{{ asset('images/ashley.webp') }}" alt="Prêt à vivre l'expérience" class="cta-image">
+            <img src="{{ asset('restaurant/plaisir/img_0246-2.jpg') }}" alt="Prêt à vivre l'expérience Factory & Co Plaisir" class="cta-image">
             <div class="cta-text">
-                <h2>Prêt à vivre<br>l'expérience ?</h2>
-                <p>Nos spécialités vous attendent. Que ce soit sur place, à emporter, ou en commande rapide : vivez l'authenticité Factory &amp; Co.</p>
+                <h2>Tentez<br>l'aventure Factory &amp; Co</h2>
+                <p>Sur place en terrasse, à emporter ou en click &amp; collect : retrouvez nos spécialités au centre commercial Mon Grand Plaisir, dans les Yvelines.</p>
                 <div class="cta-actions">
                     <a href="{{ route('menu.index') }}" class="btn btn-pink">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
@@ -378,8 +378,8 @@
 <section class="section section-dark newsletter-section">
     <div class="container">
         <div class="newsletter-content">
-            <h2>Restez connecté</h2>
-            <p>Recevez nos nouveaux menus, promotions et actualités spécialités en avant-première.</p>
+            <h2>Ne manquez rien</h2>
+            <p>Nouveautés à la carte, offres exclusives et événements à Plaisir : inscrivez-vous pour tout recevoir en premier.</p>
             <form class="newsletter-form" method="POST" action="#">
                 @csrf
                 <input type="email" placeholder="votre@email.com" required>

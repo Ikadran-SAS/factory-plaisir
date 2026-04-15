@@ -88,7 +88,7 @@
         </div>
         <div class="stat-item">
             <div class="stat-number">100%</div>
-            <div class="stat-label">Préparé à la minute</div>
+            <div class="stat-label">Frais, 100% savoureux</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">{{ number_format($averageRating, 1, ',', '') }}★</div>
@@ -114,9 +114,9 @@
                     gourmande à Plaisir
                 </h2>
 
-                <p>Au cœur du centre commercial <strong>Mon Grand Plaisir</strong>, Factory &amp; Co vous fait voyager à <strong>New York</strong> le temps d'un repas. Des recettes authentiques, des ingrédients frais, un savoir-faire qui ne triche pas.</p>
-                <p>Ici, <strong>tout est frais, tout est préparé à la commande</strong>. Nos burgers sont smashés sur plaque brûlante. Nos bagels arrivent chaque matin, croustillants et moelleux. Nos cheesecakes suivent la recette originale new-yorkaise, sans raccourci.</p>
-                <p><strong>Installez-vous en terrasse, connectez-vous au Wi-Fi, et laissez-vous transporter.</strong></p>
+                <p>Aux portes de la N12, au sein du centre commercial <strong>Mon Grand Plaisir</strong>, Factory &amp; Co pose ses valises dans les Yvelines. Jonathan Jablonski, fondateur originaire du <strong>New Jersey</strong>, y déploie depuis 2009 ses recettes authentiques certifiées <strong>halal</strong>.</p>
+                <p>Chaque burger est smashé devant vous, chaque bagel livré frais chaque matin, chaque cheesecake coulé selon la recette originale new-yorkaise. <strong>Rien n'est réchauffé, tout est préparé à la commande</strong> — c'est notre promesse depuis le premier jour.</p>
+                <p><strong>Profitez de notre terrasse ombragée, du Wi-Fi gratuit et du parking à deux pas.</strong> Une parenthèse gourmande à quelques minutes du Transilien Plaisir-Grignon.</p>
                 <a href="{{ route('concept') }}" class="btn btn-pink">
                     Découvrir notre concept
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -127,9 +127,9 @@
                      alt="Intérieur du restaurant Factory & Co Plaisir Yvelines - terrasse et ambiance diner"
                      loading="lazy" width="700" height="500">
                 <div class="concept-badge">
-                    <span class="concept-badge-title">Delicious</span>
-                    <span class="concept-badge-sub">since 1989</span>
-                    <span class="concept-badge-detail">À la commande</span>
+                    <span class="concept-badge-title">New York</span>
+                    <span class="concept-badge-sub">spirit</span>
+                    <span class="concept-badge-detail">Frais & authentique</span>
                 </div>
             </div>
         </div>
@@ -192,7 +192,7 @@
 <section class="section section-dark" id="avis">
     <div class="container">
         <div class="reviews-header-section">
-            <h2 class="section-title light">Pourquoi ils nous<br><em>ont choisi</em></h2>
+            <h2 class="section-title light">Ce qu'ils en<br><em>disent</em></h2>
             <div class="reviews-rating">
                 <div class="reviews-stars">@for($i = 1; $i <= 5; $i++)★@endfor</div>
                 <div class="reviews-score">{{ number_format($averageRating, 1, ',', '') }} <span>/5 · {{ $totalReviews }} avis Google</span></div>
@@ -266,10 +266,10 @@
 <section class="section section-cta-large">
     <div class="container">
         <div class="cta-large-content">
-            <img src="{{ asset('images/ashley.webp') }}" alt="Client commandant à emporter chez Factory & Co Plaisir" class="cta-image">
+            <img src="{{ asset('restaurant/plaisir/img_0246-2.jpg') }}" alt="Factory & Co Plaisir - à emporter ou en terrasse" class="cta-image">
             <div class="cta-text">
                 <h2>À emporter ou en terrasse</h2>
-                <p>En pause shopping à Mon Grand Plaisir ou de passage dans les Yvelines ? Composez votre menu sur place, préparé à la minute. Savourez-le sur notre terrasse ou emportez-le — un vrai repas préparé à la minute, sans compromis ni attente.</p>
+                <p>Entre deux enseignes de Mon Grand Plaisir ou en route sur la N12, arrêtez-vous le temps d'un vrai repas. Commandez au comptoir, installez-vous en terrasse avec vue sur les Yvelines ou repartez avec votre menu — toujours préparé à la commande, toujours généreux.</p>
                 <a href="{{ route('menu.index') }}" class="btn btn-pink">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                     Voir la carte
@@ -304,7 +304,7 @@
     <div class="container">
         <div class="newsletter-content">
             <h2>Restez connecté</h2>
-            <p>Recevez nos bons plans, nouveaux menus et actualités Factory &amp; Co en avant-première.</p>
+            <p>Offres exclusives, nouveautés à la carte et événements à Plaisir : inscrivez-vous pour ne rien manquer.</p>
             <form class="newsletter-form" method="POST" action="#">
                 @csrf
                 <input type="email" placeholder="votre@email.com" required>
