@@ -364,15 +364,9 @@
             À Plaisir, chaque assiette raconte New York. Pâtisseries, buns et pains bagels sont fabriqués par nos soins, avec le savoir-faire du chef Jonathan, formé au New Jersey. Dégustez-les en terrasse ou à emporter — chez Factory & Co Mon Grand Plaisir, rien n'est laissé au hasard.
         </blockquote>
 
-        {{-- Slider Wrapper avec Navigation --}}
+        {{-- Grille 4 Catégories avec cartes PREMIUM redesignées --}}
         <div class="cuisine-slider-wrapper">
-            <button class="slider-nav slider-nav-prev" id="slider-prev" aria-label="Previous">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-            </button>
-
-            {{-- Grille 4 Catégories avec cartes PREMIUM redesignées --}}
+            {{-- Grille catégories --}}
             <div class="cuisine-categories-grid" id="cuisine-slider">
             {{-- Catégorie 1: Burgers --}}
             <div class="cuisine-card-premium">
@@ -557,37 +551,6 @@
             </div>
         </div>
 
-            <button class="slider-nav slider-nav-next" id="slider-next" aria-label="Next">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </button>
-        </div>
-
-        {{-- Engagement Box avec checklist --}}
-        <div class="cuisine-engagement-box">
-            <div class="engagement-content">
-                <h3 class="engagement-title">Ce que nous garantissons</h3>
-                <ul class="engagement-checklist">
-                    <li class="checklist-item">
-                        <span class="checklist-badge">✔️</span>
-                        <span class="checklist-text">Du goût</span>
-                    </li>
-                    <li class="checklist-item">
-                        <span class="checklist-badge">✔️</span>
-                        <span class="checklist-text">De la texture</span>
-                    </li>
-                    <li class="checklist-item">
-                        <span class="checklist-badge">✔️</span>
-                        <span class="checklist-text">De la satisfaction</span>
-                    </li>
-                </ul>
-                <p class="engagement-tagline">
-                    Parce que bien manger, c'est aussi se faire plaisir sans compromis.
-                </p>
-            </div>
-            {{-- Image ashley subtle en arrière-plan --}}
-            <div class="engagement-image-bg"></div>
         </div>
     </div>
 </section>
@@ -638,7 +601,7 @@
         {{-- CARD 2: Ambiance Immersive --}}
         <div class="why-choose-card-visual card-visual-reverse">
             <div class="card-visual-image">
-                <img src="{{ asset('images/burger.webp') }}" alt="Burger Factory & Co - Qualité et générosité" loading="lazy">
+                <img src="{{ asset('menu/SAL%C3%89/BURGER/Smash%20Burgers/Spicy%20Smash/Spicy%20Smash%20Big/DSC03815.jpg') }}" alt="Spicy Smash Burger Factory & Co" loading="lazy">
                 <div class="card-visual-overlay-dark"></div>
             </div>
             <div class="card-visual-content">
@@ -683,7 +646,7 @@
         {{-- CARD 3: Cuisine Généreuse --}}
         <div class="why-choose-card-visual">
             <div class="card-visual-image">
-                <img src="{{ asset('images/desserts.webp') }}" alt="Cheesecake Factory & Co - Desserts gourmands" loading="lazy">
+                <img src="{{ asset('menu/SUCR%C3%89/DESSERTS/X/DSC00466.jpg') }}" alt="Desserts gourmands Factory & Co" loading="lazy">
                 <div class="card-visual-overlay-dark"></div>
             </div>
             <div class="card-visual-content">
@@ -710,7 +673,7 @@
         {{-- CARD 4: Expérience Complète --}}
         <div class="why-choose-card-visual card-visual-reverse">
             <div class="card-visual-image">
-                <img src="{{ asset('images/factory-val-3.webp') }}" alt="Ambiance Factory & Co - Moments en famille et entre amis" loading="lazy">
+                <img src="{{ asset('menu/SUCR%C3%89/BREAKFAST/DSC01094.jpg') }}" alt="Breakfast Factory & Co - Moments en famille" loading="lazy">
                 <div class="card-visual-overlay-dark"></div>
             </div>
             <div class="card-visual-content">
