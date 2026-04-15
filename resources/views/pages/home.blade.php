@@ -150,35 +150,35 @@
         <div class="products-slider-wrapper">
             <div class="products-slider">
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/smash-burger.webp" alt="Smash Burgers préparés à la minute au restaurant Factory & Co Plaisir" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/BURGER/Smash%20Burgers/Monster/DSC03550.jpg') }}" alt="Smash Burgers préparés à la minute au restaurant Factory & Co Plaisir" loading="lazy">
                     <figcaption>Smash Burgers</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/smoothiee.jpeg" alt="Petit-déjeuner américain et smoothies chez Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SUCR%C3%89/CHEESECAKE/Factory_Claye%204.JPG') }}" alt="New York Cheesecake signature Factory & Co Plaisir" loading="lazy">
+                    <figcaption>Cheesecake</figcaption>
+                </div>
+                <div class="product-item-slide">
+                    <img src="{{ asset('menu/SUCR%C3%89/BREAKFAST/DSC01073.jpg') }}" alt="Petit-déjeuner américain chez Factory & Co Plaisir" loading="lazy">
                     <figcaption>Breakfast</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/BLT-SEUL-2.jpg" alt="Bagels New-Yorkais frais de Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/BAGELS/DSC00828.jpg') }}" alt="Bagels New-Yorkais frais de Factory & Co Plaisir" loading="lazy">
                     <figcaption>Bagels</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/milkshake.png" alt="Milkshakes artisanaux Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/BOISSONS/MILKSHAKE/DSC01354.jpg') }}" alt="Milkshakes artisanaux Factory & Co Plaisir" loading="lazy">
                     <figcaption>Milkshakes</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2024/05/Factory_And_Co_Claye_Souilly_Jon_Filin_Burger_Cheesecake_Sports_Bar-6.png" alt="Cheesecake new-yorkais artisanal Factory & Co Plaisir" loading="lazy">
-                    <figcaption>Cheesecake</figcaption>
+                    <img src="{{ asset('menu/BOISSONS/SMOOTHIE/Ban_a%20Manga%202.jpg') }}" alt="Smoothies frais Factory & Co Plaisir" loading="lazy">
+                    <figcaption>Smoothie</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/Bowl-768x1086.png" alt="Bowl healthy et salade saine chez Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/SAL%C3%89/BOWLS/DSC00510.jpg') }}" alt="Bowl salade chez Factory & Co Plaisir" loading="lazy">
                     <figcaption>Bowl</figcaption>
                 </div>
                 <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/Cheesecake-1.png" alt="Cheesecake artisanal recette exclusive Factory & Co" loading="lazy">
-                    <figcaption>Cheesecake</figcaption>
-                </div>
-                <div class="product-item-slide">
-                    <img src="https://restaurants.factoryandco.com/wp-content/uploads/2020/07/Coffee.png" alt="Café artisanal et boissons chaudes Factory & Co" loading="lazy">
+                    <img src="{{ asset('menu/BOISSONS/COFFESHOP/DSC09733%20(Caf%C3%A9%203).jpg') }}" alt="Coffeeshop Factory & Co Plaisir, cafés signature" loading="lazy">
                     <figcaption>Coffeeshop</figcaption>
                 </div>
             </div>
