@@ -110,7 +110,7 @@
     {{-- Hero Content --}}
     <div class="hero-content">
         <span class="section-tag">LA CARTE</span>
-        <h1>Un voyage culinaire<br>sans fin</h1>
+        <h1>La carte<br>Factory & Co Plaisir</h1>
         <p>Découvrez nos incontournables New York et nos créations exclusives</p>
         <div class="hero-buttons">
             <button class="btn btn-pink scroll-to-categories" aria-label="Parcourir la carte">
