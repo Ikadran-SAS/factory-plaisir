@@ -68,8 +68,16 @@
                 @if(session('success'))
                     <div class="alert-success">✓ {{ session('success') }}</div>
                 @endif
+                @if(session('error'))
+                    <div class="alert-error">✗ {{ session('error') }}</div>
+                @endif
                 <form method="POST" action="{{ route('contact.send') }}" novalidate>
                     @csrf
+                    {{-- Honeypot anti-spam --}}
+                    <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+                        <label for="website">Website</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label class="form-label" for="prenom">Prénom *</label>

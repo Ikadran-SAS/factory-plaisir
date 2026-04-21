@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Avis Clients | Factory & Co – Nos Clients Témoignent')
-@section('description', 'Avis Google vérifiés de Factory & Co Plaisir (Yvelines 78). Terrasse, Wi-Fi, végétarien. Mon Grand Plaisir.')
-@section('keywords', 'avis factory co plaisir 78, témoignages restaurant yvelines, avis burgers smash plaisir, reviews mon grand plaisir')
-@section('canonical', route('avis'))
+@section('title', $seo['title'])
+@section('description', $seo['description'])
+@section('keywords', $seo['keywords'])
+@section('canonical', $seo['canonical'])
 
 @push('schema')
 @php

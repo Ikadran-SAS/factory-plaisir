@@ -88,8 +88,8 @@
             ],
             'aggregateRating' => [
                 '@type' => 'AggregateRating',
-                'ratingValue' => '4.3',
-                'reviewCount' => '1200',
+                'ratingValue' => (string) round($globalRating ?? 4.3, 1),
+                'reviewCount' => (string) ($globalReviewCount ?? 1200),
                 'bestRating' => '5'
             ],
             'sameAs' => ['https://www.instagram.com/factoryandco/', 'https://www.facebook.com/factoryandco/']
