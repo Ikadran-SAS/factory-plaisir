@@ -87,6 +87,16 @@ const closeModal = () => {
 }
 
 const trackNavigation = (app) => {
+  const navigationAppMap = {
+    'google-maps': 'google_maps',
+    'waze': 'waze',
+    'apple-maps': 'apple_maps',
+  }
+  window.dataLayer = window.dataLayer || []
+  window.dataLayer.push({
+    event: 'itinerary_request',
+    navigation_app: navigationAppMap[app] || app,
+  })
   emit('navigate', app)
 }
 </script>
